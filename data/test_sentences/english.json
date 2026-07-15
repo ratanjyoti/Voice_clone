@@ -1,0 +1,27 @@
+[
+  {
+    "id": "en_01",
+    "category": "normal",
+    "text": "Hello, welcome to Infinia. How can I help you today?"
+  },
+  {
+    "id": "en_02",
+    "category": "latency",
+    "text": "Your appointment is confirmed for tomorrow morning."
+  },
+  {
+    "id": "en_03",
+    "category": "name",
+    "text": "Ratan Jyoti submitted the voice engineering case study."
+  },
+  {
+    "id": "en_04",
+    "category": "numbers",
+    "text": "Your payment of two thousand four hundred fifty rupees was received."
+  },
+  {
+    "id": "en_05",
+    "category": "long",
+    "text": "Before completing your request, please verify your registered email address and account number."
+  }
+]

@@ -1,0 +1,7 @@
+torch
+transformers>=4.48,<6
+accelerate
+scipy
+numpy
+safetensors
+sentencepiece==0.2.0

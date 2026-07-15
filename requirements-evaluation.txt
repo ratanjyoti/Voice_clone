@@ -1,0 +1,7 @@
+faster-whisper==1.2.1
+ctranslate2==4.6.0
+setuptools==80.9.0
+numpy<2.3
+jiwer==4.0.0
+pandas
+soundfile

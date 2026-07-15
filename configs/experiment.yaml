@@ -1,0 +1,30 @@
+project:
+  name: infinia-multilingual-voice-case-study
+  output_format: wav
+
+models:
+  mms_english:
+    model_id: facebook/mms-tts-eng
+    language_code: en
+    language_name: English
+    supports_voice_cloning: false
+    supports_streaming: false
+
+  mms_arabic:
+    model_id: facebook/mms-tts-ara
+    language_code: ar
+    language_name: Arabic
+    supports_voice_cloning: false
+    supports_streaming: false
+
+  mms_hindi:
+    model_id: facebook/mms-tts-hin
+    language_code: hi
+    language_name: Hindi
+    supports_voice_cloning: false
+    supports_streaming: false
+
+benchmark:
+  warmup_runs: 1
+  measured_runs: 3
+  batch_size: 1
