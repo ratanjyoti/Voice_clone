@@ -1,0 +1,34 @@
+E:\NEW_genai_projects\TTS_voice\infinia-voice-case-study\.venv-melotts\lib\site-packages\librosa\util\files.py:10: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  from pkg_resources import resource_filename
+E:\NEW_genai_projects\TTS_voice\infinia-voice-case-study\.venv-melotts\lib\site-packages\google\api_core\_python_version_support.py:242: FutureWarning: You are using a non-supported Python version (3.9.25). Google will not post any further updates to google.api_core supporting this Python version. Please upgrade to the latest Python version, or at least Python 3.10, and then update google.api_core.
+  warnings.warn(message, FutureWarning)
+E:\NEW_genai_projects\TTS_voice\infinia-voice-case-study\.venv-melotts\lib\site-packages\google\auth\__init__.py:54: FutureWarning: You are using a Python version 3.9 past its end of life. Google will update google-auth with critical bug fixes on a best-effort basis, but not with any other fixes or features. Please upgrade your Python version, and then update google-auth.
+  warnings.warn(eol_message.format("3.9"), FutureWarning)
+E:\NEW_genai_projects\TTS_voice\infinia-voice-case-study\.venv-melotts\lib\site-packages\google\oauth2\__init__.py:40: FutureWarning: You are using a Python version 3.9 past its end of life. Google will update google-auth with critical bug fixes on a best-effort basis, but not with any other fixes or features. Please upgrade your Python version, and then update google-auth.
+  warnings.warn(eol_message.format("3.9"), FutureWarning)
+[nltk_data] Downloading package cmudict to
+[nltk_data]     E:\NEW_genai_projects\TTS_voice\infinia-voice-case-
+[nltk_data]     study\data\nltk_data...
+[nltk_data]   Unzipping corpora\cmudict.zip.
+[nltk_data] Downloading package averaged_perceptron_tagger_eng to
+[nltk_data]     E:\NEW_genai_projects\TTS_voice\infinia-voice-case-
+[nltk_data]     study\data\nltk_data...
+[nltk_data]   Unzipping taggers\averaged_perceptron_tagger_eng.zip.
+[nltk_data] Downloading package averaged_perceptron_tagger to
+[nltk_data]     E:\NEW_genai_projects\TTS_voice\infinia-voice-case-
+[nltk_data]     study\data\nltk_data...
+[nltk_data]   Unzipping taggers\averaged_perceptron_tagger.zip.
+E:\NEW_genai_projects\TTS_voice\infinia-voice-case-study\.venv-melotts\lib\site-packages\torch\nn\utils\weight_norm.py:143: FutureWarning: `torch.nn.utils.weight_norm` is deprecated in favor of `torch.nn.utils.parametrizations.weight_norm`.
+  WeightNorm.apply(module, name, dim)
+E:\NEW_genai_projects\TTS_voice\infinia-voice-case-study\external\MeloTTS\melo\download_utils.py:64: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  return torch.load(ckpt_path, map_location=device)
+E:\NEW_genai_projects\TTS_voice\infinia-voice-case-study\.venv-melotts\lib\site-packages\huggingface_hub\file_download.py:949: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+E:\NEW_genai_projects\TTS_voice\infinia-voice-case-study\.venv-melotts\lib\site-packages\huggingface_hub\file_download.py:949: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+Xet Storage is enabled for this repo, but the 'hf_xet' package is not installed. Falling back to regular HTTP download. For better performance, install the package with: `pip install huggingface_hub[hf_xet]` or `pip install hf_xet`
+E:\NEW_genai_projects\TTS_voice\infinia-voice-case-study\.venv-melotts\lib\site-packages\transformers\modeling_utils.py:415: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  return torch.load(checkpoint_file, map_location="cpu")
+Some weights of the model checkpoint at bert-base-uncased were not used when initializing BertForMaskedLM: ['cls.seq_relationship.weight', 'cls.seq_relationship.bias']
+- This IS expected if you are initializing BertForMaskedLM from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing BertForMaskedLM from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).

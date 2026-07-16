@@ -1,0 +1,29 @@
+{
+  "created_at": "2026-07-16T10:35:56.646584",
+  "reference_name": "Ratan Expressive",
+  "reference_audio_path": "E:\\NEW_genai_projects\\TTS_voice\\infinia-voice-case-study\\data\\reference_audio\\english\\ratan_expressive.wav",
+  "preferred_model": "Not decided",
+  "overall_notes": "",
+  "model_scores": {
+    "MMS English": {
+      "audio_path": "E:\\NEW_genai_projects\\TTS_voice\\infinia-voice-case-study\\outputs\\mms\\english\\en_05_run_03.wav",
+      "voice_similarity": 1,
+      "naturalness": 1,
+      "clarity": 4,
+      "pronunciation": 4,
+      "metallic_artifacts": "Severe",
+      "average_score": 2.5,
+      "notes": ""
+    },
+    "MeloTTS English": {
+      "audio_path": "E:\\NEW_genai_projects\\TTS_voice\\infinia-voice-case-study\\outputs\\melotts\\english\\en_05_melotts.wav",
+      "voice_similarity": 2,
+      "naturalness": 2,
+      "clarity": 4,
+      "pronunciation": 4,
+      "metallic_artifacts": "Moderate",
+      "average_score": 3.0,
+      "notes": ""
+    }
+  }
+}

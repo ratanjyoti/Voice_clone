@@ -1,0 +1,19 @@
+Python MeloTTS English smoke test
+Torch: 2.5.1+cpu
+CUDA available: False
+Device requested: cpu
+Loading MeloTTS English model...
+Model loaded successfully in 5.0498 seconds
+Available speakers: ['EN-AU', 'EN-BR', 'EN-Default', 'EN-US', 'EN_INDIA']
+Using speaker: EN-Default (4)
+Synthesizing text: Hello, welcome to Infinia. How can I help you today?
+Output WAV: E:\NEW_genai_projects\TTS_voice\infinia-voice-case-study\outputs\melotts\english\en_01_melotts_smoke.wav
+Sample rate: 44100
+Channels: 1
+Duration: 3.1499 seconds
+Model load time: 5.0498 seconds
+Synthesis time: 235.6533 seconds
+RTF: 74.8138
+RMS: 0.06855980
+Peak: 0.51196289
+Report JSON: E:\NEW_genai_projects\TTS_voice\infinia-voice-case-study\evidence\result_snapshots\melotts_english_smoke.json

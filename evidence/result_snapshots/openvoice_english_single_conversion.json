@@ -1,0 +1,71 @@
+{
+  "status": "success",
+  "language": "english",
+  "sentence_id": "en_01",
+  "source_text": "Hello, welcome to Infinia. How can I help you today?",
+  "device": "cpu",
+  "watermark_message": "@MyShell",
+  "config_path": "E:\\NEW_genai_projects\\TTS_voice\\infinia-voice-case-study\\checkpoints_v2\\converter\\config.json",
+  "checkpoint_path": "E:\\NEW_genai_projects\\TTS_voice\\infinia-voice-case-study\\checkpoints_v2\\converter\\checkpoint.pth",
+  "source_embedding_path": "E:\\NEW_genai_projects\\TTS_voice\\infinia-voice-case-study\\outputs\\openvoice\\embeddings\\mms_english_en_01_source_se.pth",
+  "target_embedding_path": "E:\\NEW_genai_projects\\TTS_voice\\infinia-voice-case-study\\outputs\\openvoice\\embeddings\\ratan_target_se.pth",
+  "output_wav": "E:\\NEW_genai_projects\\TTS_voice\\infinia-voice-case-study\\outputs\\openvoice\\english\\en_01_openvoice_cloned.wav",
+  "converter_load_time_seconds": 3.2967,
+  "source_embedding_extraction_time_seconds": 1.0901,
+  "conversion_time_seconds": 3.3633,
+  "total_processing_time_seconds": 7.7583,
+  "source_audio_duration_seconds": 3.984,
+  "output_audio_duration_seconds": 3.982222,
+  "conversion_rtf": 0.844583,
+  "total_pipeline_rtf_excluding_mms_generation": 1.948221,
+  "source_audio": {
+    "path": "E:\\NEW_genai_projects\\TTS_voice\\infinia-voice-case-study\\outputs\\mms\\english\\en_01_run_01.wav",
+    "sample_rate": 16000,
+    "channels": 1,
+    "num_samples": 63744,
+    "duration_seconds": 3.984,
+    "rms": 0.13068754952469303,
+    "peak": 0.9290851950645447,
+    "clipping_ratio": 0.0,
+    "all_finite": true
+  },
+  "output_audio": {
+    "path": "E:\\NEW_genai_projects\\TTS_voice\\infinia-voice-case-study\\outputs\\openvoice\\english\\en_01_openvoice_cloned.wav",
+    "sample_rate": 22050,
+    "channels": 1,
+    "num_samples": 87808,
+    "duration_seconds": 3.982222222222222,
+    "rms": 0.10991584304677991,
+    "peak": 0.543212890625,
+    "clipping_ratio": 0.0,
+    "all_finite": true
+  },
+  "source_embedding": {
+    "path": "E:\\NEW_genai_projects\\TTS_voice\\infinia-voice-case-study\\outputs\\openvoice\\embeddings\\mms_english_en_01_source_se.pth",
+    "shape": [
+      1,
+      256,
+      1
+    ],
+    "dtype": "torch.float32",
+    "all_finite": true,
+    "all_zero": false,
+    "l2_norm": 13.39486026763916
+  },
+  "target_embedding": {
+    "path": "E:\\NEW_genai_projects\\TTS_voice\\infinia-voice-case-study\\outputs\\openvoice\\embeddings\\ratan_target_se.pth",
+    "shape": [
+      1,
+      256,
+      1
+    ],
+    "dtype": "torch.float32",
+    "all_finite": true,
+    "all_zero": false,
+    "l2_norm": 10.671091079711914
+  },
+  "source_wav_sha256": "B7CC5A76A2EDB933ED3A9B8901ED90493C94DAA1A2297008344E6D639193DCA0",
+  "source_embedding_sha256": "63043A183C9BEF5D1A6098F0FA53D06FB8522463C586DC52FF2C187A0A4BE7EE",
+  "target_embedding_sha256": "13489076B73E4DD699FEB362DF8DFDD68719F0707FE9B699725198463E4B643B",
+  "cloned_output_sha256": "020C0A06CCDCEF18A55B4F79C7FECB431220478932E9020495D3D86E6EC6B203"
+}

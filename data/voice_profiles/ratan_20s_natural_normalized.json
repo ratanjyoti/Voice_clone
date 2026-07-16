@@ -1,0 +1,10 @@
+﻿{
+  "profile_name": "Ratan 20s Natural Normalized",
+  "language": "english",
+  "reference_audio": "data/reference_audio/english/ratan_20s_norm.wav",
+  "reference_text": "data/reference_audio/english/ratan_20s_norm.txt",
+  "reference_codes": "data/reference_audio/english/ratan_20s_norm.pt",
+  "duration_seconds": 18.645333,
+  "sample_rate": 24000,
+  "validated": true
+}

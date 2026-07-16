@@ -1,0 +1,62 @@
+{
+  "status": "success",
+  "metric_type": "Independent SpeechBrain ECAPA-TDNN cosine similarity",
+  "model_source": "speechbrain/spkrec-ecapa-voxceleb",
+  "model_cache": "E:\\NEW_genai_projects\\TTS_voice\\infinia-voice-case-study\\models\\speechbrain\\spkrec-ecapa-voxceleb",
+  "device": "cpu",
+  "python_version": "3.11.15 (main, Jun  2 2026, 22:29:49) [MSC v.1944 64 bit (AMD64)]",
+  "torch_version": "2.5.1+cpu",
+  "torchaudio_version": "2.5.1+cpu",
+  "cuda_available": false,
+  "model_load_time_seconds": 0.3312,
+  "embedding_extraction_time_seconds": 5.0115,
+  "embedding_shape": [
+    1,
+    192
+  ],
+  "audio": {
+    "reference": {
+      "path": "E:\\NEW_genai_projects\\TTS_voice\\infinia-voice-case-study\\data\\reference_audio\\ratan_reference_22050_mono.wav",
+      "original_sample_rate_hz": 22050,
+      "evaluation_sample_rate_hz": 16000,
+      "original_channels": 1,
+      "evaluation_channels": 1,
+      "duration_seconds": 20.202687,
+      "rms": 0.10861906,
+      "peak": 0.72663295,
+      "sha256": "58FCC93C94D09471712F5D34A7A8E596C2F6B653A68A72283B95A75F81DE8C4C"
+    },
+    "original_mms": {
+      "path": "E:\\NEW_genai_projects\\TTS_voice\\infinia-voice-case-study\\outputs\\mms\\english\\en_01_run_01.wav",
+      "original_sample_rate_hz": 16000,
+      "evaluation_sample_rate_hz": 16000,
+      "original_channels": 1,
+      "evaluation_channels": 1,
+      "duration_seconds": 3.984,
+      "rms": 0.13068755,
+      "peak": 0.9290852,
+      "sha256": "B7CC5A76A2EDB933ED3A9B8901ED90493C94DAA1A2297008344E6D639193DCA0"
+    },
+    "openvoice_cloned": {
+      "path": "E:\\NEW_genai_projects\\TTS_voice\\infinia-voice-case-study\\outputs\\openvoice\\english\\en_01_openvoice_cloned.wav",
+      "original_sample_rate_hz": 22050,
+      "evaluation_sample_rate_hz": 16000,
+      "original_channels": 1,
+      "evaluation_channels": 1,
+      "duration_seconds": 3.98225,
+      "rms": 0.10991244,
+      "peak": 0.54387933,
+      "sha256": "020C0A06CCDCEF18A55B4F79C7FECB431220478932E9020495D3D86E6EC6B203"
+    }
+  },
+  "scores": {
+    "reference_to_original_mms": 0.105977,
+    "reference_to_openvoice_cloned": 0.26483,
+    "original_mms_to_openvoice_cloned": 0.263953,
+    "improvement_over_original_mms": 0.158853
+  },
+  "moved_toward_reference": true,
+  "requested_threshold": 0.75,
+  "threshold_passed": false,
+  "important_note": "A fixed cosine threshold is not universally calibrated across all speaker-verification models and recording conditions. Human A/B judgment remains required."
+}

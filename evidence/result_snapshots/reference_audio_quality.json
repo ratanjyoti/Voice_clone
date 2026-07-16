@@ -1,0 +1,23 @@
+{
+  "audio_file": "E:\\NEW_genai_projects\\TTS_voice\\infinia-voice-case-study\\data\\reference_audio\\ratan_reference_22050_mono.wav",
+  "channels": 1,
+  "sample_rate_hz": 22050,
+  "sample_width_bytes": 2,
+  "frame_count": 445469,
+  "duration_seconds": 20.202675736961453,
+  "rms": 0.10896384,
+  "peak": 0.72366333,
+  "clipping_ratio": 0.0,
+  "silence_ratio": 0.25557109,
+  "checks": {
+    "duration_10_to_30_seconds": true,
+    "mono": true,
+    "sample_rate_22050": true,
+    "pcm_16_bit": true,
+    "non_silent": true,
+    "acceptable_peak": true,
+    "low_clipping": true,
+    "reasonable_silence": true
+  },
+  "passed": true
+}

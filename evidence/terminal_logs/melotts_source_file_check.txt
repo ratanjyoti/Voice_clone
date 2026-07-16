@@ -1,0 +1,3 @@
+MeloTTS source file verification
+external\MeloTTS\melo\__init__.py exists: True
+external\MeloTTS\melo\api.py exists: True

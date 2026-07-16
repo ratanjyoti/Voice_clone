@@ -1,2 +1,7 @@
-This recording contains my own voice. I consent to its use for this
-technical voice AI evaluation.
+﻿Reference speaker: Ratan Jyoti
+Recording owner: Ratan Jyoti
+Consent: I consent to the use of this recording for testing and
+evaluating open-source multilingual voice-cloning systems.
+Permitted use: Infinia Voice Case Study and associated evaluation.
+Third-party voice: No
+Recording date: 2026-07-15

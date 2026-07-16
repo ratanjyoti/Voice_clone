@@ -1,0 +1,13 @@
+﻿Official OpenVoice V2 checkpoint source check
+
+Local official docs URL attempted:
+https://myshell-public-repo-host.s3.amazonaws.com/openvoice/checkpoints_v2_0417.zip
+
+Result: HTTP 404 / NoSuchBucket, so the documented S3 archive was unavailable.
+
+Official fallback used:
+https://huggingface.co/myshell-ai/OpenVoiceV2
+
+Downloaded files:
+- converter/config.json
+- converter/checkpoint.pth

@@ -1,0 +1,5 @@
+Loading MeloTTS English model on CPU
+Torch: 2.5.1+cpu
+CUDA available: False
+MeloTTS English model loaded successfully in 126.9081 seconds
+Speakers: ['EN-AU', 'EN-BR', 'EN-Default', 'EN-US', 'EN_INDIA']

@@ -1,0 +1,2 @@
+E:\NEW_genai_projects\TTS_voice\infinia-voice-case-study\.venv-speaker-eval\Lib\site-packages\speechbrain\utils\parameter_transfer.py:234: UserWarning: Requested Pretrainer collection using symlinks on Windows. This might not work; see `LocalStrategy` documentation. Consider unsetting `collect_in` in Pretrainer to avoid symlinking altogether.
+  warnings.warn(

@@ -1,0 +1,23 @@
+{
+  "status": "success",
+  "metric_type": "OpenVoice internal speaker-embedding cosine similarity",
+  "device": "cpu",
+  "converter_load_time_seconds": 3.0575,
+  "cloned_embedding_extraction_seconds": 0.0256,
+  "embedding_shape": [
+    1,
+    256,
+    1
+  ],
+  "source_to_target_cosine": 0.089402,
+  "cloned_to_target_cosine": 0.812604,
+  "source_to_cloned_cosine": 0.089022,
+  "similarity_improvement": 0.723202,
+  "moved_toward_target": true,
+  "target_threshold": 0.75,
+  "target_passed": true,
+  "source_embedding_sha256": "63043A183C9BEF5D1A6098F0FA53D06FB8522463C586DC52FF2C187A0A4BE7EE",
+  "target_embedding_sha256": "13489076B73E4DD699FEB362DF8DFDD68719F0707FE9B699725198463E4B643B",
+  "cloned_embedding_sha256": "4DEB8DE775FB0D5067F1A7C740385BAE958E791A2F39E65F34A5726301532B8B",
+  "note": "This is an OpenVoice internal embedding metric. An independent speaker-verification model should also be used for the final benchmark."
+}

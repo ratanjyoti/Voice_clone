@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "model": "neuphonic/neutts-air",
+  "codec": "neuphonic/neucodec",
+  "device": "cpu",
+  "total_sentences": 5,
+  "successful": 5,
+  "failed": 0,
+  "model_load_time_seconds": 19.29201699999976,
+  "reference_encoding_time_seconds": 24.994809600000735,
+  "batch_time_seconds": 410.5540000999972,
+  "output_directory": "E:\\NEW_genai_projects\\TTS_voice\\infinia-voice-case-study\\outputs\\neutts\\english\\air_evaluation",
+  "csv_path": "E:\\NEW_genai_projects\\TTS_voice\\infinia-voice-case-study\\results\\neutts_air_evaluation.csv"
+}

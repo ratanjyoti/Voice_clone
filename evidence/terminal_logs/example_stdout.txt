@@ -1,0 +1,20 @@
+==============================================================================
+Independent ECAPA speaker-similarity evaluation
+==============================================================================
+Python: 3.11.15 (main, Jun  2 2026, 22:29:49) [MSC v.1944 64 bit (AMD64)]
+PyTorch: 2.5.1+cpu
+TorchAudio: 2.5.1+cpu
+CUDA available: False
+Model: speechbrain/spkrec-ecapa-voxceleb
+Device: CPU
+
+ECAPA model loaded in 0.3312 seconds.
+
+Reference → original MMS: 0.105977
+Reference → OpenVoice cloned: 0.264830
+Original MMS → OpenVoice cloned: 0.263953
+Improvement over original MMS: 0.158853
+Moved toward reference: True
+Passed requested 0.75 threshold: False
+
+Report: E:\NEW_genai_projects\TTS_voice\infinia-voice-case-study\evidence\result_snapshots\ecapa_english_speaker_similarity.json

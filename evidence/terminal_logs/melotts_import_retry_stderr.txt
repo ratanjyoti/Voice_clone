@@ -1,0 +1,4 @@
+  File "<string>", line 1
+    print('Before
+                 ^
+SyntaxError: EOL while scanning string literal

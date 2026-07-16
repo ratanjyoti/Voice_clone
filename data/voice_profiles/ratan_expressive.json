@@ -1,0 +1,10 @@
+{
+  "profile_name": "Ratan Expressive",
+  "language": "english",
+  "reference_audio": "data/reference_audio/english/ratan_expressive.wav",
+  "reference_text": "data/reference_audio/english/ratan_expressive.txt",
+  "reference_codes": "data/reference_audio/english/ratan_expressive_codes.pt",
+  "duration_seconds": 11.797333,
+  "sample_rate": 24000,
+  "validated": true
+}

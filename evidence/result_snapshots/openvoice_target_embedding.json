@@ -1,0 +1,26 @@
+{
+  "status": "success",
+  "device": "cpu",
+  "config_path": "E:\\NEW_genai_projects\\TTS_voice\\infinia-voice-case-study\\checkpoints_v2\\converter\\config.json",
+  "checkpoint_path": "E:\\NEW_genai_projects\\TTS_voice\\infinia-voice-case-study\\checkpoints_v2\\converter\\checkpoint.pth",
+  "reference_wav": "E:\\NEW_genai_projects\\TTS_voice\\infinia-voice-case-study\\data\\reference_audio\\ratan_reference_22050_mono.wav",
+  "reference_sha256": "58FCC93C94D09471712F5D34A7A8E596C2F6B653A68A72283B95A75F81DE8C4C",
+  "embedding_path": "E:\\NEW_genai_projects\\TTS_voice\\infinia-voice-case-study\\outputs\\openvoice\\embeddings\\ratan_target_se.pth",
+  "embedding_sha256": "13489076B73E4DD699FEB362DF8DFDD68719F0707FE9B699725198463E4B643B",
+  "embedding_size_bytes": 2244,
+  "converter_load_time_seconds": 3.1812,
+  "embedding_extraction_time_seconds": 0.0588,
+  "returned_and_saved_match": true,
+  "shape": [
+    1,
+    256,
+    1
+  ],
+  "dtype": "torch.float32",
+  "min": -4.274692058563232,
+  "max": 2.822387218475342,
+  "mean": -0.03785647079348564,
+  "l2_norm": 10.671091079711914,
+  "all_finite": true,
+  "all_zero": false
+}

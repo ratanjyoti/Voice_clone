@@ -1,0 +1,10 @@
+{
+  "status": "success",
+  "device": "cpu",
+  "python_version": "3.9.25 (main, Oct 31 2025, 22:56:13) [MSC v.1929 64 bit (AMD64)]",
+  "torch_version": "2.5.1+cpu",
+  "cuda_available": false,
+  "config_path": "E:\\NEW_genai_projects\\TTS_voice\\infinia-voice-case-study\\checkpoints_v2\\converter\\config.json",
+  "checkpoint_path": "E:\\NEW_genai_projects\\TTS_voice\\infinia-voice-case-study\\checkpoints_v2\\converter\\checkpoint.pth",
+  "load_time_seconds": 3.2884
+}

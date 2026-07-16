@@ -1,0 +1,30 @@
+{
+  "status": "success",
+  "test": "neucodec_reconstruction",
+  "model": "neuphonic/neucodec",
+  "device": "cpu",
+  "input_audio": "E:\\NEW_genai_projects\\TTS_voice\\infinia-voice-case-study\\data\\reference_audio\\english\\ratan_neutral.wav",
+  "output_audio": "E:\\NEW_genai_projects\\TTS_voice\\infinia-voice-case-study\\outputs\\neutts\\diagnostics\\ratan_neutral_neucodec_reconstructed.wav",
+  "model_load_time_seconds": 3.35273640000014,
+  "reconstruction_time_seconds": 11.25577169999815,
+  "input_stats": {
+    "sample_rate": 24000,
+    "channels": 1,
+    "frames": 208896,
+    "duration_seconds": 8.704,
+    "rms": 0.08104677055608438,
+    "peak": 0.54534912109375,
+    "all_finite": true,
+    "size_bytes": 417870
+  },
+  "output_stats": {
+    "sample_rate": 24000,
+    "channels": 1,
+    "frames": 208800,
+    "duration_seconds": 8.7,
+    "rms": 0.07973827186545057,
+    "peak": 0.62396240234375,
+    "all_finite": true,
+    "size_bytes": 417644
+  }
+}

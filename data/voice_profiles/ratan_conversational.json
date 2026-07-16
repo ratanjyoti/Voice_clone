@@ -1,0 +1,10 @@
+{
+  "profile_name": "Ratan Conversational",
+  "language": "english",
+  "reference_audio": "data/reference_audio/english/ratan_conversational.wav",
+  "reference_text": "data/reference_audio/english/ratan_conversational.txt",
+  "reference_codes": "data/reference_audio/english/ratan_conversational_codes.pt",
+  "duration_seconds": 11.797333,
+  "sample_rate": 24000,
+  "validated": true
+}

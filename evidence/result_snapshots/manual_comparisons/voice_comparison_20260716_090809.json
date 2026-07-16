@@ -1,0 +1,29 @@
+{
+  "created_at": "2026-07-16T09:08:09.595542",
+  "reference_name": "Hindi cloning reference",
+  "reference_audio_path": "E:\\NEW_genai_projects\\TTS_voice\\infinia-voice-case-study\\data\\reference_audio\\ratan_reference_22050_mono.wav",
+  "preferred_model": "MeloTTS English",
+  "overall_notes": "",
+  "model_scores": {
+    "MMS English": {
+      "audio_path": "E:\\NEW_genai_projects\\TTS_voice\\infinia-voice-case-study\\outputs\\mms\\english\\en_05_run_03.wav",
+      "voice_similarity": 1,
+      "naturalness": 1,
+      "clarity": 4,
+      "pronunciation": 5,
+      "metallic_artifacts": "None",
+      "average_score": 2.75,
+      "notes": ""
+    },
+    "MeloTTS English": {
+      "audio_path": "E:\\NEW_genai_projects\\TTS_voice\\infinia-voice-case-study\\outputs\\melotts\\english\\en_05_melotts.wav",
+      "voice_similarity": 2,
+      "naturalness": 1,
+      "clarity": 3,
+      "pronunciation": 3,
+      "metallic_artifacts": "None",
+      "average_score": 2.25,
+      "notes": ""
+    }
+  }
+}

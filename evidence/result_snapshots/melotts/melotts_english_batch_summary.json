@@ -1,0 +1,14 @@
+{
+  "pipeline": "melotts",
+  "model": "myshell-ai/MeloTTS-English",
+  "language": "english",
+  "device": "cpu",
+  "speaker": "EN-Default",
+  "model_load_time_seconds": 5.0640833,
+  "total_sentences": 5,
+  "successful_sentences": 5,
+  "failed_sentences": 0,
+  "total_batch_time_seconds": 51.915953599999995,
+  "output_directory": "E:\\NEW_genai_projects\\TTS_voice\\infinia-voice-case-study\\outputs\\melotts\\english",
+  "csv_path": "E:\\NEW_genai_projects\\TTS_voice\\infinia-voice-case-study\\results\\raw_runs.csv"
+}

@@ -1,0 +1,11 @@
+coloredlogs==15.0.1
+flatbuffers==25.12.19
+humanfriendly==10.0
+mpmath==1.3.0
+numpy==1.26.4
+onnxruntime==1.20.1
+onnxruntime-gpu @ file:///E:/NEW_genai_projects/TTS_voice/infinia-voice-case-study/downloads/onnxruntime_gpu-1.27.0-cp311-cp311-win_amd64.whl#sha256=c68799b35fc4818e6c1d50f5270681bf5ab8a652ac118e11a987b23f488e18dd
+packaging==26.2
+protobuf==7.35.1
+pyreadline3==3.5.6
+sympy==1.14.0

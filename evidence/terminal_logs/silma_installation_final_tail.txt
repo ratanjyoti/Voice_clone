@@ -1,0 +1,100 @@
+Collecting fonttools>=4.22.0 (from matplotlib->silma-tts)
+  Using cached fonttools-4.63.0-cp311-cp311-win_amd64.whl.metadata (121 kB)
+Collecting kiwisolver>=1.3.1 (from matplotlib->silma-tts)
+  Using cached kiwisolver-1.5.0-cp311-cp311-win_amd64.whl.metadata (5.2 kB)
+Collecting pyparsing>=3 (from matplotlib->silma-tts)
+  Using cached pyparsing-3.3.2-py3-none-any.whl.metadata (5.8 kB)
+Collecting tokenizers<=0.23.0,>=0.22.0 (from transformers->silma-tts)
+  Using cached tokenizers-0.22.2-cp39-abi3-win_amd64.whl.metadata (7.4 kB)
+Collecting encodec==0.1.1 (from vocos->silma-tts)
+  Using cached encodec-0.1.1.tar.gz (3.7 MB)
+  Installing build dependencies: started
+  Installing build dependencies: finished with status 'done'
+  Getting requirements to build wheel: started
+  Getting requirements to build wheel: finished with status 'done'
+  Preparing metadata (pyproject.toml): started
+  Preparing metadata (pyproject.toml): finished with status 'done'
+Using cached silma_tts-1.0.5-py3-none-any.whl (366 kB)
+Using cached catt_tashkeel-1.0.2-py3-none-any.whl (13 kB)
+Using cached nemo_text_processing-1.1.0-py3-none-any.whl (2.7 MB)
+Using cached ema_pytorch-0.7.9-py3-none-any.whl (11 kB)
+Using cached hydra_core-1.3.4-py3-none-any.whl (155 kB)
+Using cached omegaconf-2.3.1-py3-none-any.whl (79 kB)
+Using cached pyyaml-6.0.3-cp311-cp311-win_amd64.whl (158 kB)
+Using cached sacremoses-0.1.1-py3-none-any.whl (897 kB)
+Downloading torch-2.13.0-cp311-cp311-win_amd64.whl (122.0 MB)
+   --------                                 25.7/122.0 MB 48.1 kB/s eta 0:33:22
+.\.venv-silma\Scripts\python.exe : ERROR: Exception:
+At line:2 char:1
++ .\.venv-silma\Scripts\python.exe -m pip install --timeout 2000 --retr ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (ERROR: Exception::String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+Traceback (most recent call last):
+  File "E:\NEW_genai_projects\TTS_voice\infinia-voice-case-study\.venv-silma\Lib\site-packages\pip\_vendor\urllib3\resp
+onse.py", line 897, in _error_catcher
+    yield
+  File "E:\NEW_genai_projects\TTS_voice\infinia-voice-case-study\.venv-silma\Lib\site-packages\pip\_vendor\urllib3\resp
+onse.py", line 1043, in _raw_read
+    raise IncompleteRead(self._fp_bytes_read, self.length_remaining)
+pip._vendor.urllib3.exceptions.IncompleteRead: IncompleteRead(25656382 bytes read, 96359488 more expected)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "E:\NEW_genai_projects\TTS_voice\infinia-voice-case-study\.venv-silma\Lib\site-packages\pip\_internal\cli\base_c
+ommand.py", line 109, in _run_wrapper
+    status = _inner_run()
+             ^^^^^^^^^^^^
+  File "E:\NEW_genai_projects\TTS_voice\infinia-voice-case-study\.venv-silma\Lib\site-packages\pip\_internal\cli\base_c
+ommand.py", line 102, in _inner_run
+    return self.run(options, args)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\NEW_genai_projects\TTS_voice\infinia-voice-case-study\.venv-silma\Lib\site-packages\pip\_internal\cli\req_co
+mmand.py", line 101, in wrapper
+    return func(self, options, args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\NEW_genai_projects\TTS_voice\infinia-voice-case-study\.venv-silma\Lib\site-packages\pip\_internal\commands\i
+nstall.py", line 506, in run
+    preparer.prepare_linked_requirements_more(
+  File "E:\NEW_genai_projects\TTS_voice\infinia-voice-case-study\.venv-silma\Lib\site-packages\pip\_internal\operations
+\prepare.py", line 569, in prepare_linked_requirements_more
+    self._complete_partial_requirements(
+  File "E:\NEW_genai_projects\TTS_voice\infinia-voice-case-study\.venv-silma\Lib\site-packages\pip\_internal\operations
+\prepare.py", line 478, in _complete_partial_requirements
+    for link, (filepath, _) in batch_download:
+  File "E:\NEW_genai_projects\TTS_voice\infinia-voice-case-study\.venv-silma\Lib\site-packages\pip\_internal\network\do
+wnload.py", line 182, in batch
+    filepath, content_type = self(link, location)
+                             ^^^^^^^^^^^^^^^^^^^^
+  File "E:\NEW_genai_projects\TTS_voice\infinia-voice-case-study\.venv-silma\Lib\site-packages\pip\_internal\network\do
+wnload.py", line 193, in __call__
+    self._process_response(download, resp)
+  File "E:\NEW_genai_projects\TTS_voice\infinia-voice-case-study\.venv-silma\Lib\site-packages\pip\_internal\network\do
+wnload.py", line 210, in _process_response
+    for chunk in chunks:
+  File "E:\NEW_genai_projects\TTS_voice\infinia-voice-case-study\.venv-silma\Lib\site-packages\pip\_internal\cli\progre
+ss_bars.py", line 69, in _rich_download_progress_bar
+    for chunk in iterable:
+  File "E:\NEW_genai_projects\TTS_voice\infinia-voice-case-study\.venv-silma\Lib\site-packages\pip\_internal\network\ut
+ils.py", line 65, in response_chunks
+    for chunk in response.raw.stream(
+  File "E:\NEW_genai_projects\TTS_voice\infinia-voice-case-study\.venv-silma\Lib\site-packages\pip\_vendor\urllib3\resp
+onse.py", line 1251, in stream
+    data = self.read(amt=amt, decode_content=decode_content)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\NEW_genai_projects\TTS_voice\infinia-voice-case-study\.venv-silma\Lib\site-packages\pip\_vendor\urllib3\resp
+onse.py", line 1106, in read
+    data = self._raw_read(amt)
+           ^^^^^^^^^^^^^^^^^^^
+  File "E:\NEW_genai_projects\TTS_voice\infinia-voice-case-study\.venv-silma\Lib\site-packages\pip\_vendor\urllib3\resp
+onse.py", line 1021, in _raw_read
+    with self._error_catcher():
+  File "C:\ProgramData\anaconda3\Lib\contextlib.py", line 158, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "E:\NEW_genai_projects\TTS_voice\infinia-voice-case-study\.venv-silma\Lib\site-packages\pip\_vendor\urllib3\resp
+onse.py", line 921, in _error_catcher
+    raise ProtocolError(arg, e) from e
+pip._vendor.urllib3.exceptions.ProtocolError: ('Connection broken: IncompleteRead(25656382 bytes read, 96359488 more 
+expected)', IncompleteRead(25656382 bytes read, 96359488 more expected))

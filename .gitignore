@@ -6,3 +6,27 @@
 downloads/
 outputs/
 results/
+
+# Python virtual environments
+.venv/
+.venv-*/
+venv/
+env/
+
+# Model caches and downloads
+models/
+downloads/
+checkpoints_v2/
+.tmp/
+
+# Python cache
+__pycache__/
+*.py[cod]
+
+# Hugging Face cache
+.cache/
+huggingface/
+
+# Temporary files
+*.tmp
+*.log

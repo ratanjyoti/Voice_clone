@@ -1,0 +1,10 @@
+{
+  "profile_name": "Ratan Neutral",
+  "language": "english",
+  "reference_audio": "data/reference_audio/english/ratan_neutral.wav",
+  "reference_text": "data/reference_audio/english/ratan_neutral.txt",
+  "reference_codes": "data/reference_audio/english/ratan_neutral_codes.pt",
+  "duration_seconds": 8.704,
+  "sample_rate": 24000,
+  "validated": true
+}
