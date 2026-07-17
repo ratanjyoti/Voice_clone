@@ -30,3 +30,14 @@ huggingface/
 # Temporary files
 *.tmp
 *.log
+
+.venv
+.venv-arabic-data
+__pycache__
+*.pyc
+
+# Generated PyTorch tensors and model artifacts
+*.pt
+*.pth
+*.bin
+*.safetensors
