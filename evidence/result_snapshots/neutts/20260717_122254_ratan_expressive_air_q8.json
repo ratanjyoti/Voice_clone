@@ -1,0 +1,20 @@
+{
+  "status": "failed",
+  "pipeline": "neutts",
+  "language": "english",
+  "profile_name": "Ratan Expressive",
+  "model": "Air Q8",
+  "backbone_repo": "neuphonic/neutts-air-q8-gguf",
+  "codec_repo": "neuphonic/neucodec",
+  "mode": "Sentence-by-sentence",
+  "device": "cpu",
+  "text": "Good Morning!!! We have a great news for you.",
+  "sentence_id": "neutts_20260717_122254",
+  "output_path": "E:\\NEW_genai_projects\\TTS_voice\\infinia-voice-case-study\\outputs\\neutts\\english\\20260717_122254_ratan_expressive_air_q8.wav",
+  "report_path": "E:\\NEW_genai_projects\\TTS_voice\\infinia-voice-case-study\\evidence\\result_snapshots\\neutts\\20260717_122254_ratan_expressive_air_q8.json",
+  "reference_status": "Not encoded",
+  "model_loaded": false,
+  "generation_status": "Failed",
+  "error": "Unexpected UTF-8 BOM (decode using utf-8-sig): line 1 column 1 (char 0)",
+  "traceback": "Traceback (most recent call last):\n  File \"E:\\NEW_genai_projects\\TTS_voice\\infinia-voice-case-study\\src\\generate_neutts_english.py\", line 274, in main\n    profile = load_voice_profile(args.profile)\n              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"E:\\NEW_genai_projects\\TTS_voice\\infinia-voice-case-study\\src\\generate_neutts_english.py\", line 70, in load_voice_profile\n    profile = json.loads(path.read_text(encoding=\"utf-8\"))\n              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\ProgramData\\anaconda3\\Lib\\json\\__init__.py\", line 335, in loads\n    raise JSONDecodeError(\"Unexpected UTF-8 BOM (decode using utf-8-sig)\",\njson.decoder.JSONDecodeError: Unexpected UTF-8 BOM (decode using utf-8-sig): line 1 column 1 (char 0)\n"
+}

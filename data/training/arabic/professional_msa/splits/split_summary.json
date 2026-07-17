@@ -1,0 +1,10 @@
+{
+  "random_seed": 42,
+  "total_usable_clips": 393,
+  "train_clips": 314,
+  "validation_clips": 39,
+  "test_clips": 40,
+  "train_ratio": 0.7989821882951654,
+  "validation_ratio": 0.09923664122137404,
+  "test_ratio": 0.10178117048346055
+}

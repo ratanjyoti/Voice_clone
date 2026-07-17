@@ -1,0 +1,39 @@
+{
+  "created_at": "2026-07-17T12:20:33.354393",
+  "reference_name": "Ratan Neutral",
+  "reference_audio_path": "E:\\NEW_genai_projects\\TTS_voice\\infinia-voice-case-study\\data\\reference_audio\\english\\ratan_neutral.wav",
+  "preferred_model": "NeuTTS English",
+  "overall_notes": "",
+  "model_scores": {
+    "MMS English": {
+      "audio_path": "E:\\NEW_genai_projects\\TTS_voice\\infinia-voice-case-study\\outputs\\mms\\english\\en_05_run_03.wav",
+      "voice_similarity": 1,
+      "naturalness": 1,
+      "clarity": 4,
+      "pronunciation": 4,
+      "metallic_artifacts": "Severe",
+      "average_score": 2.5,
+      "notes": ""
+    },
+    "MeloTTS English": {
+      "audio_path": "E:\\NEW_genai_projects\\TTS_voice\\infinia-voice-case-study\\outputs\\melotts\\english\\en_05_melotts.wav",
+      "voice_similarity": 1,
+      "naturalness": 1,
+      "clarity": 4,
+      "pronunciation": 4,
+      "metallic_artifacts": "Severe",
+      "average_score": 2.5,
+      "notes": ""
+    },
+    "NeuTTS English": {
+      "audio_path": "E:\\NEW_genai_projects\\TTS_voice\\infinia-voice-case-study\\outputs\\neutts\\english\\ratan_20s_norm_air_natural_test.wav",
+      "voice_similarity": 3,
+      "naturalness": 4,
+      "clarity": 5,
+      "pronunciation": 5,
+      "metallic_artifacts": "Mild",
+      "average_score": 4.25,
+      "notes": "voice is clear and a little close to original voice"
+    }
+  }
+}

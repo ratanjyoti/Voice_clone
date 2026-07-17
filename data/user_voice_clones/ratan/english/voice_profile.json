@@ -1,0 +1,10 @@
+{
+  "voice_name": "ratan",
+  "voice_id": "ratan",
+  "language": "english",
+  "reference_audio": "data/user_voice_clones/ratan/english/reference.wav",
+  "reference_text": "data/user_voice_clones/ratan/english/reference.txt",
+  "source_file": "data/user_voice_clones/ratan/english/reference_input.m4a",
+  "created_at": "2026-07-17T12:45:16",
+  "consent_confirmed": true
+}

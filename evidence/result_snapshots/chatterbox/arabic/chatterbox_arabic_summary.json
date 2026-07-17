@@ -1,0 +1,17 @@
+{
+  "total_samples": 5,
+  "successful_samples": 5,
+  "failed_samples": 0,
+  "average_wer": 0.20125874125874127,
+  "median_wer": 0.23076923076923078,
+  "minimum_wer": 0.0,
+  "maximum_wer": 0.38461538461538464,
+  "average_generation_time": 89.40965066000062,
+  "average_duration": 7.544,
+  "average_rtf": 12.10455460552392,
+  "samples_passing_arabic_wer_le_15_percent": 2,
+  "samples_passing_clipping_eq_0": 5,
+  "model_name": "ResembleAI/chatterbox multilingual",
+  "device": "cpu",
+  "reference_used": "E:\\NEW_genai_projects\\TTS_voice\\infinia-voice-case-study\\data\\reference_audio\\arabic\\professional_msa\\arabic_reference_standard.wav"
+}

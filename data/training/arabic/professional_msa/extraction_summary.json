@@ -1,0 +1,11 @@
+{
+  "dataset": "NightPrince/Arabic-professional-voice",
+  "total_rows": 439,
+  "successfully_extracted": 439,
+  "usable_clips": 393,
+  "rejected_or_failed": 46,
+  "failed_extractions": 0,
+  "target_sample_rate": 24000,
+  "processed_directory": "E:\\NEW_genai_projects\\TTS_voice\\infinia-voice-case-study\\data\\training\\arabic\\professional_msa\\processed",
+  "metadata_path": "E:\\NEW_genai_projects\\TTS_voice\\infinia-voice-case-study\\data\\training\\arabic\\professional_msa\\metadata_all.csv"
+}

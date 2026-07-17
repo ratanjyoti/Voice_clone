@@ -1,0 +1,50 @@
+Loading Whisper small on CPU...
+Evaluating ar_clone_01_temp06_cfg05.wav
+WER 0.00% | Arabic probability 1.0000
+Evaluating ar_clone_01_temp07_cfg05.wav
+WER 11.11% | Arabic probability 1.0000
+Evaluating ar_clone_01_temp08_cfg05.wav
+WER 0.00% | Arabic probability 1.0000
+Evaluating ar_clone_01_temp07_cfg04.wav
+WER 0.00% | Arabic probability 1.0000
+Evaluating ar_clone_01_temp07_cfg06.wav
+WER 0.00% | Arabic probability 1.0000
+Automatic best candidate:
+{
+  "test_id": "ar_clone_01_greeting",
+  "output_path": "E:\\NEW_genai_projects\\TTS_voice\\infinia-voice-case-study\\outputs\\chatterbox\\arabic\\ar_clone_01_temp06_cfg05.wav",
+  "model": "ResembleAI/chatterbox multilingual",
+  "device": "cpu",
+  "reference_name": "standard",
+  "reference_used": "E:\\NEW_genai_projects\\TTS_voice\\infinia-voice-case-study\\data\\reference_audio\\arabic\\professional_msa\\arabic_reference_standard.wav",
+  "seed": "42",
+  "temperature": "0.6",
+  "cfg_weight": "0.5",
+  "exaggeration": "0.5",
+  "repetition_penalty": "2.0",
+  "min_p": "0.05",
+  "top_p": "1.0",
+  "arabic_language_probability": 1.0,
+  "asr_transcript": "مرحبا بك أنا مساعدك الصوتي ويسعدني أن أساعدك اليوم",
+  "reference_text": "مَرْحَبًا بِكَ. أَنَا مُسَاعِدُكَ الصَّوْتِيُّ، وَيَسْعَدُنِي أَنْ أُسَاعِدَكَ الْيَوْمَ.",
+  "normalized_reference_text": "مرحبا بك انا مساعدك الصوتي ويسعدني ان اساعدك اليوم",
+  "normalized_hypothesis": "مرحبا بك انا مساعدك الصوتي ويسعدني ان اساعدك اليوم",
+  "wer": 0.0,
+  "wer_percent": 0.0,
+  "duration": 5.76,
+  "generation_time": "79.48454250000214",
+  "rtf": "13.799399739583704",
+  "sample_rate": 24000,
+  "rms": 0.2413048366408903,
+  "peak": 0.95001220703125,
+  "clipping_samples": 0,
+  "silence_ratio": 0.14836516203703703,
+  "similarity_score_1_to_5": "",
+  "naturalness_score_1_to_5": "",
+  "pronunciation_score_1_to_5": "",
+  "metallic": "",
+  "missing_words": "",
+  "repeated_words": "",
+  "accepted": "",
+  "reviewer_notes": ""
+}
