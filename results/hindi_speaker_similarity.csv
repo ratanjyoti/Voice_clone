@@ -1,0 +1,13 @@
+language,model,generated_file,status,error,similarity_to_reference,average_similarity,maximum_similarity,passes_0_75
+Hindi,Chatterbox,outputs/chatterbox/hindi/conversational/conversational_01_assistance.wav,success,,0.737563,0.737563,0.737563,False
+Hindi,Chatterbox,outputs/chatterbox/hindi/conversational/conversational_02_support.wav,success,,0.627014,0.627014,0.627014,False
+Hindi,Chatterbox,outputs/chatterbox/hindi/conversational/conversational_03_schedule.wav,success,,0.672351,0.672351,0.672351,False
+Hindi,Chatterbox,outputs/chatterbox/hindi/conversational/conversational_04_clarify.wav,success,,0.72534,0.72534,0.72534,False
+Hindi,Chatterbox,outputs/chatterbox/hindi/conversational/conversational_05_followup.wav,success,,0.615259,0.615259,0.615259,False
+Hindi,Chatterbox,outputs/chatterbox/hindi/expressive/expressive_01_success.wav,success,,0.42349,0.42349,0.42349,False
+Hindi,Chatterbox,outputs/chatterbox/hindi/expressive/expressive_02_progress.wav,success,,0.510375,0.510375,0.510375,False
+Hindi,Chatterbox,outputs/chatterbox/hindi/expressive/expressive_03_excited.wav,success,,0.477236,0.477236,0.477236,False
+Hindi,Chatterbox,outputs/chatterbox/hindi/expressive/expressive_04_reassure.wav,success,,0.53845,0.53845,0.53845,False
+Hindi,Chatterbox,outputs/chatterbox/hindi/expressive/expressive_05_finish.wav,success,,0.450951,0.450951,0.450951,False
+Hindi,Chatterbox,outputs/chatterbox/hindi/neutral/neutral_01_identity.wav,success,,0.674241,0.674241,0.674241,False
+Hindi,Chatterbox,outputs/chatterbox/hindi/neutral/neutral_02_technology.wav,success,,0.588362,0.588362,0.588362,False

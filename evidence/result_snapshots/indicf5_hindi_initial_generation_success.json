@@ -1,0 +1,24 @@
+{
+  "created_at": "2026-07-18",
+  "model": "IndicF5",
+  "model_id": "ai4bharat/IndicF5",
+  "environment": {
+    "python": "3.10.20",
+    "torch": "2.8.0+cpu",
+    "torchaudio": "2.8.0+cpu",
+    "transformers": "4.49.0",
+    "f5_tts": "0.1.0 from AI4Bharat/IndicF5 git install"
+  },
+  "hf_access": "verified_authenticated_user_ratanjyoti",
+  "generation_status": "success",
+  "test_id": "hi_clone_01_greeting",
+  "WER_percent": 50.0,
+  "generation_time_seconds": 297.668119199996,
+  "audio_duration_seconds": 7.125,
+  "RTF": 41.7779816421047,
+  "peak": 0.95001220703125,
+  "clipping": false,
+  "clipping_samples": 0,
+  "silence_ratio": 0.06756140350877193,
+  "decision": "Do not expand to all five samples yet; one-sample WER is worse than Chatterbox greeting and CPU RTF is far above target."
+}

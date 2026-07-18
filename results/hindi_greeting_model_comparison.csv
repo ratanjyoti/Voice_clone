@@ -1,0 +1,4 @@
+model,WER_percent,generation_time,audio_duration,RTF,peak,clipping,speaker_cosine_if_available,technical_pass,label,status,error
+MMS-TTS,70.0,2.3064508000097703,4.64,0.49707991379520916,0.837890625,False,,True,existing Hindi baseline,completed,
+Chatterbox,30.0,178.035,6.160,28.902,,True,,False,existing Hindi cloning candidate,completed_with_clipping,Greeting sample clipped in prior benchmark.
+IndicF5,50.0,297.668119199996,7.125,41.7779816421047,0.95001220703125,False,,True,initial Hindi candidate,completed_initial_test,Greeting generated successfully after HF authentication and CPU eager torch.compile wrapper; WER did not improve over Chatterbox.

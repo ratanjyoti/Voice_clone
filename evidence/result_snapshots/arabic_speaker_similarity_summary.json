@@ -1,0 +1,23 @@
+{
+  "metric": "SpeechBrain ECAPA-TDNN cosine similarity",
+  "threshold": 0.75,
+  "xtts_average_similarity": 0.633952,
+  "chatterbox_average_similarity": 0.803016,
+  "minimum_similarity": 0.573588,
+  "maximum_similarity": 0.841807,
+  "samples_passing_0_75": 12,
+  "successful_samples": 26,
+  "total_rows": 26,
+  "models": {
+    "XTTS-v2": {
+      "average_similarity": 0.633952,
+      "passing_samples": 0,
+      "successful_samples": 13
+    },
+    "Chatterbox": {
+      "average_similarity": 0.803016,
+      "passing_samples": 12,
+      "successful_samples": 13
+    }
+  }
+}

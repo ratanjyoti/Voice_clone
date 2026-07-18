@@ -1,0 +1,53 @@
+# Infinia Voice Case Study
+
+## 1. Executive summary
+The benchmark does not produce a clean production winner for all three languages. English MMS-TTS is the strongest automatic baseline because it passed the 10% WER target and CPU RTF target, but it is not a cloning system. Arabic XTTS-v2 is the best automatic Arabic WER candidate, but it failed CPU latency/RTF and speaker-cosine targets. Hindi has no production-ready winner in this run: Chatterbox Hindi was the better tested cloning candidate but still missed the WER target, was very slow, and clipped on some samples.
+
+## 2. Hardware and methodology
+All final automatic runs were performed on Windows CPU. Each language used five fixed test categories: greeting, technology, conversational, numbers, and expressive. Automatic evaluation used Faster Whisper Small for ASR/WER, SpeechBrain ECAPA-TDNN for speaker cosine similarity, WAV sidecars for generation timing/RTF, and audio statistics for clipping and silence.
+
+Human review files were prepared anonymously under `outputs/human_review`, with the hidden mapping in `evidence/human_review_model_mapping.csv`. Real listener MOS is still pending; the summary file records this instead of inventing scores.
+
+## 3. Models tested
+English compared MMS-TTS English and NeuTTS Air. The fixed-sentence NeuTTS retry hung during model/codec loading, so the final folder reuses the previously completed five-sample NeuTTS Air run as fallback evidence.
+
+Hindi compared MMS-TTS Hindi and Chatterbox Hindi. AI4Bharat was not implemented due time and hardware constraints and is listed as future work.
+
+Arabic compared MMS-TTS, Chatterbox Arabic, and XTTS-v2 Arabic using the existing Arabic evaluation pipeline.
+
+## 4. English results
+English MMS-TTS averaged 8.0% WER and passed the 10% target. It also passed clipping checks and ran near the RTF target on CPU.
+
+NeuTTS averaged 12.67% WER on the available five-sample run and failed the 10% WER target. Its SpeechBrain speaker cosine average was about 0.513, below the 0.75 cloning target, and CPU RTF was far too slow for production.
+
+## 5. Hindi results
+Hindi MMS-TTS averaged 52.45% WER. It was fast, but it is not a cloning model and did not pass the language quality target.
+
+Chatterbox Hindi averaged 36.78% WER. It improved over MMS in this ASR metric, but still failed the 10% target, had very slow CPU generation, and clipped on two of five final samples.
+
+## 6. Arabic results
+Chatterbox Arabic failed the WER target. Its speaker cosine was comparatively strong, but automatic pronunciation accuracy was not good enough.
+
+XTTS Arabic passed WER but failed CPU latency and RTF targets. Its SpeechBrain speaker cosine average was below 0.75, so the automatic cloning score did not confirm same-speaker reproduction even though WER was strong.
+
+MMS Arabic was fast but less natural and did not provide cloning.
+
+## 7. Cross-language comparison
+The final master table is `results/final_three_language_benchmark.csv`. The clearest pattern is that fast CPU models were not necessarily natural or clone-capable, while cloning models were slow and inconsistent on CPU. Automatic WER and embedding evaluation changed the ranking: XTTS looked best for Arabic pronunciation, Chatterbox looked better for Arabic speaker similarity, and neither alone satisfied all production criteria.
+
+## 8. Failures and lessons
+- Chatterbox Arabic failed WER target.
+- XTTS Arabic passed WER but failed CPU latency and RTF targets.
+- MMS was fast but less natural and did not provide cloning.
+- Human and embedding evaluations are necessary because WER alone can reward intelligibility while missing voice identity.
+- Hindi ASR may need a stronger Indic recognizer to reduce evaluation uncertainty.
+
+## 9. Final recommendation
+English: use MMS-TTS as the automatic baseline and keep NeuTTS as a research cloning candidate only.
+
+Hindi: no production recommendation from this benchmark. Chatterbox is the best tested cloning candidate, but it needs quality and speed improvements.
+
+Arabic: use XTTS-v2 as the best quality candidate for further work, while clearly reporting that CPU latency/RTF and speaker similarity failed target.
+
+## 10. Remaining limitations
+Real MOS scores are not yet collected. NeuTTS fixed-sentence generation needs a clean rerun. Latency should be rerun on target deployment hardware. Model and reference-audio licenses must be verified before external distribution.

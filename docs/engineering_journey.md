@@ -1,4 +1,4 @@
-﻿# TTS Engineering Journey
+# TTS Engineering Journey
 
 This document records verified implementation steps, commands, outputs, failures, fixes, and decisions.
 
@@ -89,3 +89,111 @@ A compatibility failure occurred with Transformers 5.14.1 because Coqui attempte
 - Failure: The XTTS summary initially read torch from the ASR environment; fixed the evaluator to parse the XTTS import-verification log, which records torch 2.8.0+cpu.
 - Evidence: `evidence\terminal_logs\xtts_arabic_final_generation.txt`, `xtts_arabic_final_evaluation.txt`, `arabic_model_comparison.txt`; `results\xtts_arabic_evaluation.csv`, `results\arabic_model_comparison.csv`; `evidence\result_snapshots\xtts\arabic\xtts_arabic_summary.json`, `evidence\result_snapshots\arabic_model_comparison_summary.json`.
 - Decision: XTTS-v2 is the automatic metric winner, but final production suitability remains blocked on native Arabic review, licensing review, and GPU benchmarking. Website integration and fine-tuning were not started.
+
+## 2026-07-18 - IndicF5 Hindi recovery attempt
+
+Objective: install and test AI4Bharat IndicF5 as a Hindi-specialized TTS or voice-conditioned candidate, stopping after one greeting sample.
+
+Environment:
+- `.venv-indicf5`
+- Python 3.10.20, 64-bit Windows
+- Torch repaired to `2.8.0+cpu`
+- Torchaudio repaired to `2.8.0+cpu`
+- CUDA available: false
+- Device: CPU
+
+Official project inspection:
+- Official repo: `https://github.com/AI4Bharat/IndicF5`
+- Official install method: `pip install git+https://github.com/ai4bharat/IndicF5.git`
+- Official model id: `ai4bharat/IndicF5`
+- Official API pattern: `AutoModel.from_pretrained("ai4bharat/IndicF5", trust_remote_code=True)` then `model(text, ref_audio_path=..., ref_text=...)`
+- Hindi is listed as supported.
+- Reference transcript is required by the official example.
+- License noted from model card: MIT, with explicit warning against unauthorized voice cloning.
+- Windows support is not stated; Windows CPU inference is best-effort.
+
+Commands and evidence:
+- Environment verification: `evidence/terminal_logs/indicf5_environment_verification.txt`
+- Torch install: `evidence/terminal_logs/indicf5_torch_install.txt`
+- Torch verification: `evidence/terminal_logs/indicf5_torch_verification.txt`
+- IndicF5 install: `evidence/terminal_logs/indicf5_install.txt`
+- Environment freeze: `evidence/terminal_logs/indicf5_environment_freeze.txt`
+- Import verification: `evidence/terminal_logs/indicf5_import_verification.txt`
+- API signature inspection: `evidence/terminal_logs/indicf5_api_signatures.txt`
+- Initial generation attempt: `evidence/terminal_logs/indicf5_hindi_initial_generation.txt`
+- Network retry: `evidence/terminal_logs/indicf5_hindi_initial_generation_retry_network.txt`
+
+Installation/fix notes:
+- The environment initially had no installed torch/torchaudio.
+- A previous partial install left mismatched `torch 2.13.0` and `torchaudio 2.11.0`.
+- Reinstalled matching CPU wheels: `torch==2.8.0+cpu`, `torchaudio==2.8.0+cpu`.
+- Installed IndicF5 from the official GitHub URL. Package imports as `f5_tts 0.1.0`; `f5_tts.__version__` is not exposed.
+
+Reference requirements and status:
+- IndicF5-specific reference copy: `data/reference_audio/indicf5/ratan_reference_indicf5.wav`
+- Reference validation: `evidence/result_snapshots/indicf5_hindi_reference_validation.json`
+- Duration: ~20.20s, 22050 Hz, mono, PCM16, no clipping.
+- Reference transcript copied to `data/reference_audio/indicf5/ratan_reference_transcript.txt` from `data/reference_audio/transcript.txt`.
+- Transcript text exists, but should still be user-verified as the exact spoken content before treating speaker cloning results as final.
+
+Generation result:
+- Script created: `src/generate_indicf5_hindi_test.py`
+- Script compiled successfully.
+- Generation did not create audio because model loading failed before checkpoint download.
+- Failure stage: Hugging Face model download / `config.json` access.
+- Error: `ai4bharat/IndicF5` is gated and returned 401 Unauthorized. No `HF_TOKEN`, `HUGGING_FACE_HUB_TOKEN`, or local Hugging Face token file was found.
+
+Technical validation and WER:
+- Technical validation did not run on audio because no WAV was created.
+- Placeholder validation log: `evidence/terminal_logs/indicf5_hindi_initial_audio_validation.txt`
+- WER did not run because no WAV was created.
+- Blocked WER CSV: `results/indicf5_hindi_initial_test.csv`
+- Greeting comparison CSV: `results/hindi_greeting_model_comparison.csv`
+
+Decision:
+- IndicF5 is not yet runnable in this Windows CPU environment because the checkpoint is gated and authentication/access is missing.
+- It is not safe to proceed to all five samples.
+- Next required action: log in to Hugging Face with an account that has accepted access to `ai4bharat/IndicF5`, then rerun `src/generate_indicf5_hindi_test.py`.
+## 2026-07-18 - IndicF5 authenticated one-sample result
+
+Objective: rerun the gated IndicF5 Hindi greeting test after Hugging Face authentication, then stop unless the one-sample result justified expanding to all five samples.
+
+Authentication and access:
+- Hugging Face access was verified with an environment-only token; the token was not saved in scripts, logs, or docs.
+- Verification log: `evidence/terminal_logs/indicf5_hf_auth_verification.txt`.
+- Authenticated user reported by Hugging Face: `ratanjyoti`.
+- Model access to `ai4bharat/IndicF5` passed.
+
+Compatibility fixes:
+- Pinned `transformers` from `5.14.1` to `4.49.0`, matching the official `<4.50` compatibility range used by the remote model code.
+- Added a CPU eager `torch.compile` stand-in in `src/generate_indicf5_hindi_test.py` so checkpoint keys under `_orig_mod` still load while avoiding CPU compilation.
+- Evidence: `evidence/terminal_logs/indicf5_transformers_pin_4490.txt`, `evidence/terminal_logs/indicf5_hindi_initial_generation_retry_eager_wrapper.txt`.
+
+Generation result:
+- Output WAV: `outputs/indicf5/hindi/hi_clone_01_greeting.wav`.
+- Sidecar: `outputs/indicf5/hindi/hi_clone_01_greeting.json`.
+- Model loaded successfully in 15.746s after cache warm-up.
+- Greeting generation time: 297.668s.
+- Audio duration: 7.125s.
+- RTF: 41.778.
+- Peak: 0.950012.
+- Clipping samples: 0.
+- Technical audio validation passed for finite mono audio, nonzero RMS, and no clipping.
+- Audio validation log: `evidence/terminal_logs/indicf5_hindi_initial_audio_validation_retry_success.txt`.
+
+ASR/WER result:
+- Evaluator: `scripts/evaluate_indicf5_hindi_initial.py`.
+- WER CSV: `results/indicf5_hindi_initial_test.csv`.
+- Faster Whisper Small Hindi WER for the greeting: 50.0%.
+- ASR added extra leading words and mistranscribed the last phrase, so IndicF5 did not pass the 10% WER target.
+
+Greeting comparison:
+- MMS-TTS Hindi greeting: 70.0% WER, 2.306s generation, 4.64s audio, RTF 0.497, no clipping.
+- Chatterbox Hindi greeting: 30.0% WER, 178.035s generation, 6.160s audio, RTF 28.902, clipped in prior benchmark.
+- IndicF5 Hindi greeting: 50.0% WER, 297.668s generation, 7.125s audio, RTF 41.778, no clipping.
+- Comparison CSV updated: `results/hindi_greeting_model_comparison.csv`.
+
+Decision:
+- Do not expand IndicF5 to the five-sample Hindi benchmark yet.
+- It is runnable after authentication and compatibility fixes, but the initial greeting has worse WER than Chatterbox and much slower CPU batch generation.
+- Final Hindi benchmark/report should keep the current MMS and Chatterbox results unless a GPU or stronger IndicF5 runtime path is tested later.

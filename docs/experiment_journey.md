@@ -1,11 +1,11 @@
-﻿# Chatterbox Arabic CPU Engineering Journey
+# Chatterbox Arabic CPU Engineering Journey
 
 **Date:** July 17, 2026
 **Project:** Infinia Voice Case Study
 **Language:** Modern Standard Arabic
 **Model:** Chatterbox Multilingual TTS
 **Execution environment:** Windows, CPU only
-**Project root:** `E:\NEW_genai_projects\TTS_voice\infinia-voice-case-study`
+**Project root:** `<project-root>`
 
 ---
 
@@ -54,7 +54,7 @@ The Python interpreter came from the local `uv` installation because the Windows
 Verified interpreter path:
 
 ```text
-C:\Users\LENOVO\AppData\Roaming\uv\python\cpython-3.11.15-windows-x86_64-none\python.exe
+py -3.11
 ```
 
 Installed dataset and evaluation packages included:

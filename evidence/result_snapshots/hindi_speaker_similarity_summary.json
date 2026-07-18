@@ -1,0 +1,17 @@
+{
+  "language": "Hindi",
+  "metric": "SpeechBrain ECAPA-TDNN cosine similarity",
+  "threshold": 0.75,
+  "minimum_similarity": 0.42349,
+  "maximum_similarity": 0.737563,
+  "samples_passing_0_75": 0,
+  "successful_samples": 12,
+  "total_rows": 12,
+  "models": {
+    "Chatterbox": {
+      "average_similarity": 0.586719,
+      "passing_samples": 0,
+      "successful_samples": 12
+    }
+  }
+}

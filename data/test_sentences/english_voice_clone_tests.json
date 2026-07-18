@@ -1,0 +1,12 @@
+{
+  "language": "English",
+  "language_code": "en",
+  "tests": [
+    {"id": "en_clone_01_greeting", "category": "greeting", "text": "Hello and welcome. I am your voice assistant today."},
+    {"id": "en_clone_02_technology", "category": "technology", "text": "Artificial intelligence helps teams answer customers faster and more clearly."},
+    {"id": "en_clone_03_conversational", "category": "conversational", "text": "Sure, I can help with that. Please tell me what you need."},
+    {"id": "en_clone_04_numbers", "category": "numbers", "text": "Your confirmation number is two zero six five, and the meeting starts at three thirty."},
+    {"id": "en_clone_05_expressive", "category": "expressive", "text": "That is wonderful news. I am really glad everything worked out."}
+  ],
+  "latency_sentence": {"id": "en_latency_10_words", "category": "latency", "text": "Your meeting starts in ten minutes; please prepare the presentation."}
+}

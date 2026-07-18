@@ -1,0 +1,19 @@
+{
+  "source_reference": "data/reference_audio/ratan_reference_22050_mono.wav",
+  "indicf5_reference": "data/reference_audio/indicf5/ratan_reference_indicf5.wav",
+  "transcript_path": "data/reference_audio/indicf5/ratan_reference_transcript.txt",
+  "transcript_status": "exact transcript file found in repository and copied; user should verify it exactly matches spoken audio",
+  "transcript_text": "Hello, my name is Ratan Jyoti. This recording is being used as a reference sample for an open-source multilingual voice synthesis evaluation.",
+  "duration_seconds": 20.202675736961453,
+  "sample_rate": 22050,
+  "channels": 1,
+  "encoding_subtype": "PCM_16",
+  "format": "WAV",
+  "rms": 0.10896383631778378,
+  "peak": 0.723663330078125,
+  "clipping_samples": 0,
+  "silence_ratio": 0.03717205911073498,
+  "all_finite": true,
+  "sha256": "58fcc93c94d09471712f5d34a7a8e596c2f6b653a68a72283b95a75f81de8c4c",
+  "conversion_decision": "No resample performed. Official example only requires a WAV prompt path plus exact reference text; this file is already mono PCM WAV and is preserved as an IndicF5-specific copy."
+}

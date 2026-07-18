@@ -1,0 +1,17 @@
+{
+  "language": "English",
+  "metric": "SpeechBrain ECAPA-TDNN cosine similarity",
+  "threshold": 0.75,
+  "minimum_similarity": 0.423502,
+  "maximum_similarity": 0.575726,
+  "samples_passing_0_75": 0,
+  "successful_samples": 5,
+  "total_rows": 5,
+  "models": {
+    "NeuTTS": {
+      "average_similarity": 0.512658,
+      "passing_samples": 0,
+      "successful_samples": 5
+    }
+  }
+}

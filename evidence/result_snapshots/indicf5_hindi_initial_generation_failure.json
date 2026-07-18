@@ -1,0 +1,9 @@
+{
+  "status": "blocked",
+  "stage": "model_download",
+  "model_id": "ai4bharat/IndicF5",
+  "device": "cpu",
+  "error": "Hugging Face gated repo access blocked: ai4bharat/IndicF5 returned 401 Unauthorized for config.json. No HF token found in env or local token files.",
+  "output_wav_created": false,
+  "next_required_action": "Authenticate with Hugging Face and request/accept access to the gated ai4bharat/IndicF5 model, then rerun src/generate_indicf5_hindi_test.py."
+}

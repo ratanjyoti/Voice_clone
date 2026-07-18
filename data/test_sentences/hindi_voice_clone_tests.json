@@ -1,0 +1,12 @@
+{
+  "language": "Hindi",
+  "language_code": "hi",
+  "tests": [
+    {"id": "hi_clone_01_greeting", "category": "greeting", "text": "नमस्ते, आपका स्वागत है। मैं आज आपकी आवाज़ सहायक हूँ।"},
+    {"id": "hi_clone_02_technology", "category": "technology", "text": "कृत्रिम बुद्धिमत्ता ग्राहकों को तेज़ और स्पष्ट उत्तर देने में मदद करती है।"},
+    {"id": "hi_clone_03_conversational", "category": "conversational", "text": "ज़रूर, मैं इसमें मदद कर सकता हूँ। कृपया अपनी ज़रूरत बताइए।"},
+    {"id": "hi_clone_04_numbers", "category": "numbers", "text": "आपका पुष्टिकरण नंबर दो शून्य छह पांच है, और बैठक साढ़े तीन बजे शुरू होगी।"},
+    {"id": "hi_clone_05_expressive", "category": "expressive", "text": "यह बहुत अच्छी खबर है। मुझे खुशी है कि सब ठीक रहा।"}
+  ],
+  "latency_sentence": {"id": "hi_latency_10_words", "category": "latency", "text": "बैठक दस मिनट में शुरू होगी, कृपया प्रस्तुति तैयार रखिए।"}
+}

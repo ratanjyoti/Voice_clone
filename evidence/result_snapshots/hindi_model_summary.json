@@ -1,0 +1,26 @@
+{
+  "language": "Hindi",
+  "wer_target": 0.1,
+  "models": {
+    "MMS-TTS": {
+      "total_samples": 5,
+      "successful_samples": 5,
+      "average_WER": 0.5244988344988345,
+      "average_WER_percent": 52.44988344988345,
+      "WER_pass": false,
+      "average_RTF": 0.4217934397076183,
+      "clipping_pass_count": 5,
+      "failed_generations": 0
+    },
+    "Chatterbox": {
+      "total_samples": 5,
+      "successful_samples": 5,
+      "average_WER": 0.3678321678321678,
+      "average_WER_percent": 36.78321678321678,
+      "WER_pass": false,
+      "average_RTF": 19.01445631128881,
+      "clipping_pass_count": 3,
+      "failed_generations": 0
+    }
+  }
+}

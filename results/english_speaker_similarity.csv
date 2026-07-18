@@ -1,0 +1,6 @@
+language,model,generated_file,status,error,similarity_to_reference,average_similarity,maximum_similarity,passes_0_75
+English,NeuTTS,outputs/neutts/english/air_evaluation/air_01_greeting.wav,success,,0.542493,0.542493,0.542493,False
+English,NeuTTS,outputs/neutts/english/air_evaluation/air_02_identity.wav,success,,0.503958,0.503958,0.503958,False
+English,NeuTTS,outputs/neutts/english/air_evaluation/air_03_support.wav,success,,0.423502,0.423502,0.423502,False
+English,NeuTTS,outputs/neutts/english/air_evaluation/air_04_numbers.wav,success,,0.575726,0.575726,0.575726,False
+English,NeuTTS,outputs/neutts/english/air_evaluation/air_05_expressive.wav,success,,0.517609,0.517609,0.517609,False

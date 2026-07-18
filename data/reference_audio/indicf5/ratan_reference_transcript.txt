@@ -1,0 +1,1 @@
+Hello, my name is Ratan Jyoti. This recording is being used as a reference sample for an open-source multilingual voice synthesis evaluation.

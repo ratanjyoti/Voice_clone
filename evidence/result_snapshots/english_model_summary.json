@@ -1,0 +1,26 @@
+{
+  "language": "English",
+  "wer_target": 0.1,
+  "models": {
+    "MMS-TTS": {
+      "total_samples": 5,
+      "successful_samples": 5,
+      "average_WER": 0.08,
+      "average_WER_percent": 8.0,
+      "WER_pass": true,
+      "average_RTF": 0.4544416323913651,
+      "clipping_pass_count": 5,
+      "failed_generations": 0
+    },
+    "NeuTTS": {
+      "total_samples": 5,
+      "successful_samples": 5,
+      "average_WER": 0.12674825174825174,
+      "average_WER_percent": 12.674825174825175,
+      "WER_pass": false,
+      "average_RTF": 14.708489437859132,
+      "clipping_pass_count": 5,
+      "failed_generations": 0
+    }
+  }
+}
