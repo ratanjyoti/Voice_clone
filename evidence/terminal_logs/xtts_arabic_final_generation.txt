@@ -1,0 +1,14 @@
+Loading XTTS-v2 on cpu from cache E:\NEW_genai_projects\TTS_voice\infinia-voice-case-study\models\coqui
+Model loaded in 22.042s
+Final generation: ar_clone_01_greeting
+E:\NEW_genai_projects\TTS_voice\infinia-voice-case-study\.venv-xtts-arabic\Lib\site-packages\torchaudio\_backend\utils.py:213: UserWarning: In 2.9, this function's implementation will be changed to use torchaudio.load_with_torchcodec` under the hood. Some parameters like ``normalize``, ``format``, ``buffer_size``, and ``backend`` will be ignored. We recommend that you port your code to rely directly on TorchCodec's decoder instead: https://docs.pytorch.org/torchcodec/stable/generated/torchcodec.decoders.AudioDecoder.html#torchcodec.decoders.AudioDecoder.
+  warnings.warn(
+Saved E:\NEW_genai_projects\TTS_voice\infinia-voice-case-study\outputs\xtts\arabic\ar_clone_01_greeting.wav | gen 20.974s | dur 6.497s | RTF 3.228
+Final generation: ar_clone_02_technology
+Saved E:\NEW_genai_projects\TTS_voice\infinia-voice-case-study\outputs\xtts\arabic\ar_clone_02_technology.wav | gen 20.759s | dur 6.401s | RTF 3.243
+Final generation: ar_clone_03_conversational
+Saved E:\NEW_genai_projects\TTS_voice\infinia-voice-case-study\outputs\xtts\arabic\ar_clone_03_conversational.wav | gen 21.015s | dur 6.817s | RTF 3.083
+Final generation: ar_clone_04_numbers
+Saved E:\NEW_genai_projects\TTS_voice\infinia-voice-case-study\outputs\xtts\arabic\ar_clone_04_numbers.wav | gen 25.700s | dur 7.937s | RTF 3.238
+Final generation: ar_clone_05_expressive
+Saved E:\NEW_genai_projects\TTS_voice\infinia-voice-case-study\outputs\xtts\arabic\ar_clone_05_expressive.wav | gen 24.737s | dur 7.425s | RTF 3.332

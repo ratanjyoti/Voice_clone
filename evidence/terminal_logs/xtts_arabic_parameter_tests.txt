@@ -1,0 +1,52 @@
+Loading XTTS-v2 on cpu from cache E:\NEW_genai_projects\TTS_voice\infinia-voice-case-study\models\coqui
+Model loaded in 22.473s
+Parameter config A: {'temperature': 0.65, 'top_k': 50, 'top_p': 0.85, 'repetition_penalty': 2.0, 'length_penalty': 1.0, 'speed': 1.0}
+E:\NEW_genai_projects\TTS_voice\infinia-voice-case-study\.venv-xtts-arabic\Lib\site-packages\torchaudio\_backend\utils.py:213: UserWarning: In 2.9, this function's implementation will be changed to use torchaudio.load_with_torchcodec` under the hood. Some parameters like ``normalize``, ``format``, ``buffer_size``, and ``backend`` will be ignored. We recommend that you port your code to rely directly on TorchCodec's decoder instead: https://docs.pytorch.org/torchcodec/stable/generated/torchcodec.decoders.AudioDecoder.html#torchcodec.decoders.AudioDecoder.
+  warnings.warn(
+Saved E:\NEW_genai_projects\TTS_voice\infinia-voice-case-study\outputs\xtts\arabic\parameter_tests\ar_greeting_config_A.wav | gen 21.557s | dur 6.678s | RTF 3.228
+Parameter config B: {'temperature': 0.75, 'top_k': 50, 'top_p': 0.85, 'repetition_penalty': 2.0, 'length_penalty': 1.0, 'speed': 1.0}
+Saved E:\NEW_genai_projects\TTS_voice\infinia-voice-case-study\outputs\xtts\arabic\parameter_tests\ar_greeting_config_B.wav | gen 21.027s | dur 6.497s | RTF 3.237
+Parameter config C: {'temperature': 0.65, 'top_k': 40, 'top_p': 0.8, 'repetition_penalty': 5.0, 'length_penalty': 1.0, 'speed': 1.0}
+Saved E:\NEW_genai_projects\TTS_voice\infinia-voice-case-study\outputs\xtts\arabic\parameter_tests\ar_greeting_config_C.wav | gen 20.773s | dur 6.497s | RTF 3.198
+Parameter config D: installed defaults
+Saved E:\NEW_genai_projects\TTS_voice\infinia-voice-case-study\outputs\xtts\arabic\parameter_tests\ar_greeting_config_D.wav | gen 18.600s | dur 5.942s | RTF 3.130
+  
+=== Evaluation ===  
+Loading Whisper small on CPU...
+Evaluating ar_greeting_config_A.wav
+WER 22.22% | Arabic probability 1.0000
+Evaluating ar_greeting_config_B.wav
+WER 0.00% | Arabic probability 1.0000
+Evaluating ar_greeting_config_C.wav
+WER 0.00% | Arabic probability 1.0000
+Evaluating ar_greeting_config_D.wav
+WER 22.22% | Arabic probability 1.0000
+automatic parameter winner:
+{
+  "model": "tts_models/multilingual/multi-dataset/xtts_v2",
+  "test_id": "ar_clone_01_greeting",
+  "category": "neutral",
+  "expected_text": "مَرْحَبًا بِكَ. أَنَا مُسَاعِدُكَ الصَّوْتِيُّ، وَيَسْعَدُنِي أَنْ أُسَاعِدَكَ الْيَوْمَ.",
+  "output_path": "E:\\NEW_genai_projects\\TTS_voice\\infinia-voice-case-study\\outputs\\xtts\\arabic\\parameter_tests\\ar_greeting_config_C.wav",
+  "reference_strategy": "multi",
+  "reference_paths": "[\"E:\\\\NEW_genai_projects\\\\TTS_voice\\\\infinia-voice-case-study\\\\data\\\\reference_audio\\\\arabic\\\\professional_msa\\\\arabic_reference_short.wav\", \"E:\\\\NEW_genai_projects\\\\TTS_voice\\\\infinia-voice-case-study\\\\data\\\\reference_audio\\\\arabic\\\\professional_msa\\\\arabic_reference_standard.wav\", \"E:\\\\NEW_genai_projects\\\\TTS_voice\\\\infinia-voice-case-study\\\\data\\\\reference_audio\\\\arabic\\\\professional_msa\\\\arabic_reference_long.wav\"]",
+  "parameters": "{\"temperature\": \"0.65\", \"top_k\": \"40\", \"top_p\": \"0.8\", \"repetition_penalty\": \"5.0\", \"length_penalty\": \"1.0\", \"speed\": \"1.0\"}",
+  "seed": "42",
+  "generation_time": "20.773110900001484",
+  "rtf": "3.1975029604927885",
+  "status": "success",
+  "error": "",
+  "configuration_id": "C",
+  "asr_text": "مرحبا بك أنا مساعدك الصوتي ويسعدني أن أساعدك اليوم",
+  "normalized_expected": "مرحبا بك انا مساعدك الصوتي ويسعدني ان اساعدك اليوم",
+  "normalized_predicted": "مرحبا بك انا مساعدك الصوتي ويسعدني ان اساعدك اليوم",
+  "arabic_probability": 1.0,
+  "wer": 0.0,
+  "wer_percentage": 0.0,
+  "duration": 6.496666666666667,
+  "rms": 0.18500062029324907,
+  "peak": 0.95001220703125,
+  "clipping_count": 0,
+  "silence_ratio": 0.2865700359158543,
+  "sample_rate": 24000
+}

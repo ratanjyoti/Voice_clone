@@ -1,0 +1,12 @@
+Loading Whisper small on CPU...
+Evaluating ar_clone_01_greeting.wav
+WER 0.00% | Arabic probability 1.0000
+Evaluating ar_clone_02_technology.wav
+WER 10.00% | Arabic probability 1.0000
+Evaluating ar_clone_03_conversational.wav
+WER 9.09% | Arabic probability 1.0000
+Evaluating ar_clone_04_numbers.wav
+WER 7.69% | Arabic probability 1.0000
+Evaluating ar_clone_05_expressive.wav
+WER 0.00% | Arabic probability 1.0000
+summary: E:\NEW_genai_projects\TTS_voice\infinia-voice-case-study\evidence\result_snapshots\xtts\arabic\xtts_arabic_summary.json

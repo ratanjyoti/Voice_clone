@@ -41,3 +41,10 @@ __pycache__
 *.pth
 *.bin
 *.safetensors
+
+.venv*/
+models/
+downloads/
+__pycache__/
+*.pyc
+.streamlit/

@@ -1,9 +1,10 @@
-from __future__ import annotations
+﻿from __future__ import annotations
 
 import hashlib
 import io
 import json
 import subprocess
+import sys
 import time
 from datetime import datetime
 from pathlib import Path
@@ -11,7 +12,6 @@ import os
 import re
 import shutil
 import pandas as pd
-from neutts import NeuTTS
 import streamlit as st
 
 
@@ -62,6 +62,7 @@ CHATTERBOX_ENV = PROJECT_ROOT / ".venv"
 MMS_ENV = PROJECT_ROOT / ".venv"
 MELOTTS_ENV = PROJECT_ROOT / ".venv-melotts"
 NEUTTS_ENV = PROJECT_ROOT / ".venv-neutts"
+XTTS_ARABIC_ENV = PROJECT_ROOT / ".venv-xtts-arabic"
 
 REFERENCE_AUDIO_OPTIONS = {
     "Ratan Neutral": (
@@ -90,6 +91,30 @@ REFERENCE_AUDIO_OPTIONS = {
         / "data"
         / "reference_audio"
         / "ratan_reference_22050_mono.wav"
+    ),
+    "Arabic MSA short": (
+        PROJECT_ROOT
+        / "data"
+        / "reference_audio"
+        / "arabic"
+        / "professional_msa"
+        / "arabic_reference_short.wav"
+    ),
+    "Arabic MSA standard": (
+        PROJECT_ROOT
+        / "data"
+        / "reference_audio"
+        / "arabic"
+        / "professional_msa"
+        / "arabic_reference_standard.wav"
+    ),
+    "Arabic MSA long": (
+        PROJECT_ROOT
+        / "data"
+        / "reference_audio"
+        / "arabic"
+        / "professional_msa"
+        / "arabic_reference_long.wav"
     ),
 }
 
@@ -168,8 +193,69 @@ MODEL_CONFIG = {
         "audio_dir": OUTPUTS_DIR / "neutts" / "english",
         "supports_voice_cloning": True,
     },
-}
+    "Chatterbox Arabic": {
+        "environment": CHATTERBOX_ENV,
+        "script": (
+            PROJECT_ROOT
+            / "src"
+            / "generate_chatterbox_arabic.py"
+        ),
+        "report": (
+            PROJECT_ROOT
+            / "evidence"
+            / "result_snapshots"
+            / "chatterbox"
+            / "arabic"
+            / "chatterbox_arabic_summary.json"
+        ),
+        "audio_dir": OUTPUTS_DIR / "chatterbox" / "arabic",
+        "supports_voice_cloning": True,
+        "default_arguments": [
+            "--mode", "final",
+            "--device", "cpu",
+            "--reference", "standard",
+            "--seed", "42",
+            "--temperature", "0.6",
+            "--cfg-weight", "0.5",
+            "--exaggeration", "0.5",
+            "--repetition-penalty", "2.0",
+            "--min-p", "0.05",
+            "--top-p", "1.0",
+        ],
+    },
+    "XTTS-v2 Arabic": {
+        "environment": XTTS_ARABIC_ENV,
+        "script": (
+            PROJECT_ROOT
+            / "src"
+            / "generate_xtts_arabic.py"
+        ),
+        "report": (
+            PROJECT_ROOT
+            / "evidence"
+            / "result_snapshots"
+            / "xtts"
+            / "arabic"
+            / "xtts_arabic_summary.json"
+        ),
+        "audio_dir": OUTPUTS_DIR / "xtts" / "arabic",
+        "supports_voice_cloning": True,
+        "default_arguments": [
+            "--mode", "final",
+            "--device", "cpu",
+            "--reference-strategy", "multi",
+            "--seed", "42",
+            "--configuration-id", "C",
+            "--temperature", "0.65",
+            "--top-k", "40",
+            "--top-p", "0.80",
+            "--repetition-penalty", "5.0",
+            "--length-penalty", "1.0",
+            "--speed", "1.0",
+        ],
+    },
 
+}
 
 def get_python_path(environment_path: Path) -> Path:
     return environment_path / "Scripts" / "python.exe"
@@ -538,18 +624,18 @@ def status_icon(status: str) -> str:
     status_lower = status.lower()
 
     if status_lower == "working":
-        return "✅"
+        return "âœ…"
 
     if status_lower in {
         "ready to run",
         "audio generated",
     }:
-        return "🟡"
+        return "ðŸŸ¡"
 
     if status_lower == "failed":
-        return "❌"
+        return "âŒ"
 
-    return "⚪"
+    return "âšª"
 
 
 def run_script(
@@ -673,8 +759,8 @@ def show_audio_file(
     )
 
     st.caption(
-        f"{audio_path.name} • "
-        f"{size_mb:.2f} MB • "
+        f"{audio_path.name} â€¢ "
+        f"{size_mb:.2f} MB â€¢ "
         f"{modified:%Y-%m-%d %H:%M:%S}"
     )
 
@@ -1110,7 +1196,7 @@ def render_review_workspace() -> None:
             <h1>Voice Review Studio</h1>
             <p>Listen to the reference and cloned speech side by side, score every quality dimension, and persist results in one editable evaluation sheet.</p>
           </div>
-          <div class="hero-badge">Reproducible • Auditable • Multilingual</div>
+          <div class="hero-badge">Reproducible â€¢ Auditable â€¢ Multilingual</div>
         </div>
         """,
         unsafe_allow_html=True,
@@ -1211,8 +1297,8 @@ def render_review_workspace() -> None:
 
         row_by_label = {
             (
-                f"{'✓' if row['relative_path'] in reviewed_paths else '○'} "
-                f"{row['sample_id']}  ·  {row['model']} / "
+                f"{'âœ“' if row['relative_path'] in reviewed_paths else 'â—‹'} "
+                f"{row['sample_id']}  Â·  {row['model']} / "
                 f"{row['language']} / {row['profile']}"
             ): row
             for row in filtered_rows
@@ -1250,7 +1336,7 @@ def render_review_workspace() -> None:
             <div class="sample-strip">
               <div><span class="status-pill">{status_badge}</span></div>
               <div><strong>{selected['sample_id']}</strong><br><span>{selected['relative_path']}</span></div>
-              <div><strong>{selected['model']}</strong><br><span>{selected['language']} · {selected['profile']}</span></div>
+              <div><strong>{selected['model']}</strong><br><span>{selected['language']} Â· {selected['profile']}</span></div>
             </div>
             """,
             unsafe_allow_html=True,
@@ -1309,12 +1395,12 @@ def render_review_workspace() -> None:
         playback_left, playback_right = st.columns(2)
         with playback_left:
             with st.container(border=True):
-                st.markdown("### 1 · Original reference")
+                st.markdown("### 1 Â· Original reference")
                 st.caption(selected_reference_label)
                 show_audio_file(reference_audio)
         with playback_right:
             with st.container(border=True):
-                st.markdown("### 2 · Generated clone")
+                st.markdown("### 2 Â· Generated clone")
                 st.caption(selected["relative_path"])
                 show_audio_file(generated_audio)
 
@@ -1625,9 +1711,255 @@ def render_review_workspace() -> None:
             )
 
 
+
+def load_csv_dataframe(path: Path) -> pd.DataFrame:
+    if not path.exists():
+        return pd.DataFrame()
+
+    try:
+        return pd.read_csv(
+            path,
+            keep_default_na=False,
+            encoding="utf-8",
+        )
+    except Exception:
+        return pd.DataFrame()
+
+
+def numeric_value(value: object, default: float = 0.0) -> float:
+    try:
+        return float(value)
+    except Exception:
+        return default
+
+
+def render_arabic_results() -> None:
+    st.header("Arabic voice-cloning results")
+
+    comparison_path = RESULTS_DIR / "arabic_model_comparison.csv"
+    comparison_summary_path = (
+        EVIDENCE_DIR
+        / "result_snapshots"
+        / "arabic_model_comparison_summary.json"
+    )
+    xtts_summary_path = (
+        EVIDENCE_DIR
+        / "result_snapshots"
+        / "xtts"
+        / "arabic"
+        / "xtts_arabic_summary.json"
+    )
+    chatterbox_summary_path = (
+        EVIDENCE_DIR
+        / "result_snapshots"
+        / "chatterbox"
+        / "arabic"
+        / "chatterbox_arabic_summary.json"
+    )
+
+    comparison = load_csv_dataframe(comparison_path)
+    comparison_summary = load_json(comparison_summary_path) or {}
+    xtts_summary = load_json(xtts_summary_path) or {}
+    chatterbox_summary = load_json(chatterbox_summary_path) or {}
+
+    if comparison.empty:
+        st.warning(
+            "Arabic model comparison has not been generated yet."
+        )
+        st.code(str(comparison_path), language=None)
+        return
+
+    winner = comparison_summary.get(
+        "automatic_winner",
+        "Not available",
+    )
+
+    xtts_row = comparison[
+        comparison["model"].astype(str) == "XTTS-v2"
+    ]
+    chatterbox_row = comparison[
+        comparison["model"].astype(str) == "Chatterbox multilingual"
+    ]
+
+    xtts_metrics = (
+        xtts_row.iloc[0].to_dict()
+        if not xtts_row.empty
+        else {}
+    )
+    chatterbox_metrics = (
+        chatterbox_row.iloc[0].to_dict()
+        if not chatterbox_row.empty
+        else {}
+    )
+
+    metric_columns = st.columns(5)
+    metric_columns[0].metric("Automatic winner", winner)
+    metric_columns[1].metric(
+        "XTTS avg WER",
+        f"{numeric_value(xtts_metrics.get('average_wer')) * 100:.2f}%",
+    )
+    metric_columns[2].metric(
+        "XTTS WER pass",
+        f"{int(numeric_value(xtts_metrics.get('wer_pass_count')))}/5",
+    )
+    metric_columns[3].metric(
+        "XTTS avg RTF",
+        f"{numeric_value(xtts_metrics.get('average_rtf')):.2f}",
+    )
+    metric_columns[4].metric(
+        "Clipping pass",
+        f"{int(numeric_value(xtts_metrics.get('clipping_pass_count')))}/5",
+    )
+
+    st.caption(
+        "Automatic WER is a screening proxy. Native Arabic listening review is still required."
+    )
+
+    comparison_tab, samples_tab, review_tab, evidence_tab = st.tabs(
+        [
+            "Model comparison",
+            "Final samples",
+            "Native review",
+            "Evidence",
+        ]
+    )
+
+    with comparison_tab:
+        display = comparison.copy()
+        for column in [
+            "average_wer",
+            "median_wer",
+            "maximum_wer",
+        ]:
+            if column in display.columns:
+                display[column] = (
+                    pd.to_numeric(display[column], errors="coerce")
+                    * 100
+                ).round(2)
+        for column in ["average_generation_time", "average_rtf"]:
+            if column in display.columns:
+                display[column] = pd.to_numeric(
+                    display[column], errors="coerce"
+                ).round(3)
+
+        st.dataframe(display, use_container_width=True)
+
+        col1, col2 = st.columns(2)
+        with col1:
+            st.markdown("#### XTTS-v2")
+            st.json(xtts_summary)
+        with col2:
+            st.markdown("#### Chatterbox")
+            st.json(chatterbox_summary)
+
+    with samples_tab:
+        xtts_eval = load_csv_dataframe(
+            RESULTS_DIR / "xtts_arabic_evaluation.csv"
+        )
+        chatterbox_eval = load_csv_dataframe(
+            RESULTS_DIR / "chatterbox_arabic_evaluation.csv"
+        )
+
+        if xtts_eval.empty:
+            st.warning("XTTS Arabic evaluation CSV is missing.")
+            return
+
+        for _, xtts_sample in xtts_eval.iterrows():
+            test_id = str(xtts_sample.get("test_id", ""))
+            with st.container(border=True):
+                st.subheader(test_id)
+                expected_text = str(
+                    xtts_sample.get("expected_text", "")
+                    or xtts_sample.get("reference_text", "")
+                )
+                if expected_text:
+                    st.info(expected_text)
+
+                columns = st.columns(2)
+                with columns[0]:
+                    st.markdown("#### XTTS-v2 Arabic")
+                    xtts_audio = Path(
+                        str(xtts_sample.get("output_path", ""))
+                    )
+                    if xtts_audio.exists():
+                        show_audio_file(xtts_audio)
+                    st.metric(
+                        "WER",
+                        f"{numeric_value(xtts_sample.get('wer_percentage')):.2f}%",
+                    )
+                    st.metric(
+                        "RTF",
+                        f"{numeric_value(xtts_sample.get('rtf')):.2f}",
+                    )
+
+                with columns[1]:
+                    st.markdown("#### Chatterbox Arabic")
+                    chatter_match = chatterbox_eval[
+                        chatterbox_eval["test_id"].astype(str) == test_id
+                    ] if not chatterbox_eval.empty else pd.DataFrame()
+                    if not chatter_match.empty:
+                        chatter_sample = chatter_match.iloc[0]
+                        chatter_audio = Path(
+                            str(chatter_sample.get("output_path", ""))
+                        )
+                        if chatter_audio.exists():
+                            show_audio_file(chatter_audio)
+                        chatter_wer = chatter_sample.get(
+                            "wer_percent",
+                            chatter_sample.get("wer_percentage", ""),
+                        )
+                        st.metric(
+                            "WER",
+                            f"{numeric_value(chatter_wer):.2f}%",
+                        )
+                        st.metric(
+                            "RTF",
+                            f"{numeric_value(chatter_sample.get('rtf')):.2f}",
+                        )
+                    else:
+                        st.warning("No matching Chatterbox row found.")
+
+    with review_tab:
+        st.markdown("#### Review package")
+        st.write(
+            "Use these artifacts for native Arabic listening review. Human score fields are intentionally blank."
+        )
+        review_paths = [
+            docs_path
+            for docs_path in [
+                PROJECT_ROOT / "docs" / "arabic_native_review_guide.md",
+                RESULTS_DIR / "arabic_native_review_sheet.csv",
+                RESULTS_DIR / "xtts_arabic_evaluation.csv",
+                RESULTS_DIR / "chatterbox_arabic_evaluation.csv",
+            ]
+        ]
+        for review_path in review_paths:
+            status = "available" if review_path.exists() else "missing"
+            st.write(f"**{review_path.name}:** {status}")
+            st.code(str(review_path), language=None)
+
+    with evidence_tab:
+        st.markdown("#### Evidence files")
+        evidence_paths = [
+            comparison_path,
+            comparison_summary_path,
+            xtts_summary_path,
+            chatterbox_summary_path,
+            EVIDENCE_DIR
+            / "result_snapshots"
+            / "xtts"
+            / "arabic"
+            / "xtts_completion_manifest.csv",
+            PROJECT_ROOT / "docs" / "xtts_arabic_experiment_notes.md",
+            PROJECT_ROOT / "docs" / "licenses" / "xtts_v2_license_notes.md",
+        ]
+        for evidence_path in evidence_paths:
+            status = "available" if evidence_path.exists() else "missing"
+            st.write(f"**{evidence_path.name}:** {status}")
+            st.code(str(evidence_path), language=None)
 st.set_page_config(
     page_title="Infinia Voice Lab",
-    page_icon="🎙️",
+    page_icon="ðŸŽ™ï¸",
     layout="wide",
     initial_sidebar_state="expanded",
 )
@@ -1736,7 +2068,7 @@ st.markdown(
     unsafe_allow_html=True,
 )
 
-st.markdown("## 🎙️ Infinia Voice Lab")
+st.markdown("## ðŸŽ™ï¸ Infinia Voice Lab")
 st.caption(
     "Run open-source TTS experiments, inspect evidence, and build an auditable multilingual voice benchmark."
 )
@@ -1749,6 +2081,7 @@ page = st.sidebar.radio(
         "Run Experiment",
         "Generated Audio",
         "Voice Comparison",
+        "Arabic Results",
         "Review Workspace",
         "Reports",
     ],
@@ -1780,38 +2113,38 @@ if page == "Overview":
             st.write(
                 "**Voice cloning:**",
                 (
-                    "✅ Supported"
+                    "âœ… Supported"
                     if MODEL_CONFIG[
                         model_status["name"]
                     ]["supports_voice_cloning"]
-                    else "❌ Not supported"
+                    else "âŒ Not supported"
                 ),
             )
 
             st.write(
                 "Environment:",
                 (
-                    "✅"
+                    "âœ…"
                     if model_status["environment_exists"]
-                    else "❌"
+                    else "âŒ"
                 ),
             )
 
             st.write(
                 "Python executable:",
                 (
-                    "✅"
+                    "âœ…"
                     if model_status["python_exists"]
-                    else "❌"
+                    else "âŒ"
                 ),
             )
 
             st.write(
                 "Generation script:",
                 (
-                    "✅"
+                    "âœ…"
                     if model_status["script_exists"]
-                    else "❌"
+                    else "âŒ"
                 ),
             )
 
@@ -1886,7 +2219,7 @@ elif page == "Clone Your Voice":
 
     with setup_container:
         st.markdown(
-            "### 1 · Voice and language"
+            "### 1 Â· Voice and language"
         )
 
         setup_columns = st.columns(2)
@@ -1923,7 +2256,7 @@ elif page == "Clone Your Voice":
 
     with audio_container:
         st.markdown(
-            "### 2 · Add reference recording"
+            "### 2 Â· Add reference recording"
         )
 
         input_method = st.radio(
@@ -1951,7 +2284,7 @@ elif page == "Clone Your Voice":
                     "webm",
                 ],
                 help=(
-                    "Use 10–30 seconds of clear, "
+                    "Use 10â€“30 seconds of clear, "
                     "continuous speech."
                 ),
             )
@@ -1992,7 +2325,7 @@ elif page == "Clone Your Voice":
                 )
 
         st.info(
-            "For best cloning: record 10–30 seconds, "
+            "For best cloning: record 10â€“30 seconds, "
             "use one speaker, avoid music, echo, fan "
             "noise and automatic voice effects."
         )
@@ -2003,7 +2336,7 @@ elif page == "Clone Your Voice":
 
     with transcript_container:
         st.markdown(
-            "### 3 · Exact reference transcript"
+            "### 3 Â· Exact reference transcript"
         )
 
         reference_transcript = st.text_area(
@@ -2026,7 +2359,7 @@ elif page == "Clone Your Voice":
 
     with target_container:
         st.markdown(
-            "### 4 · Text to generate"
+            "### 4 Â· Text to generate"
         )
 
         target_text = st.text_area(
@@ -2055,9 +2388,9 @@ elif page == "Clone Your Voice":
                 ["air", "nano"],
                 index=0,
                 format_func=lambda value: (
-                    "NeuTTS Air — better quality"
+                    "NeuTTS Air â€” better quality"
                     if value == "air"
-                    else "NeuTTS Nano — smaller model"
+                    else "NeuTTS Nano â€” smaller model"
                 ),
             )
 
@@ -2139,7 +2472,7 @@ elif page == "Clone Your Voice":
             expanded=True,
         ):
             for error in validation_errors:
-                st.write(f"• {error}")
+                st.write(f"â€¢ {error}")
 
     generate_button = st.button(
         "Generate cloned voice",
@@ -2230,7 +2563,7 @@ elif page == "Clone Your Voice":
                 return_code = process.poll()
 
                 status_placeholder.info(
-                    "Generating cloned voice — "
+                    "Generating cloned voice â€” "
                     f"{time.perf_counter() - started:.1f}s"
                 )
 
@@ -2464,7 +2797,7 @@ elif page == "Run Experiment":
         log_placeholder = st.empty()
         status_placeholder = st.empty()
 
-        arguments = []
+        arguments = list(config.get("default_arguments", []))
 
         if selected_model == "MeloTTS English":
             arguments = ["--text", input_text]
@@ -2941,6 +3274,10 @@ elif page == "Voice Comparison":
             st.json(comparison_report)
 
 
+
+elif page == "Arabic Results":
+    render_arabic_results()
+
 elif page == "Review Workspace":
     render_review_workspace()
 
@@ -3045,6 +3382,8 @@ elif page == "Reports":
         st.info(
             "No terminal logs directory found."
         )
+
+
 
 
 

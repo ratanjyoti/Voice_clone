@@ -1,0 +1,59 @@
+{
+  "timestamp": "2026-07-17T19:21:46.987267+00:00",
+  "models": [
+    {
+      "model": "Chatterbox multilingual",
+      "successful_samples": 5,
+      "failed_samples": 0,
+      "average_wer": 0.20125874125874127,
+      "median_wer": 0.23076923076923078,
+      "maximum_wer": 0.38461538461538464,
+      "wer_pass_count": 2,
+      "average_generation_time": 89.40965066000062,
+      "average_rtf": 12.10455460552392,
+      "clipping_pass_count": 5,
+      "model_size_if_known": "not recorded in this run",
+      "cpu_feasibility": "CPU evaluation completed; production real-time suitability depends on RTF and hardware",
+      "streaming_support_if_verified": "not verified",
+      "voice_cloning_support": "verified zero-shot reference audio cloning",
+      "reference_strategy": "standard reference",
+      "license_note": "Existing case-study model; deployment licensing still requires project review.",
+      "meets_average_wer_target": false,
+      "meets_4_of_5_pass_target": false,
+      "meets_no_clipping_target": true,
+      "meets_no_failed_target": true
+    },
+    {
+      "model": "XTTS-v2",
+      "successful_samples": 5,
+      "failed_samples": 0,
+      "average_wer": 0.05356643356643357,
+      "median_wer": 0.07692307692307693,
+      "maximum_wer": 0.1,
+      "wer_pass_count": 5,
+      "average_generation_time": 22.637138959998264,
+      "average_rtf": 3.2249065560361734,
+      "clipping_pass_count": 5,
+      "model_size_if_known": "model.pth 1.87 GB plus config/vocab/speakers",
+      "cpu_feasibility": "CPU evaluation completed; production real-time suitability depends on RTF and hardware",
+      "streaming_support_if_verified": "not verified",
+      "voice_cloning_support": "verified zero-shot reference audio cloning",
+      "reference_strategy": "multi reference: short + standard + long",
+      "license_note": "CPML; commercial/deployment use requires additional license review.",
+      "meets_average_wer_target": true,
+      "meets_4_of_5_pass_target": true,
+      "meets_no_clipping_target": true,
+      "meets_no_failed_target": true
+    }
+  ],
+  "automatic_winner": "XTTS-v2",
+  "winner_rules": [
+    "meets Arabic WER target",
+    "at least 4/5 samples pass",
+    "no clipping",
+    "no failed samples",
+    "lower average WER",
+    "lower average RTF"
+  ],
+  "human_quality_fields_compared": false
+}
