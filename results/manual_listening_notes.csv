@@ -1,0 +1,2 @@
+language,model_id,sentence_id,clip_file,naturalness_1_to_5,pronunciation_1_to_5,words_missing,robotic,notes,reviewer
+arabic,facebook/mms-tts-ara,ar_01,outputs/mms/arabic/ar_01_run_01.wav,,,unknown,true,"Speech was understandable but sounded robotic.",Ratan

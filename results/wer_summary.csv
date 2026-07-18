@@ -1,0 +1,4 @@
+﻿language,language_code,model_id,asr_model,successful_samples,failed_samples,mean_wer,median_wer,min_wer,max_wer,mean_cer,median_cer,wer_target_pass_rate_percent
+arabic,,facebook/mms-tts-ara,,15,0,0.821,0.7273,0.625,1.125,0.2736,0.2727,0.0
+english,,facebook/mms-tts-eng,,5,0,0.2659,0.0,0.0,0.875,0.171,0.0,60.0
+hindi,,facebook/mms-tts-hin,,15,0,1.0,1.0,1.0,1.0,1.0,1.0,0.0

@@ -5,7 +5,6 @@
 # Local Generated Folders
 downloads/
 outputs/
-results/
 
 # Python virtual environments
 .venv/

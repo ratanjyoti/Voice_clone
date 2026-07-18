@@ -1,0 +1,4 @@
+﻿language,language_code,model_id,device,successful_runs,failed_runs,mean_generation_time_seconds,median_generation_time_seconds,min_generation_time_seconds,max_generation_time_seconds,mean_audio_duration_seconds,mean_rtf,median_rtf,min_rtf,max_rtf,mean_model_load_time_seconds,latency_target_pass_rate_percent,rtf_target_pass_rate_percent
+arabic,ar,facebook/mms-tts-ara,cpu,15,0,1.8438,1.878,1.1827,2.7712,6.1941,0.3075,0.3078,0.231,0.3725,8.6792,53.33,100.0
+english,en,facebook/mms-tts-eng,cpu,15,0,1.1418,1.0813,0.908,1.7442,4.5717,0.2489,0.2466,0.2332,0.2679,16.6255,100.0,100.0
+hindi,hi,facebook/mms-tts-hin,cpu,15,0,1.4024,1.3974,1.0866,1.7916,4.336,0.325,0.3266,0.3029,0.352,9.0098,100.0,100.0
