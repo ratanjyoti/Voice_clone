@@ -1,0 +1,22 @@
+{
+  "test_id": "en_01_greeting",
+  "model": "MeloTTS",
+  "language": "English",
+  "expected_text": "Hello, welcome to our voice assistant. How can I help you today?",
+  "asr_text": "Hello, welcome to our voice assistant. How can I help you today?",
+  "normalized_expected": "hello welcome to our voice assistant how can i help you today",
+  "normalized_asr": "hello welcome to our voice assistant how can i help you today",
+  "WER": 0.0,
+  "WER_percent": 0.0,
+  "generation_time": 13.11039,
+  "RTF": 2.820924,
+  "output_path": "E:\\NEW_genai_projects\\TTS_voice\\infinia-voice-case-study\\outputs\\english\\melotts\\final\\en_01_greeting.wav",
+  "sample_rate": 44100,
+  "channels": 1,
+  "audio_duration": 4.647551020408163,
+  "rms": 0.054408658820727804,
+  "peak": 0.360687255859375,
+  "clipping": false,
+  "clipping_samples": 0,
+  "silence_ratio": 0.24387554462643385
+}

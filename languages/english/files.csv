@@ -1,0 +1,227 @@
+language,kind,path,notes
+english,data,data/reference_audio/english/ratan_20s.original.m4a,reference voice/audio for this language
+english,data,data/reference_audio/english/ratan_20s.pt,reference voice/audio for this language
+english,data,data/reference_audio/english/ratan_20s.txt,reference voice/audio for this language
+english,data,data/reference_audio/english/ratan_20s.wav,reference voice/audio for this language
+english,data,data/reference_audio/english/ratan_20s_norm.pt,reference voice/audio for this language
+english,data,data/reference_audio/english/ratan_20s_norm.txt,reference voice/audio for this language
+english,data,data/reference_audio/english/ratan_20s_norm.wav,reference voice/audio for this language
+english,data,data/reference_audio/english/ratan_conversational.original.m4a,reference voice/audio for this language
+english,data,data/reference_audio/english/ratan_conversational.txt,reference voice/audio for this language
+english,data,data/reference_audio/english/ratan_conversational.wav,reference voice/audio for this language
+english,data,data/reference_audio/english/ratan_expressive.original.m4a,reference voice/audio for this language
+english,data,data/reference_audio/english/ratan_expressive.txt,reference voice/audio for this language
+english,data,data/reference_audio/english/ratan_expressive.wav,reference voice/audio for this language
+english,data,data/reference_audio/english/ratan_neutral.original.m4a,reference voice/audio for this language
+english,data,data/reference_audio/english/ratan_neutral.pt,reference voice/audio for this language
+english,data,data/reference_audio/english/ratan_neutral.txt,reference voice/audio for this language
+english,data,data/reference_audio/english/ratan_neutral.wav,reference voice/audio for this language
+english,data,data/test_sentences/english.json,benchmark text set for this language
+english,data,data/test_sentences/english_voice_clone_tests.json,benchmark text set for this language
+english,data,data/user_voice_clones/ratan/english/reference.txt,language-related file
+english,data,data/user_voice_clones/ratan/english/reference.wav,language-related file
+english,data,data/user_voice_clones/ratan/english/reference_input.m4a,language-related file
+english,data,data/user_voice_clones/ratan/english/target_text.txt,language-related file
+english,data,data/user_voice_clones/ratan/english/voice_profile.json,language-related file
+english,data,data/voice_profiles/ratan_20s_natural.json,language-related file
+english,data,data/voice_profiles/ratan_20s_natural_normalized.json,language-related file
+english,data,data/voice_profiles/ratan_conversational.json,language-related file
+english,data,data/voice_profiles/ratan_expressive.json,language-related file
+english,data,data/voice_profiles/ratan_neutral.json,language-related file
+english,doc,docs/english_results.md,human-readable documentation for this language
+english,evidence,evidence/result_snapshots/ecapa_english_speaker_similarity.json,execution proof/log/snapshot for this language
+english,evidence,evidence/result_snapshots/english_model_summary.json,execution proof/log/snapshot for this language
+english,evidence,evidence/result_snapshots/english_speaker_similarity_summary.json,execution proof/log/snapshot for this language
+english,evidence,evidence/result_snapshots/melotts/en_01_melotts.json,execution proof/log/snapshot for this language
+english,evidence,evidence/result_snapshots/melotts/en_02_melotts.json,execution proof/log/snapshot for this language
+english,evidence,evidence/result_snapshots/melotts/en_03_melotts.json,execution proof/log/snapshot for this language
+english,evidence,evidence/result_snapshots/melotts/en_04_melotts.json,execution proof/log/snapshot for this language
+english,evidence,evidence/result_snapshots/melotts/en_05_melotts.json,execution proof/log/snapshot for this language
+english,evidence,evidence/result_snapshots/melotts/melotts_english_batch_summary.json,execution proof/log/snapshot for this language
+english,evidence,evidence/result_snapshots/melotts_english_smoke.json,execution proof/log/snapshot for this language
+english,evidence,evidence/result_snapshots/neutts/20260716_101904_ratan_neutral_nano_q8.json,execution proof/log/snapshot for this language
+english,evidence,evidence/result_snapshots/neutts/20260717_122254_ratan_expressive_air_q8.json,execution proof/log/snapshot for this language
+english,evidence,evidence/result_snapshots/neutts/20260717_122306_ratan_expressive_air_q8.json,execution proof/log/snapshot for this language
+english,evidence,evidence/result_snapshots/neutts_air/air_01_greeting.json,execution proof/log/snapshot for this language
+english,evidence,evidence/result_snapshots/neutts_air/air_02_identity.json,execution proof/log/snapshot for this language
+english,evidence,evidence/result_snapshots/neutts_air/air_03_support.json,execution proof/log/snapshot for this language
+english,evidence,evidence/result_snapshots/neutts_air/air_04_numbers.json,execution proof/log/snapshot for this language
+english,evidence,evidence/result_snapshots/neutts_air/air_05_expressive.json,execution proof/log/snapshot for this language
+english,evidence,evidence/result_snapshots/neutts_air/neutts_air_evaluation_summary.json,execution proof/log/snapshot for this language
+english,evidence,evidence/result_snapshots/neutts_english_smoke.json,execution proof/log/snapshot for this language
+english,evidence,evidence/result_snapshots/openvoice_checkpoint_manifest.csv,execution proof/log/snapshot for this language
+english,evidence,evidence/result_snapshots/openvoice_converter_load.json,execution proof/log/snapshot for this language
+english,evidence,evidence/result_snapshots/openvoice_english_similarity.json,execution proof/log/snapshot for this language
+english,evidence,evidence/result_snapshots/openvoice_english_single_conversion.json,execution proof/log/snapshot for this language
+english,evidence,evidence/result_snapshots/openvoice_target_embedding.json,execution proof/log/snapshot for this language
+english,evidence,evidence/terminal_logs/ecapa_english_speaker_similarity.txt,execution proof/log/snapshot for this language
+english,evidence,evidence/terminal_logs/melotts_english_deps_install_stderr.txt,execution proof/log/snapshot for this language
+english,evidence,evidence/terminal_logs/melotts_english_deps_install_stdout.txt,execution proof/log/snapshot for this language
+english,evidence,evidence/terminal_logs/melotts_english_run.log,execution proof/log/snapshot for this language
+english,evidence,evidence/terminal_logs/melotts_english_smoke_hash.txt,execution proof/log/snapshot for this language
+english,evidence,evidence/terminal_logs/melotts_final_package_versions_stderr.txt,execution proof/log/snapshot for this language
+english,evidence,evidence/terminal_logs/melotts_final_package_versions_stdout.txt,execution proof/log/snapshot for this language
+english,evidence,evidence/terminal_logs/melotts_final_pip_freeze.txt,execution proof/log/snapshot for this language
+english,evidence,evidence/terminal_logs/melotts_generation_stderr.txt,execution proof/log/snapshot for this language
+english,evidence,evidence/terminal_logs/melotts_generation_stdout.txt,execution proof/log/snapshot for this language
+english,evidence,evidence/terminal_logs/melotts_import_retry_stderr.txt,execution proof/log/snapshot for this language
+english,evidence,evidence/terminal_logs/melotts_import_retry_stdout.txt,execution proof/log/snapshot for this language
+english,evidence,evidence/terminal_logs/melotts_import_test.txt,execution proof/log/snapshot for this language
+english,evidence,evidence/terminal_logs/melotts_import_test_after_librosa.txt,execution proof/log/snapshot for this language
+english,evidence,evidence/terminal_logs/melotts_import_test_after_setuptools.txt,execution proof/log/snapshot for this language
+english,evidence,evidence/terminal_logs/melotts_import_test_after_tqdm.txt,execution proof/log/snapshot for this language
+english,evidence,evidence/terminal_logs/melotts_import_test_stderr.txt,execution proof/log/snapshot for this language
+english,evidence,evidence/terminal_logs/melotts_import_test_stdout.txt,execution proof/log/snapshot for this language
+english,evidence,evidence/terminal_logs/melotts_librosa_install.txt,execution proof/log/snapshot for this language
+english,evidence,evidence/terminal_logs/melotts_model_load_stderr.txt,execution proof/log/snapshot for this language
+english,evidence,evidence/terminal_logs/melotts_model_load_stdout.txt,execution proof/log/snapshot for this language
+english,evidence,evidence/terminal_logs/melotts_package_install.txt,execution proof/log/snapshot for this language
+english,evidence,evidence/terminal_logs/melotts_package_install_nodeps.txt,execution proof/log/snapshot for this language
+english,evidence,evidence/terminal_logs/melotts_package_install_retry_escalated.txt,execution proof/log/snapshot for this language
+english,evidence,evidence/terminal_logs/melotts_package_install_retry_workspace_temp.txt,execution proof/log/snapshot for this language
+english,evidence,evidence/terminal_logs/melotts_pip_list_after_checkpoint.txt,execution proof/log/snapshot for this language
+english,evidence,evidence/terminal_logs/melotts_pip_show_before_fix.txt,execution proof/log/snapshot for this language
+english,evidence,evidence/terminal_logs/melotts_setuptools_install.txt,execution proof/log/snapshot for this language
+english,evidence,evidence/terminal_logs/melotts_source_file_check.txt,execution proof/log/snapshot for this language
+english,evidence,evidence/terminal_logs/melotts_tqdm_install.txt,execution proof/log/snapshot for this language
+english,evidence,evidence/terminal_logs/melotts_validation_stderr.txt,execution proof/log/snapshot for this language
+english,evidence,evidence/terminal_logs/melotts_validation_stdout.txt,execution proof/log/snapshot for this language
+english,evidence,evidence/terminal_logs/mms_english_benchmark.txt,execution proof/log/snapshot for this language
+english,evidence,evidence/terminal_logs/mms_english_final_generation.txt,execution proof/log/snapshot for this language
+english,evidence,evidence/terminal_logs/neutts_air_evaluation.txt,execution proof/log/snapshot for this language
+english,evidence,evidence/terminal_logs/neutts_english_final_generation.txt,execution proof/log/snapshot for this language
+english,evidence,evidence/terminal_logs/neutts_english_final_generation_retry.txt,execution proof/log/snapshot for this language
+english,evidence,evidence/terminal_logs/neutts_english_final_generation_retry_with_library.txt,execution proof/log/snapshot for this language
+english,evidence,evidence/terminal_logs/openvoice_asr_import_test.txt,execution proof/log/snapshot for this language
+english,evidence,evidence/terminal_logs/openvoice_checkpoint_download.txt,execution proof/log/snapshot for this language
+english,evidence,evidence/terminal_logs/openvoice_checkpoint_files.txt,execution proof/log/snapshot for this language
+english,evidence,evidence/terminal_logs/openvoice_checkpoint_hashes.txt,execution proof/log/snapshot for this language
+english,evidence,evidence/terminal_logs/openvoice_checkpoint_source.txt,execution proof/log/snapshot for this language
+english,evidence,evidence/terminal_logs/openvoice_checkpoint_zip_inspection.txt,execution proof/log/snapshot for this language
+english,evidence,evidence/terminal_logs/openvoice_cn2an_install.txt,execution proof/log/snapshot for this language
+english,evidence,evidence/terminal_logs/openvoice_converter_checkpoint_load.txt,execution proof/log/snapshot for this language
+english,evidence,evidence/terminal_logs/openvoice_converter_load_test.txt,execution proof/log/snapshot for this language
+english,evidence,evidence/terminal_logs/openvoice_core_import_test.txt,execution proof/log/snapshot for this language
+english,evidence,evidence/terminal_logs/openvoice_eng_to_ipa_install.txt,execution proof/log/snapshot for this language
+english,evidence,evidence/terminal_logs/openvoice_english_en01_wer.txt,execution proof/log/snapshot for this language
+english,evidence,evidence/terminal_logs/openvoice_english_similarity.txt,execution proof/log/snapshot for this language
+english,evidence,evidence/terminal_logs/openvoice_english_single_conversion.txt,execution proof/log/snapshot for this language
+english,evidence,evidence/terminal_logs/openvoice_environment_created.txt,execution proof/log/snapshot for this language
+english,evidence,evidence/terminal_logs/openvoice_git_commit.txt,execution proof/log/snapshot for this language
+english,evidence,evidence/terminal_logs/openvoice_github_releases_check.txt,execution proof/log/snapshot for this language
+english,evidence,evidence/terminal_logs/openvoice_hf_model_check.txt,execution proof/log/snapshot for this language
+english,evidence,evidence/terminal_logs/openvoice_install_no_deps.txt,execution proof/log/snapshot for this language
+english,evidence,evidence/terminal_logs/openvoice_jieba_install.txt,execution proof/log/snapshot for this language
+english,evidence,evidence/terminal_logs/openvoice_librosa_install.txt,execution proof/log/snapshot for this language
+english,evidence,evidence/terminal_logs/openvoice_modern_asr_dependencies.txt,execution proof/log/snapshot for this language
+english,evidence,evidence/terminal_logs/openvoice_numpy_downgrade.txt,execution proof/log/snapshot for this language
+english,evidence,evidence/terminal_logs/openvoice_package_install.txt,execution proof/log/snapshot for this language
+english,evidence,evidence/terminal_logs/openvoice_pypinyin_install.txt,execution proof/log/snapshot for this language
+english,evidence,evidence/terminal_logs/openvoice_python39_environment.txt,execution proof/log/snapshot for this language
+english,evidence,evidence/terminal_logs/openvoice_python_versions.txt,execution proof/log/snapshot for this language
+english,evidence,evidence/terminal_logs/openvoice_pytorch_cpu_install.txt,execution proof/log/snapshot for this language
+english,evidence,evidence/terminal_logs/openvoice_pytorch_import_test.txt,execution proof/log/snapshot for this language
+english,evidence,evidence/terminal_logs/openvoice_setuptools_pkg_resources.txt,execution proof/log/snapshot for this language
+english,evidence,evidence/terminal_logs/openvoice_soundfile_install.txt,execution proof/log/snapshot for this language
+english,evidence,evidence/terminal_logs/openvoice_target_embedding_extraction.txt,execution proof/log/snapshot for this language
+english,evidence,evidence/terminal_logs/openvoice_target_embedding_hash.txt,execution proof/log/snapshot for this language
+english,evidence,evidence/terminal_logs/openvoice_tone_converter_import_test.txt,execution proof/log/snapshot for this language
+english,evidence,evidence/terminal_logs/openvoice_torch_cpu_install.txt,execution proof/log/snapshot for this language
+english,evidence,evidence/terminal_logs/openvoice_torch_import_test.txt,execution proof/log/snapshot for this language
+english,evidence,evidence/terminal_logs/openvoice_unidecode_install.txt,execution proof/log/snapshot for this language
+english,evidence,evidence/terminal_logs/openvoice_wavmark_install.txt,execution proof/log/snapshot for this language
+english,evidence,evidence/terminal_logs/streamlit_dashboard_neutts_stderr.log,execution proof/log/snapshot for this language
+english,evidence,evidence/terminal_logs/streamlit_dashboard_neutts_stdout.log,execution proof/log/snapshot for this language
+english,output,outputs/human_review/english/sample_A_01.wav,generated audio or sidecar evidence for this language
+english,output,outputs/human_review/english/sample_A_02.wav,generated audio or sidecar evidence for this language
+english,output,outputs/human_review/english/sample_A_03.wav,generated audio or sidecar evidence for this language
+english,output,outputs/human_review/english/sample_A_04.wav,generated audio or sidecar evidence for this language
+english,output,outputs/human_review/english/sample_A_05.wav,generated audio or sidecar evidence for this language
+english,output,outputs/human_review/english/sample_B_01.wav,generated audio or sidecar evidence for this language
+english,output,outputs/human_review/english/sample_B_02.wav,generated audio or sidecar evidence for this language
+english,output,outputs/human_review/english/sample_B_03.wav,generated audio or sidecar evidence for this language
+english,output,outputs/human_review/english/sample_B_04.wav,generated audio or sidecar evidence for this language
+english,output,outputs/human_review/english/sample_B_05.wav,generated audio or sidecar evidence for this language
+english,output,outputs/melotts/english/en_01_melotts.wav,generated audio or sidecar evidence for this language
+english,output,outputs/melotts/english/en_01_melotts_smoke.wav,generated audio or sidecar evidence for this language
+english,output,outputs/melotts/english/en_02_melotts.wav,generated audio or sidecar evidence for this language
+english,output,outputs/melotts/english/en_03_melotts.wav,generated audio or sidecar evidence for this language
+english,output,outputs/melotts/english/en_04_melotts.wav,generated audio or sidecar evidence for this language
+english,output,outputs/melotts/english/en_05_melotts.wav,generated audio or sidecar evidence for this language
+english,output,outputs/mms/english/en_01_run_01.wav,generated audio or sidecar evidence for this language
+english,output,outputs/mms/english/en_01_run_02.wav,generated audio or sidecar evidence for this language
+english,output,outputs/mms/english/en_01_run_03.wav,generated audio or sidecar evidence for this language
+english,output,outputs/mms/english/en_02_run_01.wav,generated audio or sidecar evidence for this language
+english,output,outputs/mms/english/en_02_run_02.wav,generated audio or sidecar evidence for this language
+english,output,outputs/mms/english/en_02_run_03.wav,generated audio or sidecar evidence for this language
+english,output,outputs/mms/english/en_03_run_01.wav,generated audio or sidecar evidence for this language
+english,output,outputs/mms/english/en_03_run_02.wav,generated audio or sidecar evidence for this language
+english,output,outputs/mms/english/en_03_run_03.wav,generated audio or sidecar evidence for this language
+english,output,outputs/mms/english/en_04_run_01.wav,generated audio or sidecar evidence for this language
+english,output,outputs/mms/english/en_04_run_02.wav,generated audio or sidecar evidence for this language
+english,output,outputs/mms/english/en_04_run_03.wav,generated audio or sidecar evidence for this language
+english,output,outputs/mms/english/en_05_run_01.wav,generated audio or sidecar evidence for this language
+english,output,outputs/mms/english/en_05_run_02.wav,generated audio or sidecar evidence for this language
+english,output,outputs/mms/english/en_05_run_03.wav,generated audio or sidecar evidence for this language
+english,output,outputs/mms/english/en_mms_smoke_test.json,generated audio or sidecar evidence for this language
+english,output,outputs/mms/english/en_mms_smoke_test.wav,generated audio or sidecar evidence for this language
+english,output,outputs/mms/english/final/en_clone_01_greeting.json,generated audio or sidecar evidence for this language
+english,output,outputs/mms/english/final/en_clone_01_greeting.wav,generated audio or sidecar evidence for this language
+english,output,outputs/mms/english/final/en_clone_02_technology.json,generated audio or sidecar evidence for this language
+english,output,outputs/mms/english/final/en_clone_02_technology.wav,generated audio or sidecar evidence for this language
+english,output,outputs/mms/english/final/en_clone_03_conversational.json,generated audio or sidecar evidence for this language
+english,output,outputs/mms/english/final/en_clone_03_conversational.wav,generated audio or sidecar evidence for this language
+english,output,outputs/mms/english/final/en_clone_04_numbers.json,generated audio or sidecar evidence for this language
+english,output,outputs/mms/english/final/en_clone_04_numbers.wav,generated audio or sidecar evidence for this language
+english,output,outputs/mms/english/final/en_clone_05_expressive.json,generated audio or sidecar evidence for this language
+english,output,outputs/mms/english/final/en_clone_05_expressive.wav,generated audio or sidecar evidence for this language
+english,output,outputs/mms/english/final/generation_summary.json,generated audio or sidecar evidence for this language
+english,output,outputs/neutts/diagnostics/ratan_neutral_neucodec_reconstructed.wav,generated audio or sidecar evidence for this language
+english,output,outputs/neutts/english/air_evaluation/air_01_greeting.wav,generated audio or sidecar evidence for this language
+english,output,outputs/neutts/english/air_evaluation/air_02_identity.wav,generated audio or sidecar evidence for this language
+english,output,outputs/neutts/english/air_evaluation/air_03_support.wav,generated audio or sidecar evidence for this language
+english,output,outputs/neutts/english/air_evaluation/air_04_numbers.wav,generated audio or sidecar evidence for this language
+english,output,outputs/neutts/english/air_evaluation/air_05_expressive.wav,generated audio or sidecar evidence for this language
+english,output,outputs/neutts/english/final/air_01_greeting.json,generated audio or sidecar evidence for this language
+english,output,outputs/neutts/english/final/air_01_greeting.wav,generated audio or sidecar evidence for this language
+english,output,outputs/neutts/english/final/air_02_identity.json,generated audio or sidecar evidence for this language
+english,output,outputs/neutts/english/final/air_02_identity.wav,generated audio or sidecar evidence for this language
+english,output,outputs/neutts/english/final/air_03_support.json,generated audio or sidecar evidence for this language
+english,output,outputs/neutts/english/final/air_03_support.wav,generated audio or sidecar evidence for this language
+english,output,outputs/neutts/english/final/air_04_numbers.json,generated audio or sidecar evidence for this language
+english,output,outputs/neutts/english/final/air_04_numbers.wav,generated audio or sidecar evidence for this language
+english,output,outputs/neutts/english/final/air_05_expressive.json,generated audio or sidecar evidence for this language
+english,output,outputs/neutts/english/final/air_05_expressive.wav,generated audio or sidecar evidence for this language
+english,output,outputs/neutts/english/final/generation_summary.json,generated audio or sidecar evidence for this language
+english,output,outputs/neutts/english/ratan_20s_air_natural_test.wav,generated audio or sidecar evidence for this language
+english,output,outputs/neutts/english/ratan_20s_norm_air_natural_test.wav,generated audio or sidecar evidence for this language
+english,output,outputs/neutts/english/ratan_neutral_air_common_words.wav,generated audio or sidecar evidence for this language
+english,output,outputs/neutts/english/ratan_neutral_air_same_text.wav,generated audio or sidecar evidence for this language
+english,output,outputs/neutts/english/ratan_neutral_nano_corrected_name.wav,generated audio or sidecar evidence for this language
+english,output,outputs/neutts/english/ratan_neutral_nano_torch_test.wav,generated audio or sidecar evidence for this language
+english,output,outputs/openvoice/embeddings/en_01_cloned_se.pth,generated audio or sidecar evidence for this language
+english,output,outputs/openvoice/embeddings/mms_english_en_01_source_se.pth,generated audio or sidecar evidence for this language
+english,output,outputs/openvoice/embeddings/ratan_target_se.pth,generated audio or sidecar evidence for this language
+english,output,outputs/openvoice/english/en_01_openvoice_cloned.wav,generated audio or sidecar evidence for this language
+english,output,outputs/user_voice_clones/Backend_English_Test/english/20260717_130251/generation_report.json,generated audio or sidecar evidence for this language
+english,output,outputs/user_voice_clones/Backend_English_Test/english/20260717_133025/chunks/chunk_001.wav,generated audio or sidecar evidence for this language
+english,output,outputs/user_voice_clones/Backend_English_Test/english/20260717_133025/cloned_voice.wav,generated audio or sidecar evidence for this language
+english,output,outputs/user_voice_clones/Backend_English_Test/english/20260717_133025/generation_report.json,generated audio or sidecar evidence for this language
+english,output,outputs/user_voice_clones/ratan/english/20260717_124516/generation_report.json,generated audio or sidecar evidence for this language
+english,result,results/english_model_comparison.csv,metric/result evidence for this language
+english,result,results/english_speaker_similarity.csv,metric/result evidence for this language
+english,result,results/mms_english_evaluation.csv,metric/result evidence for this language
+english,result,results/neutts_air_evaluation.csv,metric/result evidence for this language
+english,result,results/neutts_english_evaluation.csv,metric/result evidence for this language
+english,script,scripts/convert_openvoice_single_english.py,implementation or evaluation code for this language
+english,script,scripts/download_neutts_air.py,implementation or evaluation code for this language
+english,script,scripts/evaluate_openvoice_similarity.py,implementation or evaluation code for this language
+english,script,scripts/extract_openvoice_target_embedding.py,implementation or evaluation code for this language
+english,script,scripts/generate_final_neutts_english.py,implementation or evaluation code for this language
+english,script,scripts/load_melotts_english_model.py,implementation or evaluation code for this language
+english,script,scripts/load_openvoice_converter_cpu.py,implementation or evaluation code for this language
+english,script,scripts/test_melotts_import.py,implementation or evaluation code for this language
+english,source,src/generate_melotts_english.py,implementation or evaluation code for this language
+english,source,src/generate_neutts_air_evaluation.py,implementation or evaluation code for this language
+english,source,src/generate_neutts_english.py,implementation or evaluation code for this language
+english,source,src/load_openvoice_converter.py,implementation or evaluation code for this language

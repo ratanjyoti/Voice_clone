@@ -1,0 +1,53 @@
+# Shared Evidence Files
+
+| Kind | Path | Notes |
+| --- | --- | --- |
+| evidence | `evidence/audio_manifest/mms_audio_manifest.csv` | shared project file used across languages |
+| evidence | `evidence/final_submission_manifest.csv` | shared project file used across languages |
+| evidence | `evidence/human_review_model_mapping.csv` | shared project file used across languages |
+| evidence | `evidence/result_snapshots/manual_comparisons/voice_comparison_20260716_090809.json` | shared project file used across languages |
+| evidence | `evidence/result_snapshots/manual_comparisons/voice_comparison_20260716_103556.json` | shared project file used across languages |
+| evidence | `evidence/result_snapshots/manual_comparisons/voice_comparison_20260716_132841.json` | shared project file used across languages |
+| evidence | `evidence/result_snapshots/manual_comparisons/voice_comparison_20260717_122033.json` | shared project file used across languages |
+| evidence | `evidence/result_snapshots/mms_summary_20260715_112720.csv` | shared project file used across languages |
+| evidence | `evidence/result_snapshots/neucodec_reconstruction_test.json` | shared project file used across languages |
+| evidence | `evidence/result_snapshots/pip_freeze.txt` | shared project file used across languages |
+| evidence | `evidence/result_snapshots/raw_runs_20260715_112720.csv` | shared project file used across languages |
+| evidence | `evidence/result_snapshots/reference_audio_quality.json` | shared project file used across languages |
+| evidence | `evidence/result_snapshots/silma_partial_environment.txt` | shared project file used across languages |
+| evidence | `evidence/result_snapshots/wer_results_20260715_112720.csv` | shared project file used across languages |
+| evidence | `evidence/result_snapshots/wer_summary_20260715_112720.csv` | shared project file used across languages |
+| evidence | `evidence/terminal_logs/dashboard_streamlit_stderr.txt` | shared project file used across languages |
+| evidence | `evidence/terminal_logs/dashboard_streamlit_stdout.txt` | shared project file used across languages |
+| evidence | `evidence/terminal_logs/environment_report.txt` | shared project file used across languages |
+| evidence | `evidence/terminal_logs/example_stderr.txt` | shared project file used across languages |
+| evidence | `evidence/terminal_logs/example_stdout.txt` | shared project file used across languages |
+| evidence | `evidence/terminal_logs/git_commit.txt` | shared project file used across languages |
+| evidence | `evidence/terminal_logs/git_status.txt` | shared project file used across languages |
+| evidence | `evidence/terminal_logs/important_package_versions.txt` | shared project file used across languages |
+| evidence | `evidence/terminal_logs/mms_benchmark_summary.txt` | shared project file used across languages |
+| evidence | `evidence/terminal_logs/mms_summary.txt` | shared project file used across languages |
+| evidence | `evidence/terminal_logs/reference_audio_ffprobe.txt` | shared project file used across languages |
+| evidence | `evidence/terminal_logs/reference_audio_hash.txt` | shared project file used across languages |
+| evidence | `evidence/terminal_logs/reference_audio_quality_validation.txt` | shared project file used across languages |
+| evidence | `evidence/terminal_logs/silma_environment_created.txt` | shared project file used across languages |
+| evidence | `evidence/terminal_logs/silma_installation_final_tail.txt` | shared project file used across languages |
+| evidence | `evidence/terminal_logs/silma_installation_retry.txt` | shared project file used across languages |
+| evidence | `evidence/terminal_logs/silma_installation_retry_2.txt` | shared project file used across languages |
+| evidence | `evidence/terminal_logs/silma_numpy_install.txt` | shared project file used across languages |
+| evidence | `evidence/terminal_logs/silma_onnxruntime_cpu_overlay.txt` | shared project file used across languages |
+| evidence | `evidence/terminal_logs/silma_onnxruntime_gpu_install.txt` | shared project file used across languages |
+| evidence | `evidence/terminal_logs/silma_onnxruntime_gpu_local_install.txt` | shared project file used across languages |
+| evidence | `evidence/terminal_logs/silma_packaging_setup.txt` | shared project file used across languages |
+| evidence | `evidence/terminal_logs/speaker_embedding_model_verification.txt` | shared project file used across languages |
+| evidence | `evidence/terminal_logs/speaker_eval_environment.txt` | shared project file used across languages |
+| evidence | `evidence/terminal_logs/speaker_eval_import_test.txt` | shared project file used across languages |
+| evidence | `evidence/terminal_logs/speaker_eval_pytorch_install.txt` | shared project file used across languages |
+| evidence | `evidence/terminal_logs/speaker_eval_speechbrain_install.txt` | shared project file used across languages |
+| evidence | `evidence/terminal_logs/speaker_similarity_dependencies_install.txt` | shared project file used across languages |
+| evidence | `evidence/terminal_logs/speaker_similarity_dependencies_install_retry.txt` | shared project file used across languages |
+| evidence | `evidence/terminal_logs/speaker_similarity_environment.txt` | shared project file used across languages |
+| evidence | `evidence/terminal_logs/speaker_similarity_evaluation.txt` | shared project file used across languages |
+| evidence | `evidence/terminal_logs/speaker_similarity_packaging_install.txt` | shared project file used across languages |
+| evidence | `evidence/terminal_logs/speaker_similarity_torch_install.txt` | shared project file used across languages |
+| evidence | `evidence/terminal_logs/wer_evaluation.txt` | shared project file used across languages |

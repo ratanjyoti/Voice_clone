@@ -1,0 +1,22 @@
+{
+  "test_id": "en_02_support",
+  "model": "MeloTTS",
+  "language": "English",
+  "expected_text": "I can help you check your order status and answer your questions.",
+  "asr_text": "I can help you check your order status and answer your questions.",
+  "normalized_expected": "i can help you check your order status and answer your questions",
+  "normalized_asr": "i can help you check your order status and answer your questions",
+  "WER": 0.0,
+  "WER_percent": 0.0,
+  "generation_time": 3.792927,
+  "RTF": 0.87514,
+  "output_path": "E:\\NEW_genai_projects\\TTS_voice\\infinia-voice-case-study\\outputs\\english\\melotts\\final\\en_02_support.wav",
+  "sample_rate": 44100,
+  "channels": 1,
+  "audio_duration": 4.334081632653061,
+  "rms": 0.04528590390914871,
+  "peak": 0.32684326171875,
+  "clipping": false,
+  "clipping_samples": 0,
+  "silence_ratio": 0.2215211397299263
+}

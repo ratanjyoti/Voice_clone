@@ -1,0 +1,22 @@
+{
+  "test_id": "en_03_conversation",
+  "model": "MeloTTS",
+  "language": "English",
+  "expected_text": "Sure, I can help with that. Please tell me what you need.",
+  "asr_text": "Sure, it can help with that. Please tell me what you need.",
+  "normalized_expected": "sure i can help with that please tell me what you need",
+  "normalized_asr": "sure it can help with that please tell me what you need",
+  "WER": 0.083333,
+  "WER_percent": 8.33,
+  "generation_time": 4.562196,
+  "RTF": 1.151325,
+  "output_path": "E:\\NEW_genai_projects\\TTS_voice\\infinia-voice-case-study\\outputs\\english\\melotts\\final\\en_03_conversation.wav",
+  "sample_rate": 44100,
+  "channels": 1,
+  "audio_duration": 3.962562358276644,
+  "rms": 0.05156993540059994,
+  "peak": 0.330078125,
+  "clipping": false,
+  "clipping_samples": 0,
+  "silence_ratio": 0.29153814900228325
+}

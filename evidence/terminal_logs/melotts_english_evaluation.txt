@@ -1,0 +1,128 @@
+E:\NEW_genai_projects\TTS_voice\infinia-voice-case-study\.venvs\.venv\Lib\site-packages\ctranslate2\__init__.py:8: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  import pkg_resources
+Loading Whisper model for English WER...
+{
+  "test_id": "en_01_greeting",
+  "model": "MeloTTS",
+  "language": "English",
+  "expected_text": "Hello, welcome to our voice assistant. How can I help you today?",
+  "asr_text": "Hello, welcome to our voice assistant. How can I help you today?",
+  "normalized_expected": "hello welcome to our voice assistant how can i help you today",
+  "normalized_asr": "hello welcome to our voice assistant how can i help you today",
+  "WER": 0.0,
+  "WER_percent": 0.0,
+  "generation_time": 13.11039,
+  "RTF": 2.820924,
+  "output_path": "E:\\NEW_genai_projects\\TTS_voice\\infinia-voice-case-study\\outputs\\english\\melotts\\final\\en_01_greeting.wav",
+  "sample_rate": 44100,
+  "channels": 1,
+  "audio_duration": 4.647551020408163,
+  "rms": 0.054408658820727804,
+  "peak": 0.360687255859375,
+  "clipping": false,
+  "clipping_samples": 0,
+  "silence_ratio": 0.24387554462643385
+}
+{
+  "test_id": "en_02_support",
+  "model": "MeloTTS",
+  "language": "English",
+  "expected_text": "I can help you check your order status and answer your questions.",
+  "asr_text": "I can help you check your order status and answer your questions.",
+  "normalized_expected": "i can help you check your order status and answer your questions",
+  "normalized_asr": "i can help you check your order status and answer your questions",
+  "WER": 0.0,
+  "WER_percent": 0.0,
+  "generation_time": 3.792927,
+  "RTF": 0.87514,
+  "output_path": "E:\\NEW_genai_projects\\TTS_voice\\infinia-voice-case-study\\outputs\\english\\melotts\\final\\en_02_support.wav",
+  "sample_rate": 44100,
+  "channels": 1,
+  "audio_duration": 4.334081632653061,
+  "rms": 0.04528590390914871,
+  "peak": 0.32684326171875,
+  "clipping": false,
+  "clipping_samples": 0,
+  "silence_ratio": 0.2215211397299263
+}
+{
+  "test_id": "en_03_conversation",
+  "model": "MeloTTS",
+  "language": "English",
+  "expected_text": "Sure, I can help with that. Please tell me what you need.",
+  "asr_text": "Sure, it can help with that. Please tell me what you need.",
+  "normalized_expected": "sure i can help with that please tell me what you need",
+  "normalized_asr": "sure it can help with that please tell me what you need",
+  "WER": 0.083333,
+  "WER_percent": 8.33,
+  "generation_time": 4.562196,
+  "RTF": 1.151325,
+  "output_path": "E:\\NEW_genai_projects\\TTS_voice\\infinia-voice-case-study\\outputs\\english\\melotts\\final\\en_03_conversation.wav",
+  "sample_rate": 44100,
+  "channels": 1,
+  "audio_duration": 3.962562358276644,
+  "rms": 0.05156993540059994,
+  "peak": 0.330078125,
+  "clipping": false,
+  "clipping_samples": 0,
+  "silence_ratio": 0.29153814900228325
+}
+{
+  "test_id": "en_04_numbers",
+  "model": "MeloTTS",
+  "language": "English",
+  "expected_text": "Your confirmation number is two zero six five, and the meeting starts at three thirty.",
+  "asr_text": "Your confirmation number is 2065 and the meeting starts at 330",
+  "normalized_expected": "your confirmation number is two zero six five and the meeting starts at three thirty",
+  "normalized_asr": "your confirmation number is 2065 and the meeting starts at 330",
+  "WER": 0.4,
+  "WER_percent": 40.0,
+  "generation_time": 6.635699,
+  "RTF": 1.142402,
+  "output_path": "E:\\NEW_genai_projects\\TTS_voice\\infinia-voice-case-study\\outputs\\english\\melotts\\final\\en_04_numbers.wav",
+  "sample_rate": 44100,
+  "channels": 1,
+  "audio_duration": 5.808548752834467,
+  "rms": 0.06295268941806353,
+  "peak": 0.477630615234375,
+  "clipping": false,
+  "clipping_samples": 0,
+  "silence_ratio": 0.18354368609875973
+}
+{
+  "test_id": "en_05_expressive",
+  "model": "MeloTTS",
+  "language": "English",
+  "expected_text": "That is great news. I am happy everything worked out well.",
+  "asr_text": "That is great news. I am happy everything worked out well.",
+  "normalized_expected": "that is great news i am happy everything worked out well",
+  "normalized_asr": "that is great news i am happy everything worked out well",
+  "WER": 0.0,
+  "WER_percent": 0.0,
+  "generation_time": 4.639613,
+  "RTF": 1.150634,
+  "output_path": "E:\\NEW_genai_projects\\TTS_voice\\infinia-voice-case-study\\outputs\\english\\melotts\\final\\en_05_expressive.wav",
+  "sample_rate": 44100,
+  "channels": 1,
+  "audio_duration": 4.032222222222222,
+  "rms": 0.0458704984666953,
+  "peak": 0.273193359375,
+  "clipping": false,
+  "clipping_samples": 0,
+  "silence_ratio": 0.22243716996305274
+}
+Evaluation saved to: E:\NEW_genai_projects\TTS_voice\infinia-voice-case-study\results\raw\melotts_english_evaluation.csv
+Summary saved to: E:\NEW_genai_projects\TTS_voice\infinia-voice-case-study\results\summary\melotts_english_summary.csv
+Comparison saved to: E:\NEW_genai_projects\TTS_voice\infinia-voice-case-study\results\summary\english_model_comparison.csv
+{
+  "model": "MeloTTS",
+  "language": "English",
+  "samples": 5,
+  "average_WER_percent": 9.67,
+  "average_RTF": 1.428,
+  "average_generation_time": 6.548,
+  "average_audio_duration": 4.557,
+  "max_peak": 0.478,
+  "total_clipping_samples": 0,
+  "status": "Final English winner if manual listening confirms naturalness"
+}

@@ -1,0 +1,22 @@
+{
+  "test_id": "en_05_expressive",
+  "model": "MeloTTS",
+  "language": "English",
+  "expected_text": "That is great news. I am happy everything worked out well.",
+  "asr_text": "That is great news. I am happy everything worked out well.",
+  "normalized_expected": "that is great news i am happy everything worked out well",
+  "normalized_asr": "that is great news i am happy everything worked out well",
+  "WER": 0.0,
+  "WER_percent": 0.0,
+  "generation_time": 4.639613,
+  "RTF": 1.150634,
+  "output_path": "E:\\NEW_genai_projects\\TTS_voice\\infinia-voice-case-study\\outputs\\english\\melotts\\final\\en_05_expressive.wav",
+  "sample_rate": 44100,
+  "channels": 1,
+  "audio_duration": 4.032222222222222,
+  "rms": 0.0458704984666953,
+  "peak": 0.273193359375,
+  "clipping": false,
+  "clipping_samples": 0,
+  "silence_ratio": 0.22243716996305274
+}

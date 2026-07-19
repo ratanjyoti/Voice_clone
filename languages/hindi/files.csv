@@ -1,0 +1,129 @@
+language,kind,path,notes
+hindi,data,data/reference_audio/hindi/ratan_hindi_conversational.original.m4a,reference voice/audio for this language
+hindi,data,data/reference_audio/hindi/ratan_hindi_conversational.txt,reference voice/audio for this language
+hindi,data,data/reference_audio/hindi/ratan_hindi_conversational.wav,reference voice/audio for this language
+hindi,data,data/reference_audio/hindi/ratan_hindi_expressive.original.m4a,reference voice/audio for this language
+hindi,data,data/reference_audio/hindi/ratan_hindi_expressive.txt,reference voice/audio for this language
+hindi,data,data/reference_audio/hindi/ratan_hindi_expressive.wav,reference voice/audio for this language
+hindi,data,data/reference_audio/hindi/ratan_hindi_neutral.original.m4a,reference voice/audio for this language
+hindi,data,data/reference_audio/hindi/ratan_hindi_neutral.txt,reference voice/audio for this language
+hindi,data,data/reference_audio/hindi/ratan_hindi_neutral.wav,reference voice/audio for this language
+hindi,data,data/reference_audio/indicf5/ratan_reference_indicf5.wav,reference voice/audio for this language
+hindi,data,data/reference_audio/indicf5/ratan_reference_transcript.txt,reference voice/audio for this language
+hindi,data,data/test_sentences/hindi.json,benchmark text set for this language
+hindi,data,data/test_sentences/hindi_voice_clone_tests.json,benchmark text set for this language
+hindi,doc,docs/hindi_results.md,human-readable documentation for this language
+hindi,doc,docs/indicf5_hindi_installation_notes.md,human-readable documentation for this language
+hindi,evidence,evidence/result_snapshots/chatterbox/hindi/conversational_hindi_cloning_results.json,execution proof/log/snapshot for this language
+hindi,evidence,evidence/result_snapshots/chatterbox/hindi/expressive_hindi_cloning_results.json,execution proof/log/snapshot for this language
+hindi,evidence,evidence/result_snapshots/chatterbox/hindi/neutral_hindi_cloning_results.json,execution proof/log/snapshot for this language
+hindi,evidence,evidence/result_snapshots/hindi_model_summary.json,execution proof/log/snapshot for this language
+hindi,evidence,evidence/result_snapshots/hindi_speaker_similarity_summary.json,execution proof/log/snapshot for this language
+hindi,evidence,evidence/result_snapshots/indicf5_hindi_initial_generation_failure.json,execution proof/log/snapshot for this language
+hindi,evidence,evidence/result_snapshots/indicf5_hindi_initial_generation_success.json,execution proof/log/snapshot for this language
+hindi,evidence,evidence/result_snapshots/indicf5_hindi_reference_validation.json,execution proof/log/snapshot for this language
+hindi,evidence,evidence/terminal_logs/chatterbox_hindi_conversational.txt,execution proof/log/snapshot for this language
+hindi,evidence,evidence/terminal_logs/chatterbox_hindi_expressive.txt,execution proof/log/snapshot for this language
+hindi,evidence,evidence/terminal_logs/chatterbox_hindi_final_generation.txt,execution proof/log/snapshot for this language
+hindi,evidence,evidence/terminal_logs/chatterbox_hindi_final_generation_resume.txt,execution proof/log/snapshot for this language
+hindi,evidence,evidence/terminal_logs/chatterbox_hindi_neutral.txt,execution proof/log/snapshot for this language
+hindi,evidence,evidence/terminal_logs/english_hindi_final_wer_evaluation.txt,execution proof/log/snapshot for this language
+hindi,evidence,evidence/terminal_logs/english_hindi_final_wer_evaluation_retry_no_vad.txt,execution proof/log/snapshot for this language
+hindi,evidence,evidence/terminal_logs/indicf5_api_signatures.txt,execution proof/log/snapshot for this language
+hindi,evidence,evidence/terminal_logs/indicf5_environment_freeze.txt,execution proof/log/snapshot for this language
+hindi,evidence,evidence/terminal_logs/indicf5_environment_verification.txt,execution proof/log/snapshot for this language
+hindi,evidence,evidence/terminal_logs/indicf5_environment_verification_details.txt,execution proof/log/snapshot for this language
+hindi,evidence,evidence/terminal_logs/indicf5_hf_auth_verification.txt,execution proof/log/snapshot for this language
+hindi,evidence,evidence/terminal_logs/indicf5_hindi_initial_audio_validation.txt,execution proof/log/snapshot for this language
+hindi,evidence,evidence/terminal_logs/indicf5_hindi_initial_audio_validation_retry_success.txt,execution proof/log/snapshot for this language
+hindi,evidence,evidence/terminal_logs/indicf5_hindi_initial_generation.txt,execution proof/log/snapshot for this language
+hindi,evidence,evidence/terminal_logs/indicf5_hindi_initial_generation_retry.txt,execution proof/log/snapshot for this language
+hindi,evidence,evidence/terminal_logs/indicf5_hindi_initial_generation_retry_eager_wrapper.txt,execution proof/log/snapshot for this language
+hindi,evidence,evidence/terminal_logs/indicf5_hindi_initial_generation_retry_network.txt,execution proof/log/snapshot for this language
+hindi,evidence,evidence/terminal_logs/indicf5_hindi_initial_generation_retry_no_meta.txt,execution proof/log/snapshot for this language
+hindi,evidence,evidence/terminal_logs/indicf5_hindi_initial_generation_retry_transformers4490.txt,execution proof/log/snapshot for this language
+hindi,evidence,evidence/terminal_logs/indicf5_hindi_initial_wer.txt,execution proof/log/snapshot for this language
+hindi,evidence,evidence/terminal_logs/indicf5_hindi_initial_wer_retry_success.txt,execution proof/log/snapshot for this language
+hindi,evidence,evidence/terminal_logs/indicf5_import_verification.txt,execution proof/log/snapshot for this language
+hindi,evidence,evidence/terminal_logs/indicf5_install.txt,execution proof/log/snapshot for this language
+hindi,evidence,evidence/terminal_logs/indicf5_packaging_install.txt,execution proof/log/snapshot for this language
+hindi,evidence,evidence/terminal_logs/indicf5_torch_install.txt,execution proof/log/snapshot for this language
+hindi,evidence,evidence/terminal_logs/indicf5_torch_verification.txt,execution proof/log/snapshot for this language
+hindi,evidence,evidence/terminal_logs/indicf5_transformers_pin_4490.txt,execution proof/log/snapshot for this language
+hindi,evidence,evidence/terminal_logs/mms_hindi_benchmark.txt,execution proof/log/snapshot for this language
+hindi,evidence,evidence/terminal_logs/mms_hindi_final_generation.txt,execution proof/log/snapshot for this language
+hindi,output,outputs/chatterbox/hindi/conversational/conversational_01_assistance.wav,generated audio or sidecar evidence for this language
+hindi,output,outputs/chatterbox/hindi/conversational/conversational_02_support.wav,generated audio or sidecar evidence for this language
+hindi,output,outputs/chatterbox/hindi/conversational/conversational_03_schedule.wav,generated audio or sidecar evidence for this language
+hindi,output,outputs/chatterbox/hindi/conversational/conversational_04_clarify.wav,generated audio or sidecar evidence for this language
+hindi,output,outputs/chatterbox/hindi/conversational/conversational_05_followup.wav,generated audio or sidecar evidence for this language
+hindi,output,outputs/chatterbox/hindi/expressive/expressive_01_success.wav,generated audio or sidecar evidence for this language
+hindi,output,outputs/chatterbox/hindi/expressive/expressive_02_progress.wav,generated audio or sidecar evidence for this language
+hindi,output,outputs/chatterbox/hindi/expressive/expressive_03_excited.wav,generated audio or sidecar evidence for this language
+hindi,output,outputs/chatterbox/hindi/expressive/expressive_04_reassure.wav,generated audio or sidecar evidence for this language
+hindi,output,outputs/chatterbox/hindi/expressive/expressive_05_finish.wav,generated audio or sidecar evidence for this language
+hindi,output,outputs/chatterbox/hindi/final/generation_summary.json,generated audio or sidecar evidence for this language
+hindi,output,outputs/chatterbox/hindi/final/hi_clone_01_greeting.json,generated audio or sidecar evidence for this language
+hindi,output,outputs/chatterbox/hindi/final/hi_clone_01_greeting.wav,generated audio or sidecar evidence for this language
+hindi,output,outputs/chatterbox/hindi/final/hi_clone_02_technology.json,generated audio or sidecar evidence for this language
+hindi,output,outputs/chatterbox/hindi/final/hi_clone_02_technology.wav,generated audio or sidecar evidence for this language
+hindi,output,outputs/chatterbox/hindi/final/hi_clone_03_conversational.json,generated audio or sidecar evidence for this language
+hindi,output,outputs/chatterbox/hindi/final/hi_clone_03_conversational.wav,generated audio or sidecar evidence for this language
+hindi,output,outputs/chatterbox/hindi/final/hi_clone_04_numbers.json,generated audio or sidecar evidence for this language
+hindi,output,outputs/chatterbox/hindi/final/hi_clone_04_numbers.wav,generated audio or sidecar evidence for this language
+hindi,output,outputs/chatterbox/hindi/final/hi_clone_05_expressive.json,generated audio or sidecar evidence for this language
+hindi,output,outputs/chatterbox/hindi/final/hi_clone_05_expressive.wav,generated audio or sidecar evidence for this language
+hindi,output,outputs/chatterbox/hindi/neutral/neutral_01_identity.wav,generated audio or sidecar evidence for this language
+hindi,output,outputs/chatterbox/hindi/neutral/neutral_02_technology.wav,generated audio or sidecar evidence for this language
+hindi,output,outputs/human_review/hindi/sample_A_01.wav,generated audio or sidecar evidence for this language
+hindi,output,outputs/human_review/hindi/sample_A_02.wav,generated audio or sidecar evidence for this language
+hindi,output,outputs/human_review/hindi/sample_A_03.wav,generated audio or sidecar evidence for this language
+hindi,output,outputs/human_review/hindi/sample_A_04.wav,generated audio or sidecar evidence for this language
+hindi,output,outputs/human_review/hindi/sample_A_05.wav,generated audio or sidecar evidence for this language
+hindi,output,outputs/human_review/hindi/sample_B_01.wav,generated audio or sidecar evidence for this language
+hindi,output,outputs/human_review/hindi/sample_B_02.wav,generated audio or sidecar evidence for this language
+hindi,output,outputs/human_review/hindi/sample_B_03.wav,generated audio or sidecar evidence for this language
+hindi,output,outputs/human_review/hindi/sample_B_04.wav,generated audio or sidecar evidence for this language
+hindi,output,outputs/human_review/hindi/sample_B_05.wav,generated audio or sidecar evidence for this language
+hindi,output,outputs/indicf5/hindi/hi_clone_01_greeting.json,generated audio or sidecar evidence for this language
+hindi,output,outputs/indicf5/hindi/hi_clone_01_greeting.wav,generated audio or sidecar evidence for this language
+hindi,output,outputs/mms/hindi/final/generation_summary.json,generated audio or sidecar evidence for this language
+hindi,output,outputs/mms/hindi/final/hi_clone_01_greeting.json,generated audio or sidecar evidence for this language
+hindi,output,outputs/mms/hindi/final/hi_clone_01_greeting.wav,generated audio or sidecar evidence for this language
+hindi,output,outputs/mms/hindi/final/hi_clone_02_technology.json,generated audio or sidecar evidence for this language
+hindi,output,outputs/mms/hindi/final/hi_clone_02_technology.wav,generated audio or sidecar evidence for this language
+hindi,output,outputs/mms/hindi/final/hi_clone_03_conversational.json,generated audio or sidecar evidence for this language
+hindi,output,outputs/mms/hindi/final/hi_clone_03_conversational.wav,generated audio or sidecar evidence for this language
+hindi,output,outputs/mms/hindi/final/hi_clone_04_numbers.json,generated audio or sidecar evidence for this language
+hindi,output,outputs/mms/hindi/final/hi_clone_04_numbers.wav,generated audio or sidecar evidence for this language
+hindi,output,outputs/mms/hindi/final/hi_clone_05_expressive.json,generated audio or sidecar evidence for this language
+hindi,output,outputs/mms/hindi/final/hi_clone_05_expressive.wav,generated audio or sidecar evidence for this language
+hindi,output,outputs/mms/hindi/hi_01_run_01.wav,generated audio or sidecar evidence for this language
+hindi,output,outputs/mms/hindi/hi_01_run_02.wav,generated audio or sidecar evidence for this language
+hindi,output,outputs/mms/hindi/hi_01_run_03.wav,generated audio or sidecar evidence for this language
+hindi,output,outputs/mms/hindi/hi_02_run_01.wav,generated audio or sidecar evidence for this language
+hindi,output,outputs/mms/hindi/hi_02_run_02.wav,generated audio or sidecar evidence for this language
+hindi,output,outputs/mms/hindi/hi_02_run_03.wav,generated audio or sidecar evidence for this language
+hindi,output,outputs/mms/hindi/hi_03_run_01.wav,generated audio or sidecar evidence for this language
+hindi,output,outputs/mms/hindi/hi_03_run_02.wav,generated audio or sidecar evidence for this language
+hindi,output,outputs/mms/hindi/hi_03_run_03.wav,generated audio or sidecar evidence for this language
+hindi,output,outputs/mms/hindi/hi_04_run_01.wav,generated audio or sidecar evidence for this language
+hindi,output,outputs/mms/hindi/hi_04_run_02.wav,generated audio or sidecar evidence for this language
+hindi,output,outputs/mms/hindi/hi_04_run_03.wav,generated audio or sidecar evidence for this language
+hindi,output,outputs/mms/hindi/hi_05_run_01.wav,generated audio or sidecar evidence for this language
+hindi,output,outputs/mms/hindi/hi_05_run_02.wav,generated audio or sidecar evidence for this language
+hindi,output,outputs/mms/hindi/hi_05_run_03.wav,generated audio or sidecar evidence for this language
+hindi,output,outputs/mms/hindi/hi_mms_smoke_test.json,generated audio or sidecar evidence for this language
+hindi,output,outputs/mms/hindi/hi_mms_smoke_test.wav,generated audio or sidecar evidence for this language
+hindi,result,results/chatterbox_hindi_evaluation.csv,metric/result evidence for this language
+hindi,result,results/english_hindi_final_evaluation_all.csv,metric/result evidence for this language
+hindi,result,results/hindi_greeting_model_comparison.csv,metric/result evidence for this language
+hindi,result,results/hindi_model_comparison.csv,metric/result evidence for this language
+hindi,result,results/hindi_speaker_similarity.csv,metric/result evidence for this language
+hindi,result,results/indicf5_hindi_initial_test.csv,metric/result evidence for this language
+hindi,result,results/mms_hindi_evaluation.csv,metric/result evidence for this language
+hindi,script,scripts/evaluate_indicf5_hindi_initial.py,implementation or evaluation code for this language
+hindi,script,scripts/generate_final_chatterbox_hindi.py,implementation or evaluation code for this language
+hindi,script,scripts/verify_indicf5_hindi.py,implementation or evaluation code for this language
+hindi,source,src/generate_chatterbox_hindi.py,implementation or evaluation code for this language
+hindi,source,src/generate_indicf5_hindi_test.py,implementation or evaluation code for this language

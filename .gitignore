@@ -1,4 +1,4 @@
-# Python Virtual Environments
+﻿# Python Virtual Environments
 .venv/
 .venv-silma/
 
@@ -47,3 +47,4 @@ downloads/
 __pycache__/
 *.pyc
 .streamlit/
+

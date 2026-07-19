@@ -1,0 +1,296 @@
+language,kind,path,notes
+shared,data,checkpoints_v2/converter/config.json,shared project file used across languages
+shared,data,data/reference_audio/consent.txt,shared project file used across languages
+shared,data,data/reference_audio/my_voice.wav,shared project file used across languages
+shared,data,data/reference_audio/ratan_reference.wav,shared project file used across languages
+shared,data,data/reference_audio/ratan_reference_22050_mono.wav,shared project file used across languages
+shared,data,data/reference_audio/transcript.txt,shared project file used across languages
+shared,data,external/MeloTTS/melo/configs/config.json,third-party source; do not edit unless intentionally patching dependency
+shared,data,external/MeloTTS/melo/text/es_phonemizer/es_symbols.json,third-party source; do not edit unless intentionally patching dependency
+shared,data,external/MeloTTS/melo/text/es_phonemizer/es_symbols_v2.json,third-party source; do not edit unless intentionally patching dependency
+shared,data,external/MeloTTS/melo/text/fr_phonemizer/en_symbols.json,third-party source; do not edit unless intentionally patching dependency
+shared,data,external/MeloTTS/melo/text/fr_phonemizer/fr_symbols.json,third-party source; do not edit unless intentionally patching dependency
+shared,doc,.tmp/user_clone_test/target.txt,shared project file used across languages
+shared,doc,README.md,shared project file used across languages
+shared,doc,docs/engineering_journey.md,shared project file used across languages
+shared,doc,docs/experiment_journey.md,shared project file used across languages
+shared,doc,external/MeloTTS/README.md,third-party source; do not edit unless intentionally patching dependency
+shared,doc,external/MeloTTS/docs/install.md,third-party source; do not edit unless intentionally patching dependency
+shared,doc,external/MeloTTS/docs/quick_use.md,third-party source; do not edit unless intentionally patching dependency
+shared,doc,external/MeloTTS/docs/training.md,third-party source; do not edit unless intentionally patching dependency
+shared,doc,external/MeloTTS/melo/text/es_phonemizer/es_symbols.txt,third-party source; do not edit unless intentionally patching dependency
+shared,doc,external/MeloTTS/melo/text/es_phonemizer/example_ipa.txt,third-party source; do not edit unless intentionally patching dependency
+shared,doc,external/MeloTTS/melo/text/es_phonemizer/spanish_symbols.txt,third-party source; do not edit unless intentionally patching dependency
+shared,doc,external/MeloTTS/melo/text/fr_phonemizer/example_ipa.txt,third-party source; do not edit unless intentionally patching dependency
+shared,doc,external/MeloTTS/melo/text/fr_phonemizer/french_symbols.txt,third-party source; do not edit unless intentionally patching dependency
+shared,doc,external/MeloTTS/melo/text/opencpop-strict.txt,third-party source; do not edit unless intentionally patching dependency
+shared,doc,external/MeloTTS/melotts.egg-info/SOURCES.txt,third-party source; do not edit unless intentionally patching dependency
+shared,doc,external/MeloTTS/melotts.egg-info/dependency_links.txt,third-party source; do not edit unless intentionally patching dependency
+shared,doc,external/MeloTTS/melotts.egg-info/entry_points.txt,third-party source; do not edit unless intentionally patching dependency
+shared,doc,external/MeloTTS/melotts.egg-info/requires.txt,third-party source; do not edit unless intentionally patching dependency
+shared,doc,external/MeloTTS/melotts.egg-info/top_level.txt,third-party source; do not edit unless intentionally patching dependency
+shared,doc,external/MeloTTS/requirements.txt,third-party source; do not edit unless intentionally patching dependency
+shared,doc,external/MeloTTS/test/basetts_test_resources/en_egs_text.txt,third-party source; do not edit unless intentionally patching dependency
+shared,doc,external/MeloTTS/test/basetts_test_resources/es_egs_text.txt,third-party source; do not edit unless intentionally patching dependency
+shared,doc,external/MeloTTS/test/basetts_test_resources/fr_egs_text.txt,third-party source; do not edit unless intentionally patching dependency
+shared,doc,external/MeloTTS/test/basetts_test_resources/jp_egs_text.txt,third-party source; do not edit unless intentionally patching dependency
+shared,doc,external/MeloTTS/test/basetts_test_resources/kr_egs_text.txt,third-party source; do not edit unless intentionally patching dependency
+shared,doc,external/MeloTTS/test/basetts_test_resources/zh_mix_en_egs_text.txt,third-party source; do not edit unless intentionally patching dependency
+shared,doc,external/OpenVoice/MyShell_OpenVoice.egg-info/SOURCES.txt,third-party source; do not edit unless intentionally patching dependency
+shared,doc,external/OpenVoice/MyShell_OpenVoice.egg-info/dependency_links.txt,third-party source; do not edit unless intentionally patching dependency
+shared,doc,external/OpenVoice/MyShell_OpenVoice.egg-info/requires.txt,third-party source; do not edit unless intentionally patching dependency
+shared,doc,external/OpenVoice/MyShell_OpenVoice.egg-info/top_level.txt,third-party source; do not edit unless intentionally patching dependency
+shared,doc,external/OpenVoice/README.md,third-party source; do not edit unless intentionally patching dependency
+shared,doc,external/OpenVoice/docs/QA.md,third-party source; do not edit unless intentionally patching dependency
+shared,doc,external/OpenVoice/docs/USAGE.md,third-party source; do not edit unless intentionally patching dependency
+shared,doc,external/OpenVoice/requirements.txt,third-party source; do not edit unless intentionally patching dependency
+shared,doc,external/neutts/CMakeLists.txt,third-party source; do not edit unless intentionally patching dependency
+shared,doc,external/neutts/README.md,third-party source; do not edit unless intentionally patching dependency
+shared,doc,external/neutts/TRAINING.md,third-party source; do not edit unless intentionally patching dependency
+shared,doc,external/neutts/examples/README.md,third-party source; do not edit unless intentionally patching dependency
+shared,doc,external/neutts/requirements-dev.txt,third-party source; do not edit unless intentionally patching dependency
+shared,doc,external/neutts/samples/dave.txt,third-party source; do not edit unless intentionally patching dependency
+shared,doc,external/neutts/samples/greta.txt,third-party source; do not edit unless intentionally patching dependency
+shared,doc,external/neutts/samples/jo.txt,third-party source; do not edit unless intentionally patching dependency
+shared,doc,external/neutts/samples/juliette.txt,third-party source; do not edit unless intentionally patching dependency
+shared,doc,external/neutts/samples/mateo.txt,third-party source; do not edit unless intentionally patching dependency
+shared,doc,requirements-evaluation.txt,shared project file used across languages
+shared,doc,requirements-mms.txt,shared project file used across languages
+shared,evidence,evidence/audio_manifest/mms_audio_manifest.csv,shared project file used across languages
+shared,evidence,evidence/final_submission_manifest.csv,shared project file used across languages
+shared,evidence,evidence/human_review_model_mapping.csv,shared project file used across languages
+shared,evidence,evidence/result_snapshots/manual_comparisons/voice_comparison_20260716_090809.json,shared project file used across languages
+shared,evidence,evidence/result_snapshots/manual_comparisons/voice_comparison_20260716_103556.json,shared project file used across languages
+shared,evidence,evidence/result_snapshots/manual_comparisons/voice_comparison_20260716_132841.json,shared project file used across languages
+shared,evidence,evidence/result_snapshots/manual_comparisons/voice_comparison_20260717_122033.json,shared project file used across languages
+shared,evidence,evidence/result_snapshots/mms_summary_20260715_112720.csv,shared project file used across languages
+shared,evidence,evidence/result_snapshots/neucodec_reconstruction_test.json,shared project file used across languages
+shared,evidence,evidence/result_snapshots/pip_freeze.txt,shared project file used across languages
+shared,evidence,evidence/result_snapshots/raw_runs_20260715_112720.csv,shared project file used across languages
+shared,evidence,evidence/result_snapshots/reference_audio_quality.json,shared project file used across languages
+shared,evidence,evidence/result_snapshots/silma_partial_environment.txt,shared project file used across languages
+shared,evidence,evidence/result_snapshots/wer_results_20260715_112720.csv,shared project file used across languages
+shared,evidence,evidence/result_snapshots/wer_summary_20260715_112720.csv,shared project file used across languages
+shared,evidence,evidence/terminal_logs/dashboard_streamlit_stderr.txt,shared project file used across languages
+shared,evidence,evidence/terminal_logs/dashboard_streamlit_stdout.txt,shared project file used across languages
+shared,evidence,evidence/terminal_logs/environment_report.txt,shared project file used across languages
+shared,evidence,evidence/terminal_logs/example_stderr.txt,shared project file used across languages
+shared,evidence,evidence/terminal_logs/example_stdout.txt,shared project file used across languages
+shared,evidence,evidence/terminal_logs/git_commit.txt,shared project file used across languages
+shared,evidence,evidence/terminal_logs/git_status.txt,shared project file used across languages
+shared,evidence,evidence/terminal_logs/important_package_versions.txt,shared project file used across languages
+shared,evidence,evidence/terminal_logs/mms_benchmark_summary.txt,shared project file used across languages
+shared,evidence,evidence/terminal_logs/mms_summary.txt,shared project file used across languages
+shared,evidence,evidence/terminal_logs/reference_audio_ffprobe.txt,shared project file used across languages
+shared,evidence,evidence/terminal_logs/reference_audio_hash.txt,shared project file used across languages
+shared,evidence,evidence/terminal_logs/reference_audio_quality_validation.txt,shared project file used across languages
+shared,evidence,evidence/terminal_logs/silma_environment_created.txt,shared project file used across languages
+shared,evidence,evidence/terminal_logs/silma_installation_final_tail.txt,shared project file used across languages
+shared,evidence,evidence/terminal_logs/silma_installation_retry.txt,shared project file used across languages
+shared,evidence,evidence/terminal_logs/silma_installation_retry_2.txt,shared project file used across languages
+shared,evidence,evidence/terminal_logs/silma_numpy_install.txt,shared project file used across languages
+shared,evidence,evidence/terminal_logs/silma_onnxruntime_cpu_overlay.txt,shared project file used across languages
+shared,evidence,evidence/terminal_logs/silma_onnxruntime_gpu_install.txt,shared project file used across languages
+shared,evidence,evidence/terminal_logs/silma_onnxruntime_gpu_local_install.txt,shared project file used across languages
+shared,evidence,evidence/terminal_logs/silma_packaging_setup.txt,shared project file used across languages
+shared,evidence,evidence/terminal_logs/speaker_embedding_model_verification.txt,shared project file used across languages
+shared,evidence,evidence/terminal_logs/speaker_eval_environment.txt,shared project file used across languages
+shared,evidence,evidence/terminal_logs/speaker_eval_import_test.txt,shared project file used across languages
+shared,evidence,evidence/terminal_logs/speaker_eval_pytorch_install.txt,shared project file used across languages
+shared,evidence,evidence/terminal_logs/speaker_eval_speechbrain_install.txt,shared project file used across languages
+shared,evidence,evidence/terminal_logs/speaker_similarity_dependencies_install.txt,shared project file used across languages
+shared,evidence,evidence/terminal_logs/speaker_similarity_dependencies_install_retry.txt,shared project file used across languages
+shared,evidence,evidence/terminal_logs/speaker_similarity_environment.txt,shared project file used across languages
+shared,evidence,evidence/terminal_logs/speaker_similarity_evaluation.txt,shared project file used across languages
+shared,evidence,evidence/terminal_logs/speaker_similarity_packaging_install.txt,shared project file used across languages
+shared,evidence,evidence/terminal_logs/speaker_similarity_torch_install.txt,shared project file used across languages
+shared,evidence,evidence/terminal_logs/wer_evaluation.txt,shared project file used across languages
+shared,project,.gitignore,shared project file used across languages
+shared,project,.tmp/tmpl5ff60r1cacert.pem,shared project file used across languages
+shared,project,checkpoints_v2/converter/checkpoint.pth,shared project file used across languages
+shared,project,configs/experiment.yaml,shared project file used across languages
+shared,project,dashboard/app.py,shared project file used across languages
+shared,project,external/MeloTTS/.github/workflows/pypi.yml,third-party source; do not edit unless intentionally patching dependency
+shared,project,external/MeloTTS/.gitignore,third-party source; do not edit unless intentionally patching dependency
+shared,project,external/MeloTTS/Dockerfile,third-party source; do not edit unless intentionally patching dependency
+shared,project,external/MeloTTS/LICENSE,third-party source; do not edit unless intentionally patching dependency
+shared,project,external/MeloTTS/logo.png,third-party source; do not edit unless intentionally patching dependency
+shared,project,external/MeloTTS/melo/__init__.py,third-party source; do not edit unless intentionally patching dependency
+shared,project,external/MeloTTS/melo/api.py,third-party source; do not edit unless intentionally patching dependency
+shared,project,external/MeloTTS/melo/app.py,third-party source; do not edit unless intentionally patching dependency
+shared,project,external/MeloTTS/melo/attentions.py,third-party source; do not edit unless intentionally patching dependency
+shared,project,external/MeloTTS/melo/commons.py,third-party source; do not edit unless intentionally patching dependency
+shared,project,external/MeloTTS/melo/data/example/metadata.list,third-party source; do not edit unless intentionally patching dependency
+shared,project,external/MeloTTS/melo/data_utils.py,third-party source; do not edit unless intentionally patching dependency
+shared,project,external/MeloTTS/melo/download_utils.py,third-party source; do not edit unless intentionally patching dependency
+shared,project,external/MeloTTS/melo/infer.py,third-party source; do not edit unless intentionally patching dependency
+shared,project,external/MeloTTS/melo/init_downloads.py,third-party source; do not edit unless intentionally patching dependency
+shared,project,external/MeloTTS/melo/losses.py,third-party source; do not edit unless intentionally patching dependency
+shared,project,external/MeloTTS/melo/main.py,third-party source; do not edit unless intentionally patching dependency
+shared,project,external/MeloTTS/melo/mel_processing.py,third-party source; do not edit unless intentionally patching dependency
+shared,project,external/MeloTTS/melo/models.py,third-party source; do not edit unless intentionally patching dependency
+shared,project,external/MeloTTS/melo/modules.py,third-party source; do not edit unless intentionally patching dependency
+shared,project,external/MeloTTS/melo/monotonic_align/__init__.py,third-party source; do not edit unless intentionally patching dependency
+shared,project,external/MeloTTS/melo/monotonic_align/core.py,third-party source; do not edit unless intentionally patching dependency
+shared,project,external/MeloTTS/melo/preprocess_text.py,third-party source; do not edit unless intentionally patching dependency
+shared,project,external/MeloTTS/melo/split_utils.py,third-party source; do not edit unless intentionally patching dependency
+shared,project,external/MeloTTS/melo/text/__init__.py,third-party source; do not edit unless intentionally patching dependency
+shared,project,external/MeloTTS/melo/text/chinese.py,third-party source; do not edit unless intentionally patching dependency
+shared,project,external/MeloTTS/melo/text/chinese_bert.py,third-party source; do not edit unless intentionally patching dependency
+shared,project,external/MeloTTS/melo/text/chinese_mix.py,third-party source; do not edit unless intentionally patching dependency
+shared,project,external/MeloTTS/melo/text/cleaner.py,third-party source; do not edit unless intentionally patching dependency
+shared,project,external/MeloTTS/melo/text/cleaner_multiling.py,third-party source; do not edit unless intentionally patching dependency
+shared,project,external/MeloTTS/melo/text/cmudict.rep,third-party source; do not edit unless intentionally patching dependency
+shared,project,external/MeloTTS/melo/text/cmudict_cache.pickle,third-party source; do not edit unless intentionally patching dependency
+shared,project,external/MeloTTS/melo/text/english.py,third-party source; do not edit unless intentionally patching dependency
+shared,project,external/MeloTTS/melo/text/english_bert.py,third-party source; do not edit unless intentionally patching dependency
+shared,project,external/MeloTTS/melo/text/english_utils/__init__.py,third-party source; do not edit unless intentionally patching dependency
+shared,project,external/MeloTTS/melo/text/english_utils/abbreviations.py,third-party source; do not edit unless intentionally patching dependency
+shared,project,external/MeloTTS/melo/text/english_utils/number_norm.py,third-party source; do not edit unless intentionally patching dependency
+shared,project,external/MeloTTS/melo/text/english_utils/time_norm.py,third-party source; do not edit unless intentionally patching dependency
+shared,project,external/MeloTTS/melo/text/es_phonemizer/__init__.py,third-party source; do not edit unless intentionally patching dependency
+shared,project,external/MeloTTS/melo/text/es_phonemizer/base.py,third-party source; do not edit unless intentionally patching dependency
+shared,project,external/MeloTTS/melo/text/es_phonemizer/cleaner.py,third-party source; do not edit unless intentionally patching dependency
+shared,project,external/MeloTTS/melo/text/es_phonemizer/es_to_ipa.py,third-party source; do not edit unless intentionally patching dependency
+shared,project,external/MeloTTS/melo/text/es_phonemizer/gruut_wrapper.py,third-party source; do not edit unless intentionally patching dependency
+shared,project,external/MeloTTS/melo/text/es_phonemizer/punctuation.py,third-party source; do not edit unless intentionally patching dependency
+shared,project,external/MeloTTS/melo/text/es_phonemizer/test.ipynb,third-party source; do not edit unless intentionally patching dependency
+shared,project,external/MeloTTS/melo/text/fr_phonemizer/__init__.py,third-party source; do not edit unless intentionally patching dependency
+shared,project,external/MeloTTS/melo/text/fr_phonemizer/base.py,third-party source; do not edit unless intentionally patching dependency
+shared,project,external/MeloTTS/melo/text/fr_phonemizer/cleaner.py,third-party source; do not edit unless intentionally patching dependency
+shared,project,external/MeloTTS/melo/text/fr_phonemizer/fr_to_ipa.py,third-party source; do not edit unless intentionally patching dependency
+shared,project,external/MeloTTS/melo/text/fr_phonemizer/french_abbreviations.py,third-party source; do not edit unless intentionally patching dependency
+shared,project,external/MeloTTS/melo/text/fr_phonemizer/gruut_wrapper.py,third-party source; do not edit unless intentionally patching dependency
+shared,project,external/MeloTTS/melo/text/fr_phonemizer/punctuation.py,third-party source; do not edit unless intentionally patching dependency
+shared,project,external/MeloTTS/melo/text/french.py,third-party source; do not edit unless intentionally patching dependency
+shared,project,external/MeloTTS/melo/text/french_bert.py,third-party source; do not edit unless intentionally patching dependency
+shared,project,external/MeloTTS/melo/text/japanese.py,third-party source; do not edit unless intentionally patching dependency
+shared,project,external/MeloTTS/melo/text/japanese_bert.py,third-party source; do not edit unless intentionally patching dependency
+shared,project,external/MeloTTS/melo/text/ko_dictionary.py,third-party source; do not edit unless intentionally patching dependency
+shared,project,external/MeloTTS/melo/text/korean.py,third-party source; do not edit unless intentionally patching dependency
+shared,project,external/MeloTTS/melo/text/spanish.py,third-party source; do not edit unless intentionally patching dependency
+shared,project,external/MeloTTS/melo/text/spanish_bert.py,third-party source; do not edit unless intentionally patching dependency
+shared,project,external/MeloTTS/melo/text/symbols.py,third-party source; do not edit unless intentionally patching dependency
+shared,project,external/MeloTTS/melo/text/tone_sandhi.py,third-party source; do not edit unless intentionally patching dependency
+shared,project,external/MeloTTS/melo/train.py,third-party source; do not edit unless intentionally patching dependency
+shared,project,external/MeloTTS/melo/train.sh,third-party source; do not edit unless intentionally patching dependency
+shared,project,external/MeloTTS/melo/transforms.py,third-party source; do not edit unless intentionally patching dependency
+shared,project,external/MeloTTS/melo/utils.py,third-party source; do not edit unless intentionally patching dependency
+shared,project,external/MeloTTS/melotts.egg-info/PKG-INFO,third-party source; do not edit unless intentionally patching dependency
+shared,project,external/MeloTTS/setup.py,third-party source; do not edit unless intentionally patching dependency
+shared,project,external/MeloTTS/test/test_base_model_tts_package.py,third-party source; do not edit unless intentionally patching dependency
+shared,project,external/MeloTTS/test/test_base_model_tts_package_from_S3.py,third-party source; do not edit unless intentionally patching dependency
+shared,project,external/OpenVoice/.gitignore,third-party source; do not edit unless intentionally patching dependency
+shared,project,external/OpenVoice/LICENSE,third-party source; do not edit unless intentionally patching dependency
+shared,project,external/OpenVoice/MyShell_OpenVoice.egg-info/PKG-INFO,third-party source; do not edit unless intentionally patching dependency
+shared,project,external/OpenVoice/MyShell_OpenVoice.egg-info/not-zip-safe,third-party source; do not edit unless intentionally patching dependency
+shared,project,external/OpenVoice/demo_part1.ipynb,third-party source; do not edit unless intentionally patching dependency
+shared,project,external/OpenVoice/demo_part2.ipynb,third-party source; do not edit unless intentionally patching dependency
+shared,project,external/OpenVoice/demo_part3.ipynb,third-party source; do not edit unless intentionally patching dependency
+shared,project,external/OpenVoice/openvoice/__init__.py,third-party source; do not edit unless intentionally patching dependency
+shared,project,external/OpenVoice/openvoice/api.py,third-party source; do not edit unless intentionally patching dependency
+shared,project,external/OpenVoice/openvoice/attentions.py,third-party source; do not edit unless intentionally patching dependency
+shared,project,external/OpenVoice/openvoice/commons.py,third-party source; do not edit unless intentionally patching dependency
+shared,project,external/OpenVoice/openvoice/mel_processing.py,third-party source; do not edit unless intentionally patching dependency
+shared,project,external/OpenVoice/openvoice/models.py,third-party source; do not edit unless intentionally patching dependency
+shared,project,external/OpenVoice/openvoice/modules.py,third-party source; do not edit unless intentionally patching dependency
+shared,project,external/OpenVoice/openvoice/openvoice_app.py,third-party source; do not edit unless intentionally patching dependency
+shared,project,external/OpenVoice/openvoice/se_extractor.py,third-party source; do not edit unless intentionally patching dependency
+shared,project,external/OpenVoice/openvoice/text/__init__.py,third-party source; do not edit unless intentionally patching dependency
+shared,project,external/OpenVoice/openvoice/text/cleaners.py,third-party source; do not edit unless intentionally patching dependency
+shared,project,external/OpenVoice/openvoice/text/english.py,third-party source; do not edit unless intentionally patching dependency
+shared,project,external/OpenVoice/openvoice/text/mandarin.py,third-party source; do not edit unless intentionally patching dependency
+shared,project,external/OpenVoice/openvoice/text/symbols.py,third-party source; do not edit unless intentionally patching dependency
+shared,project,external/OpenVoice/openvoice/transforms.py,third-party source; do not edit unless intentionally patching dependency
+shared,project,external/OpenVoice/openvoice/utils.py,third-party source; do not edit unless intentionally patching dependency
+shared,project,external/OpenVoice/resources/demo_speaker0.mp3,third-party source; do not edit unless intentionally patching dependency
+shared,project,external/OpenVoice/resources/demo_speaker1.mp3,third-party source; do not edit unless intentionally patching dependency
+shared,project,external/OpenVoice/resources/demo_speaker2.mp3,third-party source; do not edit unless intentionally patching dependency
+shared,project,external/OpenVoice/resources/example_reference.mp3,third-party source; do not edit unless intentionally patching dependency
+shared,project,external/OpenVoice/resources/framework-ipa.png,third-party source; do not edit unless intentionally patching dependency
+shared,project,external/OpenVoice/resources/huggingface.png,third-party source; do not edit unless intentionally patching dependency
+shared,project,external/OpenVoice/resources/lepton-hd.png,third-party source; do not edit unless intentionally patching dependency
+shared,project,external/OpenVoice/resources/myshell-hd.png,third-party source; do not edit unless intentionally patching dependency
+shared,project,external/OpenVoice/resources/openvoicelogo.jpg,third-party source; do not edit unless intentionally patching dependency
+shared,project,external/OpenVoice/resources/tts-guide.png,third-party source; do not edit unless intentionally patching dependency
+shared,project,external/OpenVoice/resources/voice-clone-guide.png,third-party source; do not edit unless intentionally patching dependency
+shared,project,external/OpenVoice/setup.py,third-party source; do not edit unless intentionally patching dependency
+shared,project,external/neutts/.github/workflows/publish.yaml,third-party source; do not edit unless intentionally patching dependency
+shared,project,external/neutts/.gitignore,third-party source; do not edit unless intentionally patching dependency
+shared,project,external/neutts/.pre-commit-config.yaml,third-party source; do not edit unless intentionally patching dependency
+shared,project,external/neutts/LICENSE,third-party source; do not edit unless intentionally patching dependency
+shared,project,external/neutts/__init__.py,third-party source; do not edit unless intentionally patching dependency
+shared,project,external/neutts/examples/__init__.py,third-party source; do not edit unless intentionally patching dependency
+shared,project,external/neutts/examples/basic_example.py,third-party source; do not edit unless intentionally patching dependency
+shared,project,external/neutts/examples/basic_streaming_example.py,third-party source; do not edit unless intentionally patching dependency
+shared,project,external/neutts/examples/encode_reference.py,third-party source; do not edit unless intentionally patching dependency
+shared,project,external/neutts/examples/finetune.py,third-party source; do not edit unless intentionally patching dependency
+shared,project,external/neutts/examples/finetune_config.yaml,third-party source; do not edit unless intentionally patching dependency
+shared,project,external/neutts/examples/interactive_example.ipynb,third-party source; do not edit unless intentionally patching dependency
+shared,project,external/neutts/examples/onnx_example.py,third-party source; do not edit unless intentionally patching dependency
+shared,project,external/neutts/neutts/__init__.py,third-party source; do not edit unless intentionally patching dependency
+shared,project,external/neutts/neutts/neutts.py,third-party source; do not edit unless intentionally patching dependency
+shared,project,external/neutts/neutts/phonemizers.py,third-party source; do not edit unless intentionally patching dependency
+shared,project,external/neutts/neuttsair/__init__.py,third-party source; do not edit unless intentionally patching dependency
+shared,project,external/neutts/neuttsair/neutts.py,third-party source; do not edit unless intentionally patching dependency
+shared,project,external/neutts/output.wav,third-party source; do not edit unless intentionally patching dependency
+shared,project,external/neutts/output_nano_torch_jo_test.wav,third-party source; do not edit unless intentionally patching dependency
+shared,project,external/neutts/pyproject.toml,third-party source; do not edit unless intentionally patching dependency
+shared,project,external/neutts/samples/dave.pt,third-party source; do not edit unless intentionally patching dependency
+shared,project,external/neutts/samples/dave.wav,third-party source; do not edit unless intentionally patching dependency
+shared,project,external/neutts/samples/greta.pt,third-party source; do not edit unless intentionally patching dependency
+shared,project,external/neutts/samples/greta.wav,third-party source; do not edit unless intentionally patching dependency
+shared,project,external/neutts/samples/jo.pt,third-party source; do not edit unless intentionally patching dependency
+shared,project,external/neutts/samples/jo.wav,third-party source; do not edit unless intentionally patching dependency
+shared,project,external/neutts/samples/juliette.pt,third-party source; do not edit unless intentionally patching dependency
+shared,project,external/neutts/samples/juliette.wav,third-party source; do not edit unless intentionally patching dependency
+shared,project,external/neutts/samples/mateo.pt,third-party source; do not edit unless intentionally patching dependency
+shared,project,external/neutts/samples/mateo.wav,third-party source; do not edit unless intentionally patching dependency
+shared,project,external/neutts/tests/__init__.py,third-party source; do not edit unless intentionally patching dependency
+shared,project,external/neutts/tests/test_neutts.py,third-party source; do not edit unless intentionally patching dependency
+shared,project,infinia_voice_case_study_submission.zip,shared project file used across languages
+shared,report,report/FAILURE_ANALYSIS.md,shared project file used across languages
+shared,report,report/FINAL_REPORT.md,shared project file used across languages
+shared,report,report/TOOL_DISCLOSURE.md,shared project file used across languages
+shared,report,report/infinia_voice_case_study.md,shared project file used across languages
+shared,result,results/all_language_speaker_similarity.csv,shared project file used across languages
+shared,result,results/final_comparison.csv,shared project file used across languages
+shared,result,results/final_model_summary.csv,shared project file used across languages
+shared,result,results/final_three_language_benchmark.csv,shared project file used across languages
+shared,result,results/human_evaluation_summary.csv,shared project file used across languages
+shared,result,results/human_listener_scores.csv,shared project file used across languages
+shared,result,results/human_voice_evaluations.csv,shared project file used across languages
+shared,result,results/manual_listening_notes.csv,shared project file used across languages
+shared,result,results/mms_summary.csv,shared project file used across languages
+shared,result,results/mos_results.csv,shared project file used across languages
+shared,result,results/raw_runs.csv,shared project file used across languages
+shared,result,results/similarity_results.csv,shared project file used across languages
+shared,result,results/standardized_latency_benchmark.csv,shared project file used across languages
+shared,result,results/wer_results.csv,shared project file used across languages
+shared,result,results/wer_summary.csv,shared project file used across languages
+shared,script,scripts/build_language_reports.py,shared project file used across languages
+shared,script,scripts/build_language_workspaces.py,shared project file used across languages
+shared,script,scripts/evaluate_ecapa_speaker_similarity.py,shared project file used across languages
+shared,script,scripts/evaluate_final_samples.py,shared project file used across languages
+shared,script,scripts/evaluate_speaker_similarity.py,shared project file used across languages
+shared,script,scripts/generate_final_mms.py,shared project file used across languages
+shared,script,scripts/run_final_benchmark.ps1,shared project file used across languages
+shared,script,scripts/summarize_human_evaluation.py,shared project file used across languages
+shared,script,scripts/verify_speaker_embedding_model.py,shared project file used across languages
+shared,source,src/aggregate_results.py,shared project file used across languages
+shared,source,src/aggregate_wer_results.py,shared project file used across languages
+shared,source,src/batch_calculate_wer.py,shared project file used across languages
+shared,source,src/benchmark_mms.py,shared project file used across languages
+shared,source,src/benchmark_utils.py,shared project file used across languages
+shared,source,src/calculate_similarity.py,shared project file used across languages
+shared,source,src/calculate_wer.py,shared project file used across languages
+shared,source,src/check_environment.py,shared project file used across languages
+shared,source,src/evaluate_single_audio.py,shared project file used across languages
+shared,source,src/evaluate_speaker_similarity.py,shared project file used across languages
+shared,source,src/generate_mms.py,shared project file used across languages
+shared,source,src/generate_user_voice_clone.py,shared project file used across languages
+shared,source,src/run_all_wer.py,shared project file used across languages
+shared,source,src/test_neucodec_reconstruction.py,shared project file used across languages
+shared,source,src/validate_reference_audio.py,shared project file used across languages
+shared,source,src/validate_test_data.py,shared project file used across languages
+shared,source,src/verify_speaker_embedding_model.py,shared project file used across languages

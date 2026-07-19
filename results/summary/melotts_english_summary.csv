@@ -1,0 +1,2 @@
+﻿model,language,samples,average_WER_percent,average_RTF,average_generation_time,average_audio_duration,max_peak,total_clipping_samples,status
+MeloTTS,English,5,9.67,1.428,6.548,4.557,0.478,0,Final English winner if manual listening confirms naturalness

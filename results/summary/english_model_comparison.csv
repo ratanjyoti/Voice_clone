@@ -1,0 +1,4 @@
+﻿model,language,WER_percent,RTF,status
+MMS-TTS,English,8.0,<0.3,"Fast stable baseline, robotic voice"
+NeuTTS,English,12.67,Not finalized,Failed WER target / unstable final generation
+MeloTTS,English,9.67,1.428,Final English winner if naturalness confirmed

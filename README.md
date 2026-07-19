@@ -1,4 +1,4 @@
-# Infinia Voice Case Study
+﻿# Infinia Voice Case Study
 
 Recommendation: use MMS-TTS as the fast English baseline, use XTTS-v2 as the best automatic Arabic WER candidate with clear CPU latency and speaker-similarity caveats, and treat Hindi cloning as not production-ready from this benchmark because both MMS-TTS Hindi and Chatterbox Hindi missed the 10% WER target. Human MOS is prepared but still pending real listener scores, so final production approval should wait for listener review.
 
@@ -110,3 +110,30 @@ Model licenses and reference-audio redistribution rights must be verified before
 
 ## 15. Remaining work
 Collect real MOS scores from qualified listeners, replace the NeuTTS fallback with a successful fixed-sentence run, evaluate an Indic ASR alternative for Hindi, and retest latency on GPU or deployment hardware.
+## Results by Language
+
+- English: docs\english_results.md
+- Hindi: docs\hindi_results.md
+- Arabic: docs\arabic_results.md
+- Final recommendation: docs\final_recommendation.md
+
+Rebuild these summaries with:
+
+```powershell
+python scripts\build_language_reports.py
+```
+## Language Workspaces
+
+Use these folders when changing or reviewing one language at a time:
+
+- English workspace: languages\english\README.md
+- Hindi workspace: languages\hindi\README.md
+- Arabic workspace: languages\arabic\README.md
+- Shared workspace: languages\shared\README.md
+
+Each workspace contains `files.csv` plus grouped Markdown indexes for code, data, outputs, results, docs, and evidence. Rebuild the indexes with:
+
+```powershell
+python scripts\build_language_workspaces.py
+```
+
