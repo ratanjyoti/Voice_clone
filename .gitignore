@@ -41,6 +41,11 @@ __pycache__
 *.bin
 *.safetensors
 
+outputs/
+!public_audio/
+!public_audio/*.wav
+!public_audio/*.mp3
+
 .venv*/
 models/
 downloads/
