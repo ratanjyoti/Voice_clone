@@ -1,5 +1,5 @@
 accelerate
-ctranslate2==4.6.0
+ctranslate2>=4.6.1,<4.9
 faster-whisper==1.2.1
 jiwer==4.0.0
 numpy<2.3
