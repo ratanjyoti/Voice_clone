@@ -1,0 +1,19 @@
+{
+  "language": "arabic",
+  "language_code": "ar",
+  "model_id": "facebook/mms-tts-ara",
+  "device": "cuda",
+  "input_text": "مرحباً بكم في إنفينيا، كيف يمكنني مساعدتكم اليوم؟",
+  "output_file": "E:\\NEW_genai_projects\\TTS_voice\\infinia-voice-case-study\\outputs\\mms\\arabic\\ar_mms_smoke_test.wav",
+  "sample_rate_hz": 16000,
+  "audio_samples": 105728,
+  "model_load_time_seconds": 16.2307,
+  "generation_time_seconds": 5.2652,
+  "audio_duration_seconds": 6.608,
+  "rtf": 0.7968,
+  "python_version": "3.11.7",
+  "pytorch_version": "2.7.0+cu126",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "supports_voice_cloning": false,
+  "supports_streaming": false
+}

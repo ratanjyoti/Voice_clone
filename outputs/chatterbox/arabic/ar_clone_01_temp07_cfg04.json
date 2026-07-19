@@ -1,0 +1,29 @@
+{
+  "model": "ResembleAI/chatterbox multilingual",
+  "language": "ar",
+  "test_id": "ar_clone_01_greeting",
+  "text": "مَرْحَبًا بِكَ. أَنَا مُسَاعِدُكَ الصَّوْتِيُّ، وَيَسْعَدُنِي أَنْ أُسَاعِدَكَ الْيَوْمَ.",
+  "reference_name": "standard",
+  "reference_path": "E:\\NEW_genai_projects\\TTS_voice\\infinia-voice-case-study\\data\\reference_audio\\arabic\\professional_msa\\arabic_reference_standard.wav",
+  "seed": 42,
+  "parameters": {
+    "temperature": 0.7,
+    "cfg_weight": 0.4,
+    "exaggeration": 0.5,
+    "repetition_penalty": 2.0,
+    "min_p": 0.05,
+    "top_p": 1.0
+  },
+  "generation_time": 83.01564039999357,
+  "rtf": 13.835940066665595,
+  "raw_peak_before_normalization": 1.1897854804992676,
+  "audio": {
+    "duration": 6.0,
+    "sample_rate": 24000,
+    "rms": 0.24065058084355254,
+    "peak": 0.9500000476837158,
+    "clipping_count": 0,
+    "silence_ratio": 0.14129166666666668
+  },
+  "output_path": "E:\\NEW_genai_projects\\TTS_voice\\infinia-voice-case-study\\outputs\\chatterbox\\arabic\\ar_clone_01_temp07_cfg04.wav"
+}

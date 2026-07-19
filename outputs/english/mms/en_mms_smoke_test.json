@@ -1,0 +1,19 @@
+{
+  "language": "english",
+  "language_code": "en",
+  "model_id": "facebook/mms-tts-eng",
+  "device": "cuda",
+  "input_text": "Hello, welcome to Infinia. How can I help you today?",
+  "output_file": "E:\\NEW_genai_projects\\TTS_voice\\infinia-voice-case-study\\outputs\\mms\\english\\en_mms_smoke_test.wav",
+  "sample_rate_hz": 16000,
+  "audio_samples": 56576,
+  "model_load_time_seconds": 16.1912,
+  "generation_time_seconds": 5.2966,
+  "audio_duration_seconds": 3.536,
+  "rtf": 1.4979,
+  "python_version": "3.11.7",
+  "pytorch_version": "2.7.0+cu126",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "supports_voice_cloning": false,
+  "supports_streaming": false
+}

@@ -1,0 +1,21 @@
+{
+  "test_id": "en_05_expressive",
+  "text": "That is great news. I am happy everything worked out well.",
+  "model": "MeloTTS",
+  "language": "english",
+  "device": "cpu",
+  "speaker": "0",
+  "model_load_time": 4.036965899999998,
+  "generation_time": 4.639613000000004,
+  "RTF": 1.1506342518600177,
+  "output_path": "E:\\NEW_genai_projects\\TTS_voice\\infinia-voice-case-study\\outputs\\english\\melotts\\final\\en_05_expressive.wav",
+  "sample_rate": 44100,
+  "channels": 1,
+  "audio_duration": 4.032222222222222,
+  "rms": 0.0458704984666953,
+  "peak": 0.273193359375,
+  "clipping": false,
+  "clipping_samples": 0,
+  "silence_ratio": 0.22243716996305274,
+  "sha256": "0e2f08d81de3ec7c563de2eddd44d17c7454c9bd2215d6d51a0ca3235a03c210"
+}

@@ -1,0 +1,19 @@
+{
+  "language": "hindi",
+  "language_code": "hi",
+  "model_id": "facebook/mms-tts-hin",
+  "device": "cuda",
+  "input_text": "नमस्ते, इन्फिनिया में आपका स्वागत है। मैं आपकी कैसे सहायता कर सकता हूँ?",
+  "output_file": "E:\\NEW_genai_projects\\TTS_voice\\infinia-voice-case-study\\outputs\\mms\\hindi\\hi_mms_smoke_test.wav",
+  "sample_rate_hz": 16000,
+  "audio_samples": 89600,
+  "model_load_time_seconds": 16.1477,
+  "generation_time_seconds": 5.3396,
+  "audio_duration_seconds": 5.6,
+  "rtf": 0.9535,
+  "python_version": "3.11.7",
+  "pytorch_version": "2.7.0+cu126",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "supports_voice_cloning": false,
+  "supports_streaming": false
+}

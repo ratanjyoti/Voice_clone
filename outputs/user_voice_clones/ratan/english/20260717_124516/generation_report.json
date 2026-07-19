@@ -1,0 +1,25 @@
+{
+  "status": "failed",
+  "voice_name": "ratan",
+  "voice_id": "ratan",
+  "language": "english",
+  "reference_audio": "E:\\NEW_genai_projects\\TTS_voice\\infinia-voice-case-study\\data\\user_voice_clones\\ratan\\english\\reference.wav",
+  "reference_transcript_file": "E:\\NEW_genai_projects\\TTS_voice\\infinia-voice-case-study\\data\\user_voice_clones\\ratan\\english\\reference.txt",
+  "target_text_file": "E:\\NEW_genai_projects\\TTS_voice\\infinia-voice-case-study\\data\\user_voice_clones\\ratan\\english\\target_text.txt",
+  "reference_stats": {
+    "sample_rate": 24000,
+    "channels": 1,
+    "duration_seconds": 7.488,
+    "peak": 0.581512451171875,
+    "rms": 0.08416338360319982
+  },
+  "chunk_count": 2,
+  "chunks": [
+    "The quick brown fox jumps over the lazy dog. Wait—did you really say we have to leave now? I can’t believe it!",
+    "Peter Piper picked a peck of pickled peppers, while the majestic ships sailed quietly across the shimmering bay. She ordered exactly 73 widgets for $24.50 each, totaling $1,788.50 on July 17th."
+  ],
+  "output_path": "E:\\NEW_genai_projects\\TTS_voice\\infinia-voice-case-study\\outputs\\user_voice_clones\\ratan\\english\\20260717_124516\\cloned_voice.wav",
+  "created_at": "2026-07-17T12:45:16",
+  "error": "No module named 'neutts'",
+  "traceback": "Traceback (most recent call last):\n  File \"E:\\NEW_genai_projects\\TTS_voice\\infinia-voice-case-study\\src\\generate_user_voice_clone.py\", line 641, in main\n    generate_english(\n  File \"E:\\NEW_genai_projects\\TTS_voice\\infinia-voice-case-study\\src\\generate_user_voice_clone.py\", line 388, in generate_english\n    from neutts import NeuTTS\nModuleNotFoundError: No module named 'neutts'\n"
+}
