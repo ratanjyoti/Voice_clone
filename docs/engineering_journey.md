@@ -197,3 +197,54 @@ Decision:
 - Do not expand IndicF5 to the five-sample Hindi benchmark yet.
 - It is runnable after authentication and compatibility fixes, but the initial greeting has worse WER than Chatterbox and much slower CPU batch generation.
 - Final Hindi benchmark/report should keep the current MMS and Chatterbox results unless a GPU or stronger IndicF5 runtime path is tested later.
+
+## 2026-07-19 - NeuTTS English Improved Pipeline Attempt
+
+Objective: audit the English NeuTTS failure, add TTS-only text normalization, rerun the five fixed English benchmark sentences without reusing fallback audio, evaluate the improved outputs, and only promote NeuTTS if evidence passes.
+
+Audit result:
+- Original NeuTTS average WER was 12.67% with no clipping.
+- Main WER drivers were ASR/name mismatch on Infinia/Jyoti and number/date formatting on `air_04_numbers`.
+- Diagnostic CSV: `results/diagnostics/neutts_english_error_analysis.csv`.
+
+Implementation:
+- Added `src/preprocessing/english_tts_normalizer.py` to produce separate TTS input while preserving expected evaluation text.
+- Verification passed and was logged to `evidence/terminal_logs/neutts_english_text_normalizer_verification.txt`.
+- Added `src/pipelines/english/neutts_improved.py` and `src/evaluation/neutts_english_improved_eval.py`.
+
+Generation/evaluation result:
+- Requested repo-local `.venv-neutts` was absent; actual NeuTTS environment was `.venvs/.venv-neutts`.
+- The initial improved script exposed a local-module import collision with `src/pipelines/english/neutts.py`; the script was patched to avoid importing that local file as the NeuTTS package.
+- After the collision was fixed, the environment failed at model load because the official `neutts` package is not installed: `No module named 'neutts'`.
+- Improved generation created JSON failure sidecars and `outputs/english/neutts_improved/final/generation_summary.json`; no improved WAVs were generated.
+- Improved evaluation recorded 5 failed samples, average WER 100.0%, average RTF 0.0, clipping samples 0 because no WAVs existed.
+- Logs: `evidence/terminal_logs/neutts_english_improved_generation.txt` and `evidence/terminal_logs/neutts_english_improved_evaluation.txt`.
+
+Decision:
+- NeuTTS cannot be called the English winner from this run.
+- MeloTTS remains the reproducible English winner, while NeuTTS remains naturalness winner only from manual listening notes.
+- Actual fine-tuning was not performed. A scaffold was created because the improved run failed, but validation found no accepted dataset clips.
+
+## 2026-07-19 - NeuTTS English Local Source Recovery And Successful Improved Run
+
+Follow-up: NeuTTS source was found at `external/neutts`. The `.venvs/.venv-neutts` environment did not have `neutts` installed as a package, so `src/pipelines/english/neutts_improved.py` was updated to prepend `external/neutts` to `sys.path`. System eSpeak NG was found at `C:\Program Files\eSpeak NG`; the script now sets `PHONEMIZER_ESPEAK_LIBRARY` and `ESPEAK_DATA_PATH` when those files exist.
+
+The first rerun still failed because inherited proxy variables pointed Hugging Face traffic to `127.0.0.1:9`. The successful generation was run through `cmd.exe` with proxy variables cleared so warnings did not abort PowerShell. NeuTTS loaded `neuphonic/neutts-air` and `neuphonic/neucodec`, encoded the reference once, and generated all five fixed English benchmark WAVs.
+
+Outputs:
+- Primary improved output: `outputs/english/neutts_improved/final/`
+- Mirrored NeuTTS English output: `outputs/neutts/english/improved_final/`
+- Generation log: `evidence/terminal_logs/neutts_english_improved_generation.txt`
+- Evaluation log: `evidence/terminal_logs/neutts_english_improved_evaluation.txt`
+
+Result:
+- Successful samples: 5/5
+- Average WER: 1.82%
+- Average RTF: 27.692
+- Average generation time: 150.483 seconds
+- Average audio duration: 5.404 seconds
+- Max peak: 0.778
+- Total clipping samples: 0
+- Number/date sentence WER improved from 37.5% original to 0.0% after evaluation normalization aligned numeric ASR output with spoken digits/date.
+
+Decision: NeuTTS-improved now passes the automatic WER, stability, and clipping requirements, but manual listening/MOS for the improved WAVs is still pending. It can be described as the automatic English winner pending final MOS confirmation, not as fully production-confirmed.

@@ -1,0 +1,2 @@
+﻿model,language,samples,successful_samples,failed_samples,average_WER_percent,average_RTF,average_generation_time,average_audio_duration,max_peak,total_clipping_samples
+NeuTTS-improved,English,5,5,0,1.82,27.692,150.483,5.404,0.778,0

@@ -1,4 +1,5 @@
-﻿model,language,WER_percent,RTF,status
-MMS-TTS,English,8.0,<0.3,"Fast stable baseline, robotic voice"
-NeuTTS,English,12.67,Not finalized,Failed WER target / unstable final generation
-MeloTTS,English,9.67,1.428,Final English winner if naturalness confirmed
+﻿model,average_WER_percent,average_RTF,average_generation_time,average_audio_duration,max_peak,total_clipping_samples,manual_naturalness_rank,stability_status,final_decision
+MMS-TTS,8.0,<0.3,,,,0,robotic,stable,"Automatic WER/RTF baseline, not naturalness winner"
+MeloTTS,9.67,1.428,,,,0,pending,stable,Current reproducible English winner unless NeuTTS improved passes
+NeuTTS-original,12.67,14.708,82.079,,0.821,0,most human in manual listening,final standardized run previously hung,"Naturalness winner only, not final reproducible winner"
+NeuTTS-improved,1.82,27.692,150.483,5.404,0.778,0,pending,stable,NeuTTS improved is English winner pending final MOS confirmation

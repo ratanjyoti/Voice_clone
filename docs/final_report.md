@@ -53,3 +53,18 @@ Arabic: use XTTS-v2 as the best quality candidate for further work, while clearl
 
 ## 10. Remaining limitations
 Real MOS scores are not yet collected. NeuTTS fixed-sentence generation needs a clean rerun. Latency should be rerun on target deployment hardware. Model and reference-audio licenses must be verified before external distribution.
+## 11. 2026-07-19 NeuTTS Improved Follow-Up
+
+NeuTTS remained the most human-sounding English candidate in manual listening, but it could not be promoted without a passing reproducible run. A new TTS-only normalizer, improved generation script, improved evaluator, comparison CSV, and fine-tuning scaffold were added.
+
+The improved run did not generate any WAVs because `.venvs/.venv-neutts` does not currently contain an importable official `neutts` package. The evaluator recorded 5 failed samples, average WER 100.0%, average RTF 0.0, and 0 clipping samples. The number sentence did not improve because no new audio existed to evaluate.
+
+Decision: NeuTTS is still a research/naturalness candidate only. MeloTTS remains the reproducible English winner pending final manual MOS confirmation. Fine-tuning was not performed; only a scaffold was created and dataset validation found no accepted clips.
+
+## 12. 2026-07-19 NeuTTS Improved Recovery Result
+
+NeuTTS was recovered by using the local source checkout at `external/neutts`, system eSpeak NG, and a clean proxy-free generation command. The improved run generated all five English WAVs and sidecars successfully.
+
+Automatic results: average WER 1.82%, average RTF 27.692, total clipping samples 0, failed samples 0. The number/date sentence improved to 0.0% WER. NeuTTS-improved therefore passes the automatic English WER/stability/clipping gate, but final manual MOS/listening confirmation is still pending.
+
+Recommendation update: NeuTTS-improved is the automatic English winner pending final MOS confirmation. MeloTTS remains the fallback reproducible English winner if manual listening does not confirm NeuTTS-improved naturalness.

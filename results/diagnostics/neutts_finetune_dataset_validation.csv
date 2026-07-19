@@ -1,0 +1,2 @@
+﻿file_name,path,transcript,speaker_id,split,sample_rate,channels,duration_seconds,rms,peak,clipping,clipping_samples,silence_ratio,status,issues
+clip_0001.wav,E:\NEW_genai_projects\TTS_voice\infinia-voice-case-study\data\finetune\neutts_english\audio\clip_0001.wav,Exact transcript for this clip.,ratan,train,0,0,0.0,0.0,0.0,False,0,1.0,rejected,missing_audio_file

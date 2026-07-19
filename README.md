@@ -428,3 +428,10 @@ Still pending:
 This project demonstrates a realistic open-source multilingual TTS benchmark under practical engineering constraints. English reached the strongest result with **MeloTTS**. Arabic achieved the best intelligibility with **XTTS-v2**, but CPU latency remained a limitation. Hindi remained unresolved despite testing MMS-TTS, Chatterbox, and IndicF5.
 
 The final recommendation is a **language-router system** with strict validation gates for WER, clipping, prompt leakage, runtime, and manual listening quality. The repository includes both successful outputs and failed runs, showing the actual engineering process instead of only polished results.
+## NeuTTS English Improved Recovery
+
+NeuTTS source was found at `external/neutts` and the improved English pipeline now imports it directly. The run also uses the installed system eSpeak NG at `C:\Program Files\eSpeak NG` and clears stale proxy variables for model loading.
+
+Current improved result: all five English NeuTTS samples generated successfully, average WER 1.82%, average RTF 27.692, max peak 0.778, total clipping samples 0. Primary outputs are in `outputs/english/neutts_improved/final/`; the same successful WAVs/sidecars are mirrored under `outputs/neutts/english/improved_final/`.
+
+Decision: NeuTTS-improved is the automatic English winner pending final MOS/manual listening confirmation. Manual MOS is still not invented.

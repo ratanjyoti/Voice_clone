@@ -1,0 +1,41 @@
+﻿# NeuTTS English fine-tuning config scaffold only.
+# Compare this file against the official NeuTTS examples/finetune_config.yaml
+# before running. Fields marked EDIT must be verified against the official repo.
+
+run_name: neutts_ratan_english_finetune
+seed: 42
+
+model:
+  backbone_repo: neuphonic/neutts-air
+  restore_from_checkpoint: neuphonic/neutts-air  # EDIT: replace with exact checkpoint path/id expected by official script.
+  codec_repo: neuphonic/neucodec
+
+data:
+  manifest_path: data/finetune/neutts_english/manifest_clean.csv  # EDIT after dataset validation.
+  audio_root: data/finetune/neutts_english/audio
+  sample_rate: 24000
+  speaker_id: ratan
+  encoded_audio_dir: data/finetune/neutts_english/neucodec_codes  # Produced with NeuCodec before training.
+
+training:
+  learning_rate: 0.00002  # EDIT within official-guide range 1e-5 to 4e-5.
+  max_steps: 1500         # EDIT within 1000-2000 for about 10 hours; adjust for smaller prototype data.
+  batch_size: 1           # EDIT for available GPU memory.
+  gradient_accumulation_steps: 8
+  precision: bf16         # EDIT for Colab/GPU support.
+  save_every_steps: 250
+  eval_every_steps: 250
+  output_dir: checkpoints/neutts_ratan_english
+
+validation:
+  min_clip_seconds: 3
+  max_clip_seconds: 12
+  require_mono: true
+  require_sample_rate: 24000
+  max_peak: 0.999
+  max_silence_ratio: 0.6
+
+notes:
+  - This scaffold does not prove fine-tuning ran.
+  - Encode audio with NeuCodec before invoking official examples/finetune.py.
+  - Replace placeholder keys if official examples/finetune_config.yaml uses different names.

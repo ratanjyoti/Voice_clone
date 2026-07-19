@@ -1,0 +1,170 @@
+Loading NeuTTS improved English pipeline once...
+Skipping import of cpp extensions due to incompatible torch version. Please upgrade to torch >= 2.11.0 (found 2.8.0+cpu).
+W0719 21:26:44.126000 32136 Lib\site-packages\torch\distributed\elastic\multiprocessing\redirects.py:29] NOTE: Redirects are currently not supported in Windows or MacOs.
+
+WARNING: You are using espeak-ng version 1.52.0, which is not the supported version bundled with NeuTTS. This version is not supported and may not work as intended, particularly for non-English languages. To use the correct version, reinstall the package via pip: pip install neutts
+
+Loading phonemizer...
+
+WARNING: You are using espeak-ng version 1.52.0, which is not the supported version bundled with NeuTTS. This version is not supported and may not work as intended, particularly for non-English languages. To use the correct version, reinstall the package via pip: pip install neutts
+
+Loading backbone from: neuphonic/neutts-air on cpu ...
+Loading codec from: neuphonic/neucodec on cpu ...
+E:\NEW_genai_projects\TTS_voice\infinia-voice-case-study\.venvs\.venv-neutts\Lib\site-packages\torch\nn\utils\weight_norm.py:144: FutureWarning: `torch.nn.utils.weight_norm` is deprecated in favor of `torch.nn.utils.parametrizations.weight_norm`.
+  WeightNorm.apply(module, name, dim)
+loaded PerthNet (Implicit) at step 250,000
+Model loaded in 80.461s
+Encoding reference once...
+Reference encoded in 39.047s
+[1/5] air_01_greeting
+TTS input: Hello, welcome to Infinia. I am ready to help you today.
+[2/5] air_02_identity
+TTS input: My name is Ratan Jyoti, and I enjoy building practical artificial intelligence systems.
+[3/5] air_03_support
+TTS input: Thank you for contacting customer support. I have reviewed your request and will guide you through the next steps.
+[4/5] air_04_numbers
+TTS input: Your order number is five eight two four, and it will arrive on July twenty first.
+[5/5] air_05_expressive
+TTS input: That is wonderful news! Everything worked correctly, and I hope you have a great day.
+{
+  "status": "success",
+  "model": "neuphonic/neutts-air",
+  "codec": "neuphonic/neucodec",
+  "seed": 42,
+  "sample_timeout_seconds": 300,
+  "timeout_note": "SIGALRM timeout is active only on platforms that provide it.",
+  "reference_audio": "E:\\NEW_genai_projects\\TTS_voice\\infinia-voice-case-study\\data\\reference_audio\\english\\ratan_neutral.wav",
+  "reference_text": "Hello, my name is Ratan Jyoti. I am testing a natural voice-generation system on my personal computer.",
+  "model_load_time": 80.46051110001281,
+  "reference_encoding_time": 39.046930200012866,
+  "total_samples": 5,
+  "successful_samples": 5,
+  "failed_samples": 0,
+  "samples": [
+    {
+      "test_id": "air_01_greeting",
+      "category": "greeting",
+      "expected_text": "Hello, welcome to Infinia. I am ready to help you today.",
+      "tts_input_text": "Hello, welcome to Infinia. I am ready to help you today.",
+      "model": "neuphonic/neutts-air",
+      "codec": "neuphonic/neucodec",
+      "reference_audio": "E:\\NEW_genai_projects\\TTS_voice\\infinia-voice-case-study\\data\\reference_audio\\english\\ratan_neutral.wav",
+      "reference_text": "Hello, my name is Ratan Jyoti. I am testing a natural voice-generation system on my personal computer.",
+      "generation_time": 108.18721200001892,
+      "audio_duration": 3.62,
+      "RTF": 29.885970165751083,
+      "sample_rate": 24000,
+      "peak": 0.743133544921875,
+      "rms": 0.1358059660256583,
+      "clipping": false,
+      "clipping_samples": 0,
+      "silence_ratio": 0.03748848987108656,
+      "status": "success",
+      "error": "",
+      "model_load_time": 80.46051110001281,
+      "reference_encoding_time": 39.046930200012866,
+      "output_path": "E:\\NEW_genai_projects\\TTS_voice\\infinia-voice-case-study\\outputs\\english\\neutts_improved\\final\\air_01_greeting.wav",
+      "channels": 1
+    },
+    {
+      "test_id": "air_02_identity",
+      "category": "identity",
+      "expected_text": "My name is Ratan Jyoti, and I enjoy building practical artificial intelligence systems.",
+      "tts_input_text": "My name is Ratan Jyoti, and I enjoy building practical artificial intelligence systems.",
+      "model": "neuphonic/neutts-air",
+      "codec": "neuphonic/neucodec",
+      "reference_audio": "E:\\NEW_genai_projects\\TTS_voice\\infinia-voice-case-study\\data\\reference_audio\\english\\ratan_neutral.wav",
+      "reference_text": "Hello, my name is Ratan Jyoti. I am testing a natural voice-generation system on my personal computer.",
+      "generation_time": 145.4368339999928,
+      "audio_duration": 5.66,
+      "RTF": 25.69555371024608,
+      "sample_rate": 24000,
+      "peak": 0.528045654296875,
+      "rms": 0.09862787305436252,
+      "clipping": false,
+      "clipping_samples": 0,
+      "silence_ratio": 0.040555064782096584,
+      "status": "success",
+      "error": "",
+      "model_load_time": 80.46051110001281,
+      "reference_encoding_time": 39.046930200012866,
+      "output_path": "E:\\NEW_genai_projects\\TTS_voice\\infinia-voice-case-study\\outputs\\english\\neutts_improved\\final\\air_02_identity.wav",
+      "channels": 1
+    },
+    {
+      "test_id": "air_03_support",
+      "category": "customer_support",
+      "expected_text": "Thank you for contacting customer support. I have reviewed your request and will guide you through the next steps.",
+      "tts_input_text": "Thank you for contacting customer support. I have reviewed your request and will guide you through the next steps.",
+      "model": "neuphonic/neutts-air",
+      "codec": "neuphonic/neucodec",
+      "reference_audio": "E:\\NEW_genai_projects\\TTS_voice\\infinia-voice-case-study\\data\\reference_audio\\english\\ratan_neutral.wav",
+      "reference_text": "Hello, my name is Ratan Jyoti. I am testing a natural voice-generation system on my personal computer.",
+      "generation_time": 236.07382099999813,
+      "audio_duration": 6.66,
+      "RTF": 35.446519669669385,
+      "sample_rate": 24000,
+      "peak": 0.563507080078125,
+      "rms": 0.07630737040294082,
+      "clipping": false,
+      "clipping_samples": 0,
+      "silence_ratio": 0.05551801801801802,
+      "status": "success",
+      "error": "",
+      "model_load_time": 80.46051110001281,
+      "reference_encoding_time": 39.046930200012866,
+      "output_path": "E:\\NEW_genai_projects\\TTS_voice\\infinia-voice-case-study\\outputs\\english\\neutts_improved\\final\\air_03_support.wav",
+      "channels": 1
+    },
+    {
+      "test_id": "air_04_numbers",
+      "category": "numbers_and_date",
+      "expected_text": "Your order number is five eight two four, and it will arrive on July twenty-first.",
+      "tts_input_text": "Your order number is five eight two four, and it will arrive on July twenty first.",
+      "model": "neuphonic/neutts-air",
+      "codec": "neuphonic/neucodec",
+      "reference_audio": "E:\\NEW_genai_projects\\TTS_voice\\infinia-voice-case-study\\data\\reference_audio\\english\\ratan_neutral.wav",
+      "reference_text": "Hello, my name is Ratan Jyoti. I am testing a natural voice-generation system on my personal computer.",
+      "generation_time": 134.0305534999934,
+      "audio_duration": 5.7,
+      "RTF": 23.514132192981297,
+      "sample_rate": 24000,
+      "peak": 0.628692626953125,
+      "rms": 0.08590489738645687,
+      "clipping": false,
+      "clipping_samples": 0,
+      "silence_ratio": 0.03421783625730994,
+      "status": "success",
+      "error": "",
+      "model_load_time": 80.46051110001281,
+      "reference_encoding_time": 39.046930200012866,
+      "output_path": "E:\\NEW_genai_projects\\TTS_voice\\infinia-voice-case-study\\outputs\\english\\neutts_improved\\final\\air_04_numbers.wav",
+      "channels": 1
+    },
+    {
+      "test_id": "air_05_expressive",
+      "category": "expressive",
+      "expected_text": "That is wonderful news! Everything worked correctly, and I hope you have a great day.",
+      "tts_input_text": "That is wonderful news! Everything worked correctly, and I hope you have a great day.",
+      "model": "neuphonic/neutts-air",
+      "codec": "neuphonic/neucodec",
+      "reference_audio": "E:\\NEW_genai_projects\\TTS_voice\\infinia-voice-case-study\\data\\reference_audio\\english\\ratan_neutral.wav",
+      "reference_text": "Hello, my name is Ratan Jyoti. I am testing a natural voice-generation system on my personal computer.",
+      "generation_time": 128.68822040001396,
+      "audio_duration": 5.38,
+      "RTF": 23.91974356877583,
+      "sample_rate": 24000,
+      "peak": 0.77752685546875,
+      "rms": 0.09728218221784221,
+      "clipping": false,
+      "clipping_samples": 0,
+      "silence_ratio": 0.04450898389095415,
+      "status": "success",
+      "error": "",
+      "model_load_time": 80.46051110001281,
+      "reference_encoding_time": 39.046930200012866,
+      "output_path": "E:\\NEW_genai_projects\\TTS_voice\\infinia-voice-case-study\\outputs\\english\\neutts_improved\\final\\air_05_expressive.wav",
+      "channels": 1
+    }
+  ]
+}

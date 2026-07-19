@@ -409,11 +409,17 @@ def resolve_existing_audio_path(audio_path: Path | str) -> Path:
     matches = list(OUTPUTS_DIR.rglob(path.name)) if OUTPUTS_DIR.exists() else []
     return matches[0] if matches else path
 
-def show_audio_file(audio_path: Path, title: str | None = None):
+def show_audio_file(audio_path: Path | str, title: str | None = None):
     audio_path = resolve_existing_audio_path(audio_path)
-    if title: st.markdown(f"#### {title}")
-    if not audio_path.exists(): st.error(f"File missing: {audio_path}"); return
-    st.audio(audio_path.read_bytes(), format="audio/wav")
+    if title:
+        st.markdown(f"#### {title}")
+    if not audio_path.exists():
+        st.error(f"File missing: {audio_path}")
+        return
+    try:
+        st.audio(str(audio_path), format="audio/wav")
+    except Exception:
+        st.audio(audio_path.read_bytes(), format="audio/wav")
     st.caption(project_relative(audio_path))
 
 def run_script(python_path: Path, script_path: Path, arguments: list[str]):
@@ -516,21 +522,35 @@ def render_generated_audio_page() -> None:
     if not rows:
         st.warning("No generated WAV files found under outputs.")
         return
+
     df = pd.DataFrame(rows)
     languages = ["All"] + sorted(df["language"].unique().tolist())
     models = ["All"] + sorted(df["model"].unique().tolist())
     c1, c2 = st.columns(2)
     language = c1.selectbox("Language", languages)
     model = c2.selectbox("Model", models)
+
     filtered = df.copy()
-    if language != "All": filtered = filtered[filtered["language"] == language]
-    if model != "All": filtered = filtered[filtered["model"] == model]
+    if language != "All":
+        filtered = filtered[filtered["language"] == language]
+    if model != "All":
+        filtered = filtered[filtered["model"] == model]
+
     st.dataframe(filtered.drop(columns=["path"]), use_container_width=True, hide_index=True)
-    selected = st.selectbox("Play audio", list(filtered["path"]), format_func=lambda path: project_relative(path)) if not filtered.empty else None
-    if selected:
-        show_audio_file(selected)
-        expected = find_expected_text(selected)
-        if expected: st.info(expected)
+    if filtered.empty:
+        st.info("No audio matches the selected filters.")
+        return
+
+    st.subheader("Audio Players")
+    for idx, row in filtered.reset_index(drop=True).iterrows():
+        audio_path = Path(row["path"])
+        label = f'{idx + 1}. {row.get("language", "unknown")} / {row.get("model", "unknown")} / {audio_path.name}'
+        with st.expander(label, expanded=idx < 3):
+            st.caption(project_relative(audio_path))
+            show_audio_file(audio_path)
+            expected = find_expected_text(audio_path)
+            if expected:
+                st.info(expected)
 
 
 def render_review_workspace() -> None:
@@ -634,6 +654,38 @@ def render_voice_comparison_page() -> None:
             show_audio_file(selected)
 
 
+def result_csvs_for_language(language: str) -> list[Path]:
+    keywords = {
+        "English": ("english", "melotts", "neutts"),
+        "Hindi": ("hindi", "indicf5"),
+        "Arabic": ("arabic", "xtts"),
+    }[language]
+    csv_files = sorted(RESULTS_DIR.rglob("*.csv")) if RESULTS_DIR.exists() else []
+    return [
+        path for path in csv_files
+        if any(keyword in path.name.lower() for keyword in keywords)
+    ]
+
+
+def render_results_by_language_page() -> None:
+    st.header("Results")
+    tabs = st.tabs(["English", "Hindi", "Arabic"] )
+    for tab, language in zip(tabs, ["English", "Hindi", "Arabic"]):
+        with tab:
+            st.subheader(language)
+            files = result_csvs_for_language(language)
+            if not files:
+                st.warning(f"No CSV results found for {language}.")
+                continue
+            for csv_path in files:
+                with st.expander(project_relative(csv_path), expanded=False):
+                    df = load_csv_dataframe(csv_path)
+                    if df.empty:
+                        st.warning("This CSV is missing or empty.")
+                    else:
+                        st.dataframe(df, use_container_width=True)
+
+
 def render_reports_page() -> None:
     st.header("Reports and metrics")
     csv_files = sorted(RESULTS_DIR.rglob("*.csv")) if RESULTS_DIR.exists() else []
@@ -651,26 +703,40 @@ def render_reports_page() -> None:
 def render_final_results_page() -> None:
     st.header("Final Results")
     st.dataframe(pd.DataFrame(get_final_decision_rows()), use_container_width=True, hide_index=True)
-    tabs = st.tabs(["English", "Arabic", "Hindi", "All CSVs"])
-    with tabs[0]:
-        for path in [result_csv_path("melotts_english_summary.csv", True), result_csv_path("melotts_english_evaluation.csv"), result_csv_path("english_model_comparison.csv", True), result_csv_path("mms_english_evaluation.csv"), result_csv_path("neutts_english_evaluation.csv")]:
-            st.subheader(path.name)
-            df = load_csv_dataframe(path)
-            st.dataframe(df, use_container_width=True) if not df.empty else st.warning(f"Missing or empty: {project_relative(path)}")
-    with tabs[1]:
-        for path in [result_csv_path("arabic_model_comparison.csv", True), result_csv_path("xtts_arabic_evaluation.csv"), result_csv_path("chatterbox_arabic_evaluation.csv"), result_csv_path("arabic_speaker_similarity.csv", True)]:
-            st.subheader(path.name)
-            df = load_csv_dataframe(path)
-            st.dataframe(df, use_container_width=True) if not df.empty else st.warning(f"Missing or empty: {project_relative(path)}")
-    with tabs[2]:
-        for path in [result_csv_path("hindi_model_comparison.csv", True), result_csv_path("chatterbox_hindi_evaluation.csv"), result_csv_path("mms_hindi_evaluation.csv"), result_csv_path("hindi_speaker_similarity.csv", True)]:
-            st.subheader(path.name)
-            df = load_csv_dataframe(path)
-            st.dataframe(df, use_container_width=True) if not df.empty else st.warning(f"Missing or empty: {project_relative(path)}")
-    with tabs[3]:
-        csvs = sorted(RESULTS_DIR.rglob("*.csv")) if RESULTS_DIR.exists() else []
-        selected = st.selectbox("Select result CSV", csvs, format_func=lambda p: project_relative(p)) if csvs else None
-        if selected: st.dataframe(load_csv_dataframe(selected), use_container_width=True)
+
+    st.subheader("Detailed Evaluation CSVs")
+    detailed_files = {
+        "English": [
+            result_csv_path("english_detailed_evaluation.csv"),
+            result_csv_path("melotts_english_evaluation.csv"),
+            result_csv_path("mms_english_evaluation.csv"),
+            result_csv_path("neutts_english_evaluation.csv"),
+        ],
+        "Hindi": [
+            result_csv_path("chatterbox_hindi_evaluation.csv"),
+            result_csv_path("mms_hindi_evaluation.csv"),
+            result_csv_path("hindi_model_comparison.csv", True),
+        ],
+        "Arabic": [
+            result_csv_path("xtts_arabic_evaluation.csv"),
+            result_csv_path("chatterbox_arabic_evaluation.csv"),
+            result_csv_path("arabic_model_comparison.csv", True),
+        ],
+    }
+
+    tabs = st.tabs(["English", "Hindi", "Arabic"])
+    for tab, language in zip(tabs, ["English", "Hindi", "Arabic"]):
+        with tab:
+            for csv_path in detailed_files[language]:
+                expanded = csv_path.name == "english_detailed_evaluation.csv"
+                with st.expander(csv_path.name, expanded=expanded):
+                    df = load_csv_dataframe(csv_path)
+                    if df.empty:
+                        st.warning(f"Missing or empty: {project_relative(csv_path)}")
+                    else:
+                        st.caption(project_relative(csv_path))
+                        st.dataframe(df, use_container_width=True)
+
 
 # ==============================================================================
 # MAIN APP ENTRY
@@ -698,13 +764,9 @@ page = st.sidebar.radio(
         "Final Results",
         "Audio Clips",
         "Evidence & Logs",
-        "Review Workspace",
-        "Run Experiment",
-        "Clone Your Voice",
         "Generated Audio",
-        "Arabic Results",
+        "Results",
         "Voice Comparison",
-        "Reports",
     ],
 )
 
@@ -717,19 +779,9 @@ elif page == "Audio Clips":
     render_recruiter_audio_clips()
 elif page == "Evidence & Logs":
     render_evidence_and_logs_page()
-elif page == "Review Workspace":
-    render_review_workspace()
-elif page == "Run Experiment":
-    render_run_experiment_page()
-elif page == "Clone Your Voice":
-    st.header("Clone Your Voice")
-    st.info("Voice-clone generation script path is configured below. Use Run Experiment for scripted runs, or restore the custom upload workflow if you need browser-based recording.")
-    st.code(str(USER_CLONE_SCRIPT), language=None)
 elif page == "Generated Audio":
     render_generated_audio_page()
-elif page == "Arabic Results":
-    render_arabic_results()
+elif page == "Results":
+    render_results_by_language_page()
 elif page == "Voice Comparison":
     render_voice_comparison_page()
-elif page == "Reports":
-    render_reports_page()

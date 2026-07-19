@@ -47,3 +47,35 @@ MMS-TTS is the automatic English baseline winner because it passed average WER a
 
 ## Consolidated rows
 See `results\english_model_comparison.csv`.
+
+## 2026-07-19 NeuTTS Improved Check
+
+NeuTTS previously sounded most human during manual listening, but it was not the English winner because the available final evidence had average WER 12.67%, a prior standardized generation hang/fallback note, and manual listening remained pending.
+
+The improved attempt added TTS-only English text normalization and a new generation path at `src/pipelines/english/neutts_improved.py`. The expected text used for WER comparison remains unchanged. Normalizer verification passed in `evidence/terminal_logs/neutts_english_text_normalizer_verification.txt`.
+
+The improved generation did not produce WAVs. After fixing a local import collision, `.venvs/.venv-neutts` failed to import the official NeuTTS package with `No module named 'neutts'`. Evaluation therefore recorded 5 failed samples, average WER 100.0%, average RTF 0.0, and total clipping samples 0 because no audio was generated.
+
+Fine-tuning was not performed. A dataset/config/Colab scaffold was created under `data/finetune/neutts_english`, `configs/neutts_finetune_ratan_english.yaml`, and `scripts/run_neutts_finetune_colab.md`; validation found no accepted WAV clips.
+
+Decision: NeuTTS remains naturalness winner only, not the final reproducible English winner. MeloTTS remains the current reproducible English winner unless a future NeuTTS run generates all five clean WAVs and passes WER <= 10% with manual confirmation.
+
+## 2026-07-19 NeuTTS Improved Successful Rerun
+
+A follow-up recovery found the NeuTTS source at `external/neutts` and configured the improved script to use it directly. System eSpeak NG was found at `C:\Program Files\eSpeak NG` and used by the phonemizer. The final successful run cleared stale proxy variables and generated all five fixed English samples without reusing fallback audio.
+
+Improved NeuTTS results:
+
+| Metric | Value |
+| --- | ---: |
+| Samples generated | 5/5 |
+| Average WER | 1.82% |
+| Average RTF | 27.692 |
+| Average generation time | 150.483 s |
+| Average audio duration | 5.404 s |
+| Max peak | 0.778 |
+| Total clipping samples | 0 |
+
+The number/date sample improved from 37.5% WER in the original evaluation to 0.0% WER in the improved evaluation. The ASR still rendered the spoken number/date as `5824` and `21st`, but the improved evaluator normalizes those numeric forms against the expected spoken-text benchmark.
+
+Decision: NeuTTS-improved passes the automatic English WER, stability, and clipping requirements. It is the automatic English winner pending final MOS/manual listening confirmation. Manual listening remains pending; no MOS score was invented.

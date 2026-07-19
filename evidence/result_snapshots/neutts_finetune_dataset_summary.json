@@ -1,0 +1,17 @@
+{
+  "audio_dir": "E:\\NEW_genai_projects\\TTS_voice\\infinia-voice-case-study\\data\\finetune\\neutts_english\\audio",
+  "metadata_path": "E:\\NEW_genai_projects\\TTS_voice\\infinia-voice-case-study\\data\\finetune\\neutts_english\\metadata_template.csv",
+  "total_rows": 1,
+  "accepted_rows": 0,
+  "rejected_rows": 1,
+  "total_accepted_seconds": 0,
+  "total_accepted_minutes": 0.0,
+  "speakers": [],
+  "prototype_ready": false,
+  "recommended_real_improvement_ready": false,
+  "training_started": false,
+  "training_status": "not_started_scaffold_only",
+  "blockers": [
+    "No accepted WAV clips found."
+  ]
+}
