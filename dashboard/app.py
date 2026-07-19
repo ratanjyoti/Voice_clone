@@ -1,4 +1,4 @@
-from __future__ import annotations
+﻿from __future__ import annotations
 
 import hashlib
 import io
@@ -285,18 +285,82 @@ def render_final_results_page() -> None:
 
 def render_recruiter_audio_clips() -> None:
     st.header("Final Audio Clips")
+
+    st.info(
+        "These clips include the final winners, speed baselines, and rejected-but-important "
+        "naturalness/failure cases. NeuTTS is shown as an English naturalness candidate, "
+        "not as the final winner."
+    )
+
     clip_groups = {
-        "English — MeloTTS": OUTPUTS_DIR / "english" / "melotts",
-        "Arabic — XTTS-v2": OUTPUTS_DIR / "arabic" / "xtts",
-        "Hindi — MMS/Chatterbox": OUTPUTS_DIR / "hindi" / "mms",
+        "English — MeloTTS Winner": [
+            OUTPUTS_DIR / "english" / "melotts",
+            OUTPUTS_DIR / "melotts" / "english",
+        ],
+        "English — NeuTTS Naturalness Candidate": [
+            OUTPUTS_DIR / "english" / "neutts",
+            OUTPUTS_DIR / "neutts" / "english",
+        ],
+        "English — MMS Speed Baseline": [
+            OUTPUTS_DIR / "english" / "mms",
+            OUTPUTS_DIR / "mms" / "english",
+        ],
+        "Arabic — XTTS-v2 Quality Candidate": [
+            OUTPUTS_DIR / "arabic" / "xtts",
+            OUTPUTS_DIR / "xtts" / "arabic",
+        ],
+        "Arabic — MMS Speed Baseline": [
+            OUTPUTS_DIR / "arabic" / "mms",
+            OUTPUTS_DIR / "mms" / "arabic",
+        ],
+        "Arabic — Chatterbox Rejected Candidate": [
+            OUTPUTS_DIR / "arabic" / "chatterbox",
+            OUTPUTS_DIR / "chatterbox" / "arabic",
+        ],
+        "Hindi — MMS Stable Baseline": [
+            OUTPUTS_DIR / "hindi" / "mms",
+            OUTPUTS_DIR / "mms" / "hindi",
+        ],
+        "Hindi — Chatterbox Best Tested Candidate": [
+            OUTPUTS_DIR / "hindi" / "chatterbox",
+            OUTPUTS_DIR / "chatterbox" / "hindi",
+        ],
     }
-    for group_name, directory in clip_groups.items():
+
+    for group_name, directories in clip_groups.items():
         with st.container(border=True):
             st.subheader(group_name)
-            wav_files = sorted(directory.rglob("*.wav")) if directory.exists() else []
-            if not wav_files: st.warning("No clips found."); continue
-            selected = st.selectbox(f"Select clip", wav_files, format_func=lambda p: p.name, key=f"clip_{group_name}")
+
+            wav_files = []
+            for directory in directories:
+                if directory.exists():
+                    wav_files.extend(directory.rglob("*.wav"))
+
+            unique_files = sorted(
+                {str(path.resolve()): path for path in wav_files}.values(),
+                key=lambda p: p.name,
+            )
+
+            if not unique_files:
+                st.warning("No clips found.")
+                st.caption(
+                    "Checked: "
+                    + ", ".join(project_relative(directory) for directory in directories)
+                )
+                continue
+
+            selected = st.selectbox(
+                "Select clip",
+                unique_files,
+                format_func=lambda p: project_relative(p),
+                key=f"clip_{group_name}",
+            )
+
             show_audio_file(selected)
+
+            expected = find_expected_text(selected)
+            if expected:
+                st.info(expected)
 
 def render_evidence_and_logs_page() -> None:
     st.header("Evidence & Logs")
